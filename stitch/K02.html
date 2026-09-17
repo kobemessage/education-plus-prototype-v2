@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">科普视频详情</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full pb-24">
+<!-- Top Context Subheader (WeChat Sub-navigation indicator) -->
+<section class="px-margin-page pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-body-medium text-body-medium">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>科学港</span>
+<span class="text-outline-variant font-label-meta text-label-meta">/ 基础物理专区</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-outline text-label-meta font-label-meta">[演示数据]</span>
+</section>
+<!-- 16:9 Video Mock Player Component -->
+<section class="px-margin-page mb-space-md">
+<div class="relative w-full aspect-video rounded-xl bg-inverse-surface overflow-hidden shadow-md group">
+<img class="w-full h-full object-cover opacity-75" data-alt="A pristine sphere of water floating weightlessly inside a luminous futuristic space station laboratory, cinematic lighting with emerald green and aqua reflections, earth glowing outside the circular viewing window in the background, ultra crisp hyper-realistic physics demonstration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVFz1HMPgjenogfj0tGWvo_E4I5s8S-QhCPhE8p5vU4V6If5uM3mQJUtbfpgwrp4MHCHt7FAppiJ0_kUf_fG7EYbvRDZwoU8g2WTsPtD3OpvznGbglgeh1wvnig3ZxpyRTJqYYaylg9X-eX8QeZNd3AmAoGTY_3W1f2XiHt00SSFJoE517kbq_IFP3iYXXwwcnaMHqkO4ra91poJn9PyoauNQYm8gIlveCzluvAzeUxKn0Sp8ADiuN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-inverse-surface/30 flex flex-col justify-between p-space-md">
+<!-- Top Video Controls Overlay -->
+<div class="flex items-center justify-between text-on-primary">
+<span class="px-2 py-0.5 rounded-full bg-inverse-surface/60 backdrop-blur text-label-meta font-label-meta flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span>
+            1080P 超清
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-inverse-surface/60 backdrop-blur text-label-meta font-label-meta text-inverse-on-surface">时长 03:20</span>
+</div>
+<!-- Center Play Button & Notice -->
+<div class="flex flex-col items-center justify-center gap-space-xs my-auto">
+<button class="w-13 h-13 w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg active:scale-90 transition-transform" id="playBtn" type="button">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<p class="text-label-meta font-label-meta text-on-primary/80 bg-inverse-surface/70 px-space-sm py-1 rounded">视频演示占位，未接真实视频源</p>
+</div>
+<!-- Bottom Playback Progress Bar -->
+<div class="w-full space-y-1">
+<div class="w-full h-1 bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed w-1/3 rounded-full"></div>
+</div>
+<div class="flex justify-between items-center text-label-meta font-label-meta text-on-primary/70 px-0.5">
+<span>01:07</span>
+<span>03:20</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Metadata & Interaction Bar -->
+<section class="px-margin-page mb-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-caption text-label-caption">基础物理篇·3分钟科普微课</span>
+<span class="text-outline text-label-meta font-label-meta">No.PH-204</span>
+</div>
+<h2 class="font-headline-page text-headline-page text-on-surface mb-space-sm leading-snug">为什么空间站中微重力水滴会呈现球形？</h2>
+<p class="font-body-default text-body-default text-on-surface-variant mb-space-md leading-relaxed">
+        中国空间站天宫课堂经典实验解析：在近地轨道的微重力环境下，水滴为何不再受平直容器限制，而化身晶莹透亮的完美几何水球？
+      </p>
+<!-- Stats Pill Grid -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container-low/70 rounded-lg px-space-md py-space-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility</span>
+<span class="font-label-caption text-label-caption">8,600 次播放</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<span class="font-label-caption text-label-caption">1,248</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="font-label-caption text-label-caption">892</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Principle Breakdown Bento Cards -->
+<section class="px-margin-page mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 rounded-full bg-primary-container"></span>
+<h3 class="font-headline-section text-headline-section text-on-surface">核心原理拆解</h3>
+</div>
+<span class="font-label-meta text-label-meta text-outline">共 3 个认知要点</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Principle 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed/40 text-primary flex-shrink-0 flex items-center justify-center font-display-stat text-body-medium">
+            01
+          </div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-card text-title-card text-on-surface mb-1">重力掩盖了微弱的表面张力</h4>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+              在地球常重力场下，重力处于主导地位，容器底部的支撑力与重力共同迫使水滴摊平或顺沿容器壁贴合，极其微弱的液体分子分子间吸引力（表面张力）无法形成宏观形态的主宰。
+            </p>
+</div>
+</div>
+</div>
+<!-- Principle 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed/50 text-secondary flex-shrink-0 flex items-center justify-center font-display-stat text-body-medium">
+            02
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<h4 class="font-title-card text-title-card text-on-surface">表面积最小化趋向</h4>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-meta text-label-meta">关键机理</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed mb-space-sm">
+              进入自由落体式的空间站微重力环境后，重力效应几乎消失。水分子的内聚力让液体自发向中心收缩，以达成势能最低状态——在相同体积下，**球体具有最小的表面积**。
+            </p>
+<!-- Visual Graphic Representation -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface font-body-medium">分子能量平衡公式</span>
+<span class="font-label-meta text-label-meta text-outline font-mono">E_surface = γ · ΔA (趋向极小值)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">blur_circular</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Principle 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed/40 text-tertiary flex-shrink-0 flex items-center justify-center font-display-stat text-body-medium">
+            03
+          </div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-card text-title-card text-on-surface mb-1">太空水膜实验与张力应用</h4>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+              当航天员王亚平在金属圈中注水形成大水膜时，水分子间的吸附使水膜能够夹持花朵而不断裂，展现了液体表面张力在无浮力对流环境中的独特流体力学特性。
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Homework & Thought Sparks (Delight Section) -->
+<section class="px-margin-page mb-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+</div>
+<h3 class="font-headline-section text-headline-section text-on-surface">思考与课后验证小建议</h3>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant mb-space-md">
+        不需要去太空，在日常生活中也能感受表面张力的绝对力量：
+      </p>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-lg p-space-md">
+<img class="w-full h-20 object-cover rounded mb-2" data-alt="Macro close up shot of glistening dew drops resting as near perfect spheres on a fresh vibrant green lotus leaf, shallow depth of field, morning soft sunlight reflecting sparkles of water tension." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANPuhICUX7VPhzR44JXuQ7Ros45ihLsEWrWpKxg3ulmdrn63eVygCvodlmTQoq5yR3eSgqGrbL-0uODyUAot81HnEe-R6XRXUDwXxpRxzRRY2hWWLh-JZrHmjqGlxJuIkCN3iMr1UnqNCiQA_twYt6b52OT3Do-7_V1yGGf8nRvu4bBj8uMOPUj89HJUdTOJFW2skLOhIQlfGCEMiyUEvU22Pq-z87ayCb9c9oyll-cwNGjtGdwmi0"/>
+<h5 class="font-body-medium text-body-medium text-on-surface mb-0.5">荷叶上的露珠</h5>
+<p class="font-label-caption text-label-caption text-outline">超疏水微纳结构排斥润湿，水滴在重力下依然保持高球度。</p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-md">
+<img class="w-full h-20 object-cover rounded mb-2" data-alt="Laboratory shot of a shiny liquid mercury droplet on a flat clean glass dish forming a convex rounded bead, metallic chrome reflections, crisp modern physics visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmw9Va9FwKJkolBmpxD2V_lfD2Eu5pXuICzKEhHIXElyW-wBCwvoTM_uhCUqXHChwZMFnlMdV8-940-8d8AA6B6eudiBvAw99-7eqh_980wXeXdn2L9awoGcXo6fjI9VT9G2UNPHAiUeBVuMzutHq3GECi56SG6YAnlfBNIPW6jewiNY2HmlmYF7wPXeR5Rl1oBf4hygkc2iCf4Wk050gxxnizn2PE9jjXoLgkwEoo7ZJNtOBq7hcB"/>
+<h5 class="font-body-medium text-body-medium text-on-surface mb-0.5">水银滴常温形态</h5>
+<p class="font-label-caption text-label-caption text-outline">水银表面张力极高（约为水的6倍），即使在地面也呈明显球珠状。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community / Discussion Slot -->
+<section class="px-margin-page mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-section text-headline-section text-on-surface">读者学友交流区</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-meta text-label-meta">4 条讨论</span>
+</div>
+<button class="text-primary font-label-caption text-label-caption flex items-center" type="button">
+          最新排序 <span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Comment 1 -->
+<div class="flex gap-space-md pb-space-md mb-space-md">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-title-card text-title-card flex-shrink-0">
+          星
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-medium text-body-medium text-on-surface">星际漫游者小林</span>
+<span class="font-label-meta text-label-meta text-outline">10分钟前</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant mb-space-xs">
+            看航天员太空授课时特别好奇这个！原来宏观的球体背后竟是热力学能量最小化的本能，微重力把微观的作用力放大了！
+          </p>
+<div class="flex items-center gap-space-md text-outline font-label-meta text-label-meta">
+<span class="flex items-center gap-1 active:text-primary"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 24</span>
+<span>回复</span>
+</div>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-title-card text-title-card flex-shrink-0">
+          陈
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-medium text-body-medium text-on-surface">陈同学 (格致物理社)</span>
+<span class="font-label-meta text-label-meta text-outline">1小时前</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant mb-space-xs">
+            建议大家课后试一下用甘油勾兑洗洁精吹泡泡，膜的拉伸张力肉眼可见！
+          </p>
+<div class="flex items-center gap-space-md text-outline font-label-meta text-label-meta">
+<span class="flex items-center gap-1 active:text-primary"><span class="material-symbols-outlined text-[14px]">thumb_up</span> 18</span>
+<span>回复</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom WeChat Action Dock -->
+<footer class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-md px-margin-page py-2 shadow-xl z-40 pb-safe">
+<div class="flex items-center justify-between gap-space-md h-12">
+<!-- Input Mock Field -->
+<div class="flex-1 h-10 bg-surface-container-low rounded-full px-space-md flex items-center gap-space-xs text-outline cursor-pointer active:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span class="font-body-default text-body-default text-outline">参与科学讨论...</span>
+</div>
+<!-- Quick Action Icons -->
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<button aria-label="点赞" class="w-10 h-10 flex flex-col items-center justify-center active:scale-90 transition-transform" id="likeBtn" type="button">
+<span class="material-symbols-outlined text-[22px] text-tertiary">thumb_up</span>
+<span class="text-[10px] font-label-meta text-outline">点赞</span>
+</button>
+<button aria-label="收藏" class="w-10 h-10 flex flex-col items-center justify-center active:scale-90 transition-transform" id="favBtn" type="button">
+<span class="material-symbols-outlined text-[22px] text-secondary">bookmark</span>
+<span class="text-[10px] font-label-meta text-outline">收藏</span>
+</button>
+<button aria-label="分享微课" class="w-10 h-10 flex flex-col items-center justify-center active:scale-90 transition-transform" id="shareBtn" type="button">
+<span class="material-symbols-outlined text-[22px] text-primary">share</span>
+<span class="text-[10px] font-label-meta text-outline">分享</span>
+</button>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interactions for WeChat Mini-Program feel
+  document.getElementById('playBtn')?.addEventListener('click', function() {
+    this.classList.toggle('scale-95');
+    alert('【演示环境提示】真实视频播放流暂未挂载，当前为科学港科普微课原型占位。');
+  });
+
+  const likeBtn = document.getElementById('likeBtn');
+  likeBtn?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    const isFilled = icon.style.fontVariationSettings.includes('1');
+    if (isFilled) {
+      icon.style.fontVariationSettings = "'FILL' 0";
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      this.classList.add('scale-125');
+      setTimeout(() => this.classList.remove('scale-125'), 180);
+    }
+  });
+
+  const favBtn = document.getElementById('favBtn');
+  favBtn?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    const isFilled = icon.style.fontVariationSettings.includes('1');
+    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+  });
+</script></main><script>window.EP_PAGE="K02";</script><script src="../routes.js"></script></body></html>

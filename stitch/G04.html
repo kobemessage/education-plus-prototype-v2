@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 我的活动报名记录</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">我的活动报名记录</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-6">
+<!-- Top Auxiliary Bar with Back & Demo Badge -->
+<div class="flex items-center justify-between py-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<button aria-label="返回上一页" class="w-8 h-8 rounded-full flex items-center justify-center bg-surface-container-high/60 active:scale-95 transition-transform text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<span class="font-headline-section text-headline-section text-on-surface font-semibold tracking-tight">我的活动报名</span>
+</div>
+<span class="font-label-meta text-label-meta px-space-xs py-space-2xs rounded bg-surface-container-highest text-on-surface-variant select-none">
+      [演示数据]
+    </span>
+</div>
+<!-- Filter Pills Segmented Group -->
+<div class="flex items-center gap-space-xs mb-space-md overflow-x-auto no-scrollbar py-space-2xs" id="filter-group">
+<button class="filter-pill flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-caption text-label-caption shadow-sm transition-all" data-filter="all" type="button">
+<span>全部</span>
+<span class="opacity-90 font-label-meta text-label-meta">(3)</span>
+</button>
+<button class="filter-pill flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface-variant font-label-caption text-label-caption shadow-sm transition-all" data-filter="upcoming" type="button">
+<span>待出行/已报名</span>
+<span class="opacity-80 font-label-meta text-label-meta">(2)</span>
+</button>
+<button class="filter-pill flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-lowest text-on-surface-variant font-label-caption text-label-caption shadow-sm transition-all" data-filter="completed" type="button">
+<span>已完成</span>
+<span class="opacity-80 font-label-meta text-label-meta">(1)</span>
+</button>
+</div>
+<!-- Registration Cards List -->
+<div class="flex flex-col gap-space-md" id="cards-container">
+<!-- Card 1: 待出行·小记者采风 -->
+<div class="activity-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md" data-status="upcoming">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded-full bg-on-primary-container text-primary font-label-meta text-label-meta font-medium">
+            小记者采风
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-primary/10 text-primary font-label-meta text-label-meta flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            待出行
+          </span>
+</div>
+<div class="flex items-center text-primary-container font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] mr-0.5">verified</span>
+<span>席位已确认</span>
+</div>
+</div>
+<!-- Title & Cover Thumbnail -->
+<div class="flex gap-space-md">
+<div class="flex-1 min-w-0">
+<h3 class="font-title-card text-title-card text-on-surface font-semibold leading-snug line-clamp-2">
+            《探访省农科院山地智慧农业实践采风》
+          </h3>
+<p class="font-label-meta text-label-meta text-on-surface-variant mt-1 font-mono">
+            单号：GZ-XJZ-20250524-038
+          </p>
+</div>
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Chinese primary school student reporter wearing green outdoor vest with camera exploring modern greenhouse technology and hydroponic agriculture at Guizhou Agricultural Science Academy, bright morning campus sunlight, cinematic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcrEqymTEs-h3WUbQMRYz79BSITzJnP6lL4_E3e6fMAyZqFNCTMN68O78DRiKNyipTXf4DRZSyrzi3wWF0F3-IwON_-gunvk5PFpXGO8aRIRj1WhcvuCbG22SH5OG9VgjYtEvMcZdgbtBjT19d2eDtBtuY8vrPxa7tzCkzzkLyQPlXx-VQL4o14syEj-YSyTADLc_SyDRCakKrpKrakzVbp1E6emNbayzCumpJgzVc4FjGVYHa6FBM"/>
+</div>
+</div>
+<!-- Info Details Box -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="text-on-surface font-medium">本周六 09:00 - 16:00</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span class="truncate">贵阳市花溪区省农科院山地现代农业实践基地</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+<span>报名学员：<strong class="text-on-surface font-medium">张小禾</strong> (三年级 · 小记者038号)</span>
+</div>
+</div>
+<!-- Primary Action -->
+<a class="w-full h-11 rounded-full bg-primary text-on-primary flex items-center justify-center gap-space-xs font-body-medium text-body-medium shadow-sm active:scale-[0.98] transition-transform" href="#/j03-ticket-code">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>查看入场凭证与签到码（进入J03）</span>
+</a>
+</div>
+<!-- Card 2: 待出行·高校开放日 -->
+<div class="activity-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md" data-status="upcoming">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-meta text-label-meta font-medium">
+            高校开放日
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-primary/10 text-primary font-label-meta text-label-meta">
+            待出行
+          </span>
+</div>
+<div class="flex items-center text-primary font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] mr-0.5">lock</span>
+<span>名额已锁定</span>
+</div>
+</div>
+<!-- Title & Cover Thumbnail -->
+<div class="flex gap-space-md">
+<div class="flex-1 min-w-0">
+<h3 class="font-title-card text-title-card text-on-surface font-semibold leading-snug line-clamp-2">
+            《走进贵州大学国家重点实验室开放日》
+          </h3>
+<p class="font-label-meta text-label-meta text-on-surface-variant mt-1">
+            审核结果：已通过学术研学委员会资质校验
+          </p>
+</div>
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Sunlit futuristic university key laboratory building surrounded by green pine trees and modern architecture at Guizhou University Huaxi campus, crisp academic atmosphere, blue sky, wide angle photographic shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH8uVWaVff9JbPXDkH12n-smH9mYegMjJN8TqoFDLwf6ho8UWfCIRroW2lMfBXyVTSPhoHBwY8wlEV0vyTG03BLdXeTiLNQa0BRirxqAN6uLAlP4b5r-yWvd9okTTTQOV9o8wsfrJmr1gUvYN0cAVaBUOoRURkOfjZfa9dgakTYMvD-qxYQ7O8MUlD8nDOg6sx_iNOvNaTWSiRhW0yfJMpP4A6To6ayoB2x7vAa8okxc7IwedJbC5j"/>
+</div>
+</div>
+<!-- Info Details Box -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="text-on-surface font-medium">下周六 09:30 - 16:00</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span class="truncate">贵大花溪南校区 · 喀斯特环境国家重点实验室</span>
+</div>
+</div>
+<!-- Secondary Action -->
+<a class="w-full h-11 rounded-full bg-surface-container-high text-primary flex items-center justify-center gap-space-xs font-body-medium text-body-medium active:scale-[0.98] transition-transform" href="#/k05-registration-details">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>查看报名详情（进入K05）</span>
+</a>
+</div>
+<!-- Card 3: 已完成·报史馆采风 -->
+<div class="activity-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md" data-status="completed">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-on-surface-variant font-label-meta text-label-meta font-medium">
+            报史馆采风
+          </span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">
+            已完成
+          </span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-meta text-label-meta font-semibold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[13px]">award_star</span>
+          已获 4.0 实践学时
+        </span>
+</div>
+<!-- Title & Cover Thumbnail -->
+<div class="flex gap-space-md">
+<div class="flex-1 min-w-0">
+<h3 class="font-title-card text-title-card text-on-surface font-semibold leading-snug line-clamp-2">
+            《走进贵州教育报史馆：寻找铅字背后的时代记忆》
+          </h3>
+<p class="font-label-meta text-label-meta text-on-surface-variant mt-1">
+            结业记录：已完成采风手记提交与导师评定
+          </p>
+</div>
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Vintage movable metal letterpress printing types and historic educational newspapers exhibition inside Guizhou Education Press Museum, warm ambient museum spot light, scholarly documentary texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT5FjcMOyAqiM105ySq2igvhEC6pocv2DATPTCAgU_BeKc0sJZ59qn1eYl_IA1EDPHPUM1al4qT7n5dhg5yP5p1KetHDpoo6rDS9UiDENZo0_DxdEhW9r3sGet-1-Of6jBKdxbI_A_3lopugL9GfUzcSNawuSyEIDaaeM4UGsBI7_qhwxpInIAc8THwasLVv0o8QH1WzS0XUPdtb0SKQnrKY4yJGDRPy-4oUq_IvKa2SAsLCjpqUQP"/>
+</div>
+</div>
+<!-- Result Micro Summary -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">task_alt</span>
+<span>现场签到与研学报告已归档</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary font-medium">查看证书 ›</span>
+</div>
+<!-- Completed Action Button -->
+<a class="w-full h-11 rounded-full bg-surface-container-low text-on-surface flex items-center justify-center gap-space-xs font-body-medium text-body-medium active:scale-[0.98] transition-transform" href="#/j04-activity-review">
+<span class="material-symbols-outlined text-[18px] text-tertiary">history_edu</span>
+<span>查看活动回顾与心得（进入J04）</span>
+</a>
+</div>
+</div>
+<!-- Bottom Guidelines & Consultation Section -->
+<div class="mt-space-lg rounded-2xl bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+<div class="flex flex-col gap-space-2xs">
+<h4 class="font-label-caption text-label-caption font-semibold text-on-surface">活动出行与核销提示</h4>
+<p class="font-label-meta text-label-meta text-on-surface-variant leading-relaxed">
+          电子报名凭证与动态签到码为活动现场资格核销的唯一凭证，请提前出示。本平台所有研学实践活动均为<span class="text-primary font-medium">公益免费开放</span>，严禁私下转让名额。
+        </p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">组委会咨询热线 (工作日 09:00-17:30)</span>
+<a class="flex items-center gap-space-2xs text-primary font-label-caption text-label-caption font-semibold active:opacity-75" href="tel:0851-88600120">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>0851-88600120</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const filterGroup = document.getElementById('filter-group');
+    if (!filterGroup) return;
+    const buttons = filterGroup.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('#cards-container .activity-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Toggle pill visual states
+        buttons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        this.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        this.classList.add('bg-primary', 'text-on-primary');
+
+        const filterVal = this.getAttribute('data-filter');
+        cards.forEach(card => {
+          const status = card.getAttribute('data-status');
+          if (filterVal === 'all' || status === filterVal) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="G04";</script><script src="../routes.js"></script></body></html>

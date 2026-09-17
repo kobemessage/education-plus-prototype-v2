@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20 pb-28"><header class="fixed top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-10 h-10 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[200px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">小记者在线投稿</h1></div><div class="flex items-center gap-space-xs"><span class="px-space-xs py-0.5 bg-surface-container-high rounded text-[11px] text-outline font-label-meta tracking-wide">[演示数据]</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface"><div class="flex flex-col w-full px-margin-page py-space-md space-y-space-md">
+<!-- 头部提示横幅 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-primary/15 relative overflow-hidden">
+<div class="absolute -right-5 -bottom-5 w-20 h-20 rounded-full bg-primary/5 pointer-events-none"></div>
+<div class="flex items-start space-x-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-space-xs">
+<h2 class="font-title-card text-title-card text-on-surface">贵州教育报·校园小记者</h2>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-semibold">稿件征集平台</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1 leading-relaxed">
+        所有来稿由报社采编专家集中初审，优秀作品将刊登于《贵州教育报》学生版并收入成长档案。
+      </p>
+</div>
+</div>
+</div>
+<!-- 投稿基本信息表单 -->
+<form class="space-y-space-md" id="articleForm" onsubmit="return false;">
+<!-- 稿件内容卡片 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-2xs border-b border-surface-container">
+<div class="flex items-center space-x-space-xs">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h3 class="font-title-card text-title-card text-on-surface">稿件内容</h3>
+</div>
+<span class="text-[11px] text-outline font-label-meta">带 * 为必填项</span>
+</div>
+<!-- 稿件分类单选 -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-body-medium text-body-medium text-on-surface">
+          稿件分类 <span class="text-error">*</span>
+</label>
+<span class="font-label-meta text-label-meta text-outline">选择最匹配的体裁</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs" id="categorySelector">
+<button class="cat-btn py-2 px-1 rounded-xl border border-primary bg-primary/10 text-primary font-body-medium text-body-medium flex items-center justify-center space-x-1 transition-all" id="cat-news" onclick="selectCategory('news')" type="button">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>校园新闻</span>
+</button>
+<button class="cat-btn py-2 px-1 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium flex items-center justify-center space-x-1 transition-all" id="cat-interview" onclick="selectCategory('interview')" type="button">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+<span>人物专访</span>
+</button>
+<button class="cat-btn py-2 px-1 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium flex items-center justify-center space-x-1 transition-all" id="cat-notes" onclick="selectCategory('notes')" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+<span>观察手记</span>
+</button>
+</div>
+<input id="selectedCategory" type="hidden" value="news"/>
+</div>
+<!-- 稿件标题输入 -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-body-medium text-body-medium text-on-surface" for="artTitle">
+          稿件标题 <span class="text-error">*</span>
+</label>
+<span class="font-label-meta text-label-meta text-outline" id="titleCount">24/30</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-space-md bg-surface-container-low rounded-lg font-body-default text-body-default text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all border border-transparent focus:border-transparent" id="artTitle" maxlength="30" oninput="updateTitleCount(this)" placeholder="请输入简明生动的稿件标题" required="" type="text" value="《大山深处的朗朗书声：走访乡村智慧图书角手记》"/>
+</div>
+</div>
+<!-- 采写正文文本域 -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-body-medium text-body-medium text-on-surface" for="artContent">
+          采写正文 <span class="text-error">*</span>
+</label>
+<span class="font-label-meta text-label-meta text-outline" id="contentCount">650/1500 字</span>
+</div>
+<div class="relative">
+<textarea class="w-full h-44 p-space-md bg-surface-container-low rounded-lg font-body-default text-body-default text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all border border-transparent focus:border-transparent resize-none leading-relaxed" id="artContent" maxlength="1500" oninput="updateContentCount(this)" placeholder="请按新闻事实记录采访过程、现场观察或对话精彩语录..." required="">清晨，薄雾还笼罩在花溪区高坡乡的梯田上，一所依山而建的小学里已经响起了清脆悦耳的晨读声。作为《贵州教育报》校园小记者，我带着采写本和录音笔，走进刚落成不久的“乡村智慧图书角”。
+
+一排排整洁的原木色书架上，整齐摆放着科普读本、名著绘本和少儿科幻杂志。五年级的班长王浩同学笑着告诉我：“以前村里图书少，借一本故事书要跑好几里地，现在智慧图书角里不仅有新书，还能扫码听名师在线导读！”
+
+在图书角一角，我采访了驻校帮扶的科技特派员陈老师。他正耐心地指导孩子们使用平板电脑检索农业科技科普小动画。“让大山里的孩子同享优质阅读资源，就是智慧教育下沉的意义。”陈老师动情地说。
+
+通过一整天的观察与手记，我真切感受到书香正在润泽更多乡村少年的心田。笔墨记录当下，镜头定格希望，这是一次难忘的采写实践。</textarea>
+</div>
+</div>
+<!-- 现场实拍配图上传区 -->
+<div class="space-y-space-xs pt-space-2xs">
+<div class="flex items-center justify-between">
+<label class="font-body-medium text-body-medium text-on-surface">
+          现场实拍配图
+        </label>
+<span class="font-label-meta text-label-meta text-outline" id="photoCountTip">已上传 2/4 张</span>
+</div>
+<p class="font-label-meta text-label-meta text-outline">请上传高清横版或竖版实拍照片，支持 jpg / png</p>
+<div class="grid grid-cols-4 gap-space-xs pt-1" id="photoGrid">
+<!-- Photo 1 (Existing) -->
+<div class="relative aspect-square rounded-lg overflow-hidden border border-outline-variant/60 bg-surface-container group" id="photo-item-1">
+<img alt="采访图书角现场" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgE4SqCg8BbX5bI7jb58vD4uS7CVngPxz9OsXSHWTAWx-TPwok6-zv9kb07irhKJJ8phDsh-1UKNNIZ_WU5qX_nxNmWsim52sEYF2mABQmjaIuBPo3ObUiRvz--eH92ahDx4Ak1sSVUtdgbH2nP2bZTdyHYCsGVOmkM6Ip_MtgfD2VjhhUwhrdTKVek9TIDS6RjZX5uP_4qALmjKPkYeG5AMZtYYjZcqV74n7YuvGz8HLG_3eR80Fm"/>
+<button aria-label="删除照片" class="absolute top-1 right-1 w-5 h-5 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors" onclick="removePhoto(1)" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+<span class="absolute bottom-0 inset-x-0 bg-black/50 text-[9px] text-white text-center py-0.5 truncate px-0.5">图书角</span>
+</div>
+<!-- Photo 2 (Existing) -->
+<div class="relative aspect-square rounded-lg border border-outline-variant/60 bg-surface-container overflow-hidden group" id="photo-item-2">
+<img alt="采访辅导老师" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgi8fvi9AOiLYMOPZ7JZvLjQrFRTPAyDCjxPmHlyMpirfPiyeIIi98lEbxBgR8TDSnSkbokravd_zSO1N1ZmyoWZVdLIXkHw640j8n8BH_xSvHCFT2ZQ8vQeABTVZ74GNit3xloeHyF5TqR7y85jVz8AHppu6PHqlkL6vn26bCbe3cmzIm0VjskQajSklIRFCSoAemv_d_Yvi51mn4kh6bkbNOQlzXjUN5rcWqNZ2iQ47-Sf6kEire"/>
+<button aria-label="删除照片" class="absolute top-1 right-1 w-5 h-5 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors" onclick="removePhoto(2)" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+<span class="absolute bottom-0 inset-x-0 bg-black/50 text-[9px] text-white text-center py-0.5 truncate px-0.5">师生共读</span>
+</div>
+<!-- Add Photo Slot -->
+<button class="aspect-square rounded-lg border-2 border-dashed border-primary/40 bg-primary/5 flex flex-col items-center justify-center text-primary active:scale-95 transition-transform" onclick="triggerUpload()" type="button">
+<span class="material-symbols-outlined text-[24px]">add_a_photo</span>
+<span class="text-[10px] font-medium mt-0.5">添加照片</span>
+</button>
+<!-- Placeholder Slot -->
+<div class="aspect-square rounded-lg border border-dashed border-outline-variant/50 bg-surface-container-low/40 flex flex-col items-center justify-center text-outline/60">
+<span class="material-symbols-outlined text-[20px]">image</span>
+<span class="text-[9px] mt-0.5">最多4张</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 采写作者与学校信息 (已认证) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-2xs border-b border-surface-container">
+<div class="flex items-center space-x-space-xs">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h3 class="font-title-card text-title-card text-on-surface">采写作者信息</h3>
+</div>
+<span class="flex items-center text-primary font-label-meta text-label-meta bg-primary/10 px-space-xs py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px] mr-1" style="font-variation-settings: 'FILL' 1;">verified</span>
+        学籍与记者卡认证
+      </span>
+</div>
+<div class="space-y-space-xs pt-space-2xs">
+<div class="flex items-center justify-between py-1">
+<span class="font-body-default text-body-default text-on-surface-variant">小记者姓名</span>
+<div class="flex items-center space-x-space-xs">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">林奕辰</span>
+<span class="px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed-variant rounded text-[10px] font-label-meta">主采小记者</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-default text-body-default text-on-surface-variant">在读学校班级</span>
+<span class="font-body-medium text-body-medium text-on-surface">贵阳第一实验小学 五年级(3)班</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-default text-body-default text-on-surface-variant">小记者证号</span>
+<span class="font-body-medium text-body-medium text-on-surface font-mono text-[13px]">GZXJZ-2024-0829</span>
+</div>
+<!-- 指导老师姓名输入框 (选填) -->
+<div class="pt-space-xs">
+<div class="flex items-center justify-between mb-1">
+<label class="font-body-medium text-body-medium text-on-surface" for="teacherName">
+            指导老师姓名
+          </label>
+<span class="font-label-meta text-label-meta text-outline">选填</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline text-[18px]">school</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low rounded-lg font-body-default text-body-default text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all border border-transparent focus:border-transparent" id="teacherName" placeholder="例如：林静 老师" type="text" value="林静 老师"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 原创与真实性承诺勾选框 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<label class="flex items-start space-x-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer" id="agreementCheck" type="checkbox"/>
+<span class="font-label-caption text-label-caption text-on-surface-variant leading-relaxed">
+        我保证本篇文稿为校园真实采写与独立创作，文责自负，同意授权《贵州教育报》公益刊发与作品展播。
+      </span>
+</label>
+</div>
+</form>
+</div>
+<!-- 底部固定操作栏 -->
+<aside aria-label="提交操作栏" class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md border-t border-surface-container-high px-margin-page py-space-sm pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<button class="flex-1 h-12 bg-primary hover:bg-primary-container text-on-primary rounded-full font-title-card text-title-card shadow-md active:scale-98 transition-all flex items-center justify-center space-x-space-xs" onclick="handleSubmitArticle()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>确认提交并送审</span>
+</button>
+</div>
+</aside>
+<!-- 提交成功模态框 -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden px-margin-page transition-all" id="successModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-xs p-space-xl text-center space-y-space-md shadow-2xl animate-scaleUp border border-primary/10">
+<div class="w-16 h-16 mx-auto rounded-full bg-primary-fixed flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<div>
+<h4 class="font-headline-page text-headline-page text-on-surface">投稿提交成功！</h4>
+<p class="font-body-default text-body-default text-on-surface-variant mt-2 leading-relaxed text-[13px]">
+        稿件已送达报社编辑部初审队列，预计2个工作日内反馈审核意见。
+      </p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm text-left font-label-meta text-label-meta space-y-1.5 border border-outline-variant/30">
+<div class="flex justify-between items-center">
+<span class="text-outline">稿件编号：</span>
+<span class="font-mono text-on-surface font-semibold text-[12px]">SUB-20250524-0318</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">投稿体裁：</span>
+<span class="text-primary font-medium" id="modalCategoryLabel">校园新闻</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">初审状态：</span>
+<span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-medium">编辑部待分发</span>
+</div>
+</div>
+<div class="space-y-space-xs pt-space-2xs">
+<button class="w-full h-11 bg-primary text-on-primary rounded-full font-title-card text-title-card active:scale-95 transition-transform flex items-center justify-center space-x-1 shadow-sm" onclick="goToProgress()" type="button">
+<span>查看投稿进度 (前往J03)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full h-9 text-outline font-label-caption text-label-caption active:text-on-surface transition-colors" onclick="goToHome()" type="button">
+        返回小记者首页
+      </button>
+</div>
+</div>
+</div>
+</main>
+<script>
+  var currentCategory = 'news';
+  var categoryNames = {
+    'news': '校园新闻',
+    'interview': '人物专访',
+    'notes': '观察手记'
+  };
+
+  function selectCategory(cat) {
+    currentCategory = cat;
+    document.getElementById('selectedCategory').value = cat;
+
+    var keys = ['news', 'interview', 'notes'];
+    keys.forEach(function(k) {
+      var btn = document.getElementById('cat-' + k);
+      if (k === cat) {
+        btn.className = 'cat-btn py-2 px-1 rounded-xl border border-primary bg-primary/10 text-primary font-body-medium text-body-medium flex items-center justify-center space-x-1 transition-all ring-1 ring-primary';
+      } else {
+        btn.className = 'cat-btn py-2 px-1 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium flex items-center justify-center space-x-1 transition-all';
+      }
+    });
+  }
+
+  function updateTitleCount(input) {
+    var count = input.value.length;
+    document.getElementById('titleCount').innerText = count + '/30';
+  }
+
+  function updateContentCount(textarea) {
+    var count = textarea.value.length;
+    document.getElementById('contentCount').innerText = count + '/1500 字';
+  }
+
+  function removePhoto(id) {
+    var el = document.getElementById('photo-item-' + id);
+    if (el) {
+      el.remove();
+      var remaining = document.querySelectorAll('#photoGrid [id^="photo-item-"]').length;
+      document.getElementById('photoCountTip').innerText = '已上传 ' + remaining + '/4 张';
+    }
+  }
+
+  function triggerUpload() {
+    var remaining = document.querySelectorAll('#photoGrid [id^="photo-item-"]').length;
+    if (remaining >= 4) {
+      alert('最多只支持上传 4 张实拍配图');
+      return;
+    }
+    alert('已调起相册/相机，可选择采访现场实拍原图');
+  }
+
+  function handleSubmitArticle() {
+    var title = document.getElementById('artTitle').value.trim();
+    var content = document.getElementById('artContent').value.trim();
+    var agreement = document.getElementById('agreementCheck').checked;
+
+    if (!title) {
+      alert('请填写稿件标题');
+      document.getElementById('artTitle').focus();
+      return;
+    }
+    if (!content) {
+      alert('请填写采写正文');
+      document.getElementById('artContent').focus();
+      return;
+    }
+    if (!agreement) {
+      alert('请确认并勾选原创真实性承诺');
+      return;
+    }
+
+    document.getElementById('modalCategoryLabel').innerText = categoryNames[currentCategory] || '校园新闻';
+    document.getElementById('successModal').classList.remove('hidden');
+  }
+
+  function goToProgress() {
+    document.getElementById('successModal').classList.add('hidden');
+    alert('正在前往 [J03 投稿审核与刊发进度] 页面...');
+  }
+
+  function goToHome() {
+    document.getElementById('successModal').classList.add('hidden');
+    alert('返回小记者工作台首页');
+  }
+</script>
+<script>window.EP_PAGE="J02";</script><script src="../routes.js"></script></body></html>

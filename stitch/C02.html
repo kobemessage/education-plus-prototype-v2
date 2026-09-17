@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">直播课堂</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full pb-24">
+<!-- 顶部面包屑/返回引导标签 -->
+<div class="px-margin-page py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-body-medium text-body-medium">公益课</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-meta bg-surface-container text-outline">演示数据</span>
+</div>
+<!-- 1. 直播视频演示窗口 (16:9 比例) -->
+<div class="relative w-full aspect-video bg-inverse-surface overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover opacity-85" data-alt="A brightly lit modern university lecture amphitheater with tiered wooden seating, filled with engaged college students listening to a respected male professor in smart casual attire gesturing warmly towards a large projection screen displaying historical slides and green botanical emblems, captured in natural academic tones with teal lighting accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS0Vy5B6VJzbGV4gsr4g8CJtMFBt5TzSIQwbnUjqfRvf81o5XCvfCbPVEu7izKbzbNdqcRVLGgwx2CtFbxXhr570bktgQU9z3tsIraFd7zHe5RN5oWVVlTBXyQsMiL4iWf5bfPOwurfaP7nBDpvCdZNpZTnO9hDtIw7bGDgh1QDHRs7UPkdwj3QkAfn5jTYRfZ8qwKnow9ojZNK15Ypgu6bvGa_DKDUXsDCm2oJ5UvstSQFqrhn0pq"/>
+<!-- 顶部状态浮层 -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-inverse-surface/80 backdrop-blur-md text-on-primary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span class="font-label-caption text-label-caption text-on-primary font-medium">直播中</span>
+<span class="text-[10px] opacity-75 font-label-meta">· [演示数据]</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-inverse-surface/70 backdrop-blur-md text-on-primary text-[11px] font-label-meta">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>超清 1080P</span>
+</div>
+</div>
+<!-- 核心提示浮层 (占位标语) -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-[2px]">
+<div class="p-3 rounded-full bg-primary/30 backdrop-blur-md mb-2 text-primary-fixed">
+<span class="material-symbols-outlined text-[32px] block">smart_display</span>
+</div>
+<p class="font-title-card text-title-card text-on-primary text-center tracking-wide drop-shadow-sm">视频演示占位，未接真实视频源</p>
+<p class="font-label-caption text-label-caption text-surface-container-high/90 mt-1">音画同步模块已就绪 · 公益课数字教研系统</p>
+</div>
+<!-- 底部控制指示条 -->
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary text-xs">
+<span class="font-label-meta text-label-meta bg-inverse-surface/60 px-2 py-0.5 rounded">实况延迟: 0.4s</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</div>
+</div>
+</div>
+<div class="px-margin-page mt-space-md flex flex-col gap-space-md">
+<!-- 2. 直播状态与实时数据看板 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-meta bg-primary/10 text-primary font-medium">思想政治专题</span>
+<span class="text-outline text-[11px] font-label-meta">今日 14:30 开播</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-on-surface mt-1.5 truncate">新时代青少年的理想与担当</h2>
+</div>
+<button class="flex flex-col items-center justify-center w-12 h-12 rounded-xl bg-surface-container-low text-primary active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">share</span>
+<span class="text-[10px] font-label-meta mt-0.5">邀请</span>
+</button>
+</div>
+<!-- 讲师与数据微模块 -->
+<div class="flex items-center justify-between pt-2 border-none bg-surface-container-low/60 rounded-lg px-3 py-2.5">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold overflow-hidden shadow-sm">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-card text-title-card text-on-surface text-[15px]">郭振华 教授</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-medium">特聘专家</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant text-[12px]">马克思主义学院青年德育研究中心</p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-center justify-end gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span class="font-title-card text-title-card text-[15px] font-bold">1,420</span>
+</div>
+<p class="font-label-meta text-label-meta text-outline mt-0.5">人在学 · [演示数据]</p>
+</div>
+</div>
+</div>
+<!-- 3. 课程简介卡片 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-4 rounded-full bg-primary"></div>
+<h3 class="font-title-card text-title-card text-on-surface">课程提要与导学</h3>
+</div>
+<span class="text-outline text-label-caption font-label-caption">第 3 讲 / 共 6 讲</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+        本讲座聚焦百年未有之大变局背景下，青年学子如何将个人志向与社会发展紧密融合。从遵义会议的重大转折历史经验切入，深入阐述当代青年的战略定力与实践底气。
+      </p>
+<!-- 重点思辨问题引导 -->
+<div class="bg-primary/5 rounded-lg p-3 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="font-body-medium text-body-medium text-[13px] font-semibold">本期思辨思考题：</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant pl-5 leading-normal">
+          “青年人应如何在日常专业研习中，找到践行时代责任的具体切入点？”
+        </p>
+</div>
+</div>
+<!-- 4. 互动讨论区 (弹幕/留言流) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-4 rounded-full bg-secondary"></div>
+<h3 class="font-title-card text-title-card text-on-surface">研讨交流</h3>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-meta bg-secondary-fixed text-on-secondary-fixed">实时互动</span>
+</div>
+<span class="text-[11px] font-label-meta text-outline">[演示数据流]</span>
+</div>
+<!-- 留言列表 -->
+<div class="flex flex-col gap-space-sm" id="chat-stream">
+<!-- 留言 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary/15 flex items-center justify-center text-secondary font-semibold text-xs shrink-0">
+            林
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-on-surface font-semibold">林晨（法学院22级）</span>
+<span class="text-[10px] font-label-meta text-outline">14:38</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant text-[13px] mt-0.5">
+              遵义会议的历史转折讲得很透彻！尤其说到把舵定向的决策智慧，对我们的现实课题研究启发很大。
+            </p>
+</div>
+</div>
+<!-- 留言 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center text-primary font-semibold text-xs shrink-0">
+            陈
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-label-caption text-label-caption text-on-surface font-semibold">陈老师（辅导员）</span>
+<span class="text-[9px] px-1 bg-primary text-on-primary rounded font-label-meta">带班研讨</span>
+</div>
+<span class="text-[10px] font-label-meta text-outline">14:41</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant text-[13px] mt-0.5">
+              做好笔记，周末结合研学再思考。周一主题班会我们展开分组深度交流。
+            </p>
+</div>
+</div>
+<!-- 留言 3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-full bg-tertiary/15 flex items-center justify-center text-tertiary font-semibold text-xs shrink-0">
+            张
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-on-surface font-semibold">张宇轩（计算机系）</span>
+<span class="text-[10px] font-label-meta text-outline">14:43</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant text-[13px] mt-0.5">
+              郭老师提到“将代码写在祖国大地上”，作为工科生深受鼓舞！为老师献上一束鲜花 💐！
+            </p>
+</div>
+</div>
+</div>
+<!-- 友情提示 -->
+<div class="flex items-center justify-center gap-1 text-[11px] font-label-meta text-outline pt-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+<span>演示网络环境已开启发言过滤与文明监督</span>
+</div>
+</div>
+</div>
+<!-- 5. 底部固定互动栏与免责声明提示 -->
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)] z-40">
+<div class="px-margin-page py-2 flex items-center gap-2">
+<!-- 课件讲义预览入口按钮 -->
+<button class="flex flex-col items-center justify-center h-10 w-11 rounded-lg bg-surface-container-low text-primary active:scale-95 transition-transform shrink-0" id="btn-slide" title="课件讲义" type="button">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-[9px] font-label-meta mt-0.5 leading-none">讲义</span>
+</button>
+<!-- 留言输入框 -->
+<div class="flex-1 relative flex items-center">
+<input class="w-full h-10 pl-3.5 pr-9 bg-surface-container-low rounded-full font-body-default text-body-default text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container text-sm" id="chat-input" placeholder="发一条文明互动发言…" type="text"/>
+<button class="absolute right-1 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center active:scale-90 transition-transform" id="btn-send" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+<!-- 点赞送花互动按钮 -->
+<button class="relative flex items-center justify-center h-10 px-3 gap-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-title-card text-[13px] active:scale-95 transition-transform shrink-0 shadow-sm" id="btn-flower" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+<span id="flower-count">368</span>
+</button>
+</div>
+<!-- 免责提示 (不承诺免流与额外认证) -->
+<div class="px-margin-page pb-1 text-center">
+<p class="text-[10px] font-label-meta text-outline leading-tight">
+        * 提示：本页数据与流媒体均为模拟演示，不消耗校园网专属免流包，亦不代表已完成课程实名认证学时记录。
+      </p>
+</div>
+</div>
+<!-- 轻量讲义预览浮层 (默认隐藏) -->
+<div class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 hidden flex items-end justify-center" id="slide-modal">
+<div class="w-full max-w-[390px] bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-3 shadow-xl max-h-[70vh] overflow-y-auto">
+<div class="flex items-center justify-between border-b pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+<h4 class="font-title-card text-title-card text-on-surface">特邀讲义预览 · [演示数据]</h4>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full text-outline hover:text-on-surface" id="btn-close-slide" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2.5 text-on-surface-variant font-body-default text-body-default text-sm">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="font-semibold text-on-surface">第一章：时代坐标中的使命感</p>
+<p class="text-xs text-outline mt-1">从国家现代化战略看当代青年担当与专业成才路径。</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="font-semibold text-on-surface">第二章：遵义精神的当代价值</p>
+<p class="text-xs text-outline mt-1">坚持真理、科学应变与大学生创新开拓精神。</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="font-semibold text-on-surface">第三章：知行合一的实践方法</p>
+<p class="text-xs text-outline mt-1">如何从校园研学、志愿服务起步走向基层广阔天地。</p>
+</div>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary rounded-xl font-title-card text-[14px] mt-1 shadow-sm" id="btn-confirm-slide" type="button">
+        关闭预览
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 送花微交互逻辑
+    const btnFlower = document.getElementById('btn-flower');
+    const flowerCountEl = document.getElementById('flower-count');
+    let flowerCount = 368;
+
+    if (btnFlower && flowerCountEl) {
+      btnFlower.addEventListener('click', function() {
+        flowerCount++;
+        flowerCountEl.textContent = flowerCount;
+        
+        // 动态轻微弹跳反馈
+        btnFlower.classList.add('scale-110');
+        setTimeout(() => {
+          btnFlower.classList.remove('scale-110');
+        }, 150);
+      });
+    }
+
+    // 弹幕留言微交互
+    const btnSend = document.getElementById('btn-send');
+    const inputChat = document.getElementById('chat-input');
+    const chatStream = document.getElementById('chat-stream');
+
+    function sendChatMessage() {
+      const text = inputChat.value.trim();
+      if (!text) return;
+
+      const newMsg = document.createElement('div');
+      newMsg.className = 'p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2.5 transition-all duration-300';
+      newMsg.innerHTML = `
+        <div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-semibold text-xs shrink-0">
+          我
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1">
+              <span class="font-label-caption text-label-caption text-on-surface font-semibold">您（现场学员）</span>
+              <span class="text-[9px] px-1 bg-primary/20 text-primary rounded font-label-meta">刚刚</span>
+            </div>
+          </div>
+          <p class="font-body-default text-body-default text-on-surface text-[13px] mt-0.5 font-medium">
+            ${text.replace(/</g, '<').replace(/>/g, '>')}
+          </p>
+        </div>
+      `;
+      chatStream.prepend(newMsg);
+      inputChat.value = '';
+    }
+
+    if (btnSend && inputChat) {
+      btnSend.addEventListener('click', sendChatMessage);
+      inputChat.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          sendChatMessage();
+        }
+      });
+    }
+
+    // 讲义弹窗开关
+    const btnSlide = document.getElementById('btn-slide');
+    const slideModal = document.getElementById('slide-modal');
+    const btnCloseSlide = document.getElementById('btn-close-slide');
+    const btnConfirmSlide = document.getElementById('btn-confirm-slide');
+
+    function openModal() {
+      if (slideModal) slideModal.classList.remove('hidden');
+    }
+    function closeModal() {
+      if (slideModal) slideModal.classList.add('hidden');
+    }
+
+    if (btnSlide) btnSlide.addEventListener('click', openModal);
+    if (btnCloseSlide) btnCloseSlide.addEventListener('click', closeModal);
+    if (btnConfirmSlide) btnConfirmSlide.addEventListener('click', closeModal);
+  })();
+</script></main><script>window.EP_PAGE="C02";</script><script src="../routes.js"></script></body></html>

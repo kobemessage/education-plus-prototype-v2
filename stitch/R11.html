@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">阅读排行</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full pb-10">
+<!-- Top Scope & Demo Banner -->
+<div class="px-margin-page pt-space-md pb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-headline-section text-headline-section text-on-surface">书香领航周榜</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>[演示数据]</span>
+</div>
+</div>
+<!-- Segmented Tabs -->
+<div class="px-margin-page mt-space-sm">
+<div class="bg-surface-container-low p-1 rounded-xl flex items-center shadow-sm">
+<button class="flex-1 py-2 px-1 text-center rounded-lg font-body-medium text-body-medium transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1" id="tab-class" onclick="switchScope('class')">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>班级榜</span>
+</button>
+<button class="flex-1 py-2 px-1 text-center rounded-lg font-body-medium text-body-medium transition-all duration-200 text-on-surface-variant flex items-center justify-center gap-1" id="tab-school" onclick="switchScope('school')">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>全校榜</span>
+</button>
+<button class="flex-1 py-2 px-1 text-center rounded-lg font-body-medium text-body-medium transition-all duration-200 text-on-surface-variant flex items-center justify-center gap-1" id="tab-region" onclick="switchScope('region')">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>区域榜</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Scope Subtitle & Weekly Countdown -->
+<div class="px-margin-page mt-space-sm flex items-center justify-between text-on-surface-variant font-label-caption text-label-caption">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+<span class="font-medium text-on-surface" id="scope-description">初二 (3) 班 · 晨读共研组</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high/60 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px] text-tertiary">hourglass_top</span>
+<span>结算倒计时 2天14时</span>
+</div>
+</div>
+<!-- My Sticky Rank Card -->
+<div class="px-margin-page mt-space-md">
+<div class="relative overflow-hidden rounded-xl bg-primary-fixed/30 p-space-md shadow-sm">
+<!-- Decorative background accent glow -->
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Warm studio photographic portrait of a teenage Chinese male student in a neat teal school tracksuit smiling gently against a bright library bookshelf backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu7CNPQp02P9MueHAbGFq04qKdshepS3vcsDS3e8V_9PbpjdpCh6nkMmQayL8-F-AF-3W3No_QOnlDTUko2Y6j_62mEQl3FzmmQPNYJ6FtVYQLLgggJ4PHvOHPcJKePAOVi4i3NqlYA-wYkoSqO-6CZYS1LFgMSL2-P8WU842dhdVSYdIKCbNXmxiZ7IqGZwOyhldQYjf08B_8TNQq4IJ4WX3nmMUPSclT1kf7_uiNeXbMaG7EFGzW"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary text-[10px] font-label-meta px-1.5 py-0.2 rounded-full ring-2 ring-surface-container-lowest">我</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-card text-title-card text-on-surface truncate">张子墨</span>
+<span class="px-1.5 py-0.2 rounded text-[11px] font-label-meta bg-primary-container/15 text-primary-container">初二(3)班</span>
+</div>
+<p class="font-label-meta text-label-meta text-on-surface-variant mt-0.5" id="rank-gap-text">
+              当前第 <span class="font-bold text-primary text-body-medium">8</span> 名 · 距前一名仅差 <span class="text-tertiary font-bold">35</span> 分
+            </p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-display-stat text-display-stat text-primary" id="my-score">1,280</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">阅读积分</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="mt-space-sm pt-space-xs grid grid-cols-3 gap-2 bg-surface-container-lowest/80 backdrop-blur-sm rounded-lg p-2 text-center">
+<div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">打卡坚持</div>
+<div class="font-body-medium text-body-medium text-on-surface mt-0.5">12 <span class="font-label-meta text-label-meta">天</span></div>
+</div>
+<div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">深读名著</div>
+<div class="font-body-medium text-body-medium text-on-surface mt-0.5">2 <span class="font-label-meta text-label-meta">本</span></div>
+</div>
+<div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">周超越率</div>
+<div class="font-body-medium text-body-medium text-primary mt-0.5" id="my-percentile">78.4%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Podium Section: Top 3 Rankers -->
+<div class="px-margin-page mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">workspace_premium</span>
+<span class="font-headline-section text-headline-section text-on-surface">领读金榜前三强</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">精研勋章已点亮</span>
+</div>
+<!-- 3-Column Podium -->
+<div class="grid grid-cols-3 gap-2 items-end pt-5 pb-2">
+<!-- 2nd Place: Silver (Left) -->
+<div class="flex flex-col items-center bg-surface-container-low/70 rounded-xl p-2.5 relative pt-6 shadow-sm">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[20px] text-outline" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-surface-container-highest" data-alt="Portrait photo of a junior middle school girl with glasses reading a book calmly, soft morning sunlight in an academic reading room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGG1js9pefQnIGS99T9nk-_EppDO3RdJlH2dDor9ncCAi4jbwB1Jywu9k9EpVtpwWHd99B9aBSfM4rfgLFI75a9d1tiRhqoVtyjJbMsyfIFwzWvlMxGuCyFPoHP_IpvYzu-wI5-R7gAnQa2Pr_Aa2f8bnNwW0MYBXFdN-Ayt0J_5G_YNxSPKhqsGnXF1TXYc4tQlbOZm3PoJUQUv8ZmOJEI4gCFhDTWbCowWzAn13buPBodi8Icev_"/>
+<span class="mt-1.5 font-body-medium text-body-medium text-on-surface truncate w-full text-center" id="p2-name">苏沐雨</span>
+<span class="font-title-card text-title-card text-on-surface font-semibold mt-0.5" id="p2-pts">2,110</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant scale-90">打卡 35 天</span>
+<div class="mt-2 w-full py-1 text-center rounded bg-surface-container font-label-meta text-label-meta text-on-surface-variant">
+          第 2 名
+        </div>
+</div>
+<!-- 1st Place: Gold (Center Elevated) -->
+<div class="flex flex-col items-center bg-tertiary-fixed/40 rounded-xl p-2.5 relative pt-8 shadow-md">
+<div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-tertiary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px] text-on-tertiary" style="font-variation-settings: 'FILL' 1;">trophy</span>
+</div>
+<img class="w-14 h-14 rounded-full object-cover shadow-md ring-4 ring-tertiary/20" data-alt="Dynamic documentary close portrait of an enthusiastic middle school Chinese boy holding an academic literature journal, natural soft emerald green ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo_L4BtbkFOt-yozTKL2IU9ekM_lu2kUloFvSXdYQ6RjTbrK_2TBIVCMDFFk1VhQaUnnJERRdQOs9gBf-awHK_1ZhKwahrhu3pYjzXK-wUcb1CAY99_JIjsDLJ4Ftnxknu2WKreOmlKtSY6mLOi1E5wwuluDSNSzdDG5UpTrJ-piyLT_LgEX9W5RtuZVixYaNhGUaU5vatfyIwPgLXQP45UuKZ-l0pxSKz2UQOjG1a4jkROi2E6rD7"/>
+<div class="flex items-center gap-1 mt-1.5">
+<span class="font-title-card text-title-card text-on-surface font-bold truncate text-center" id="p1-name">沈嘉言</span>
+</div>
+<span class="font-display-stat text-display-stat text-tertiary font-bold mt-0.5" id="p1-pts">2,450</span>
+<span class="font-label-meta text-label-meta text-on-tertiary-fixed-variant font-medium">打卡 42 天 · 榜首</span>
+<div class="mt-2 w-full py-1 text-center rounded bg-tertiary text-on-tertiary font-label-caption text-label-caption font-semibold shadow-xs">
+          第 1 名
+        </div>
+</div>
+<!-- 3rd Place: Bronze (Right) -->
+<div class="flex flex-col items-center bg-surface-container-low/70 rounded-xl p-2.5 relative pt-6 shadow-sm">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-tertiary-fixed-dim/40 flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[20px] text-tertiary" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-tertiary-fixed-dim/40" data-alt="Portrait of a young male junior student focused on an open textbook with botanical library plants blurred in gentle warm background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35X0yu798JQb9kQyifdpJ3Yjl9SaUXmY2-IyW4lqLF248y4w_UjhHz1FKb0MHHcfgFknI1p7nwpY_xgpd7rYDMzX5bpfK62_ewWEvnc66du5QoefhHH5s5mGGdJeIRPTCbwqp4TDKDrsPqLlEntRWHapCRooSEBaX4cGG7_fQZYvTflb1SyeVXv5BY4lrf_Li5C65CPW6oNly2-IdXW_FbSzIBugPXsVQS8Cyhy1ijHYvDg2tXTC9"/>
+<span class="mt-1.5 font-body-medium text-body-medium text-on-surface truncate w-full text-center" id="p3-name">韩泽宇</span>
+<span class="font-title-card text-title-card text-on-surface font-semibold mt-0.5" id="p3-pts">1,890</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant scale-90">打卡 30 天</span>
+<div class="mt-2 w-full py-1 text-center rounded bg-surface-container font-label-meta text-label-meta text-on-surface-variant">
+          第 3 名
+        </div>
+</div>
+</div>
+</div>
+<!-- Weekly Progress Trend Visualization -->
+<div class="px-margin-page mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-primary">ssid_chart</span>
+<span class="font-title-card text-title-card text-on-surface">近 7 日班级平均积分爬升</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary">+14.2%</span>
+</div>
+<!-- Lightweight Inline SVG Sparkline -->
+<div class="w-full h-14 flex items-end pt-2">
+<svg class="w-full h-12 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 340 48">
+<path d="M0 40 L50 36 L100 32 L150 24 L200 28 L250 14 L300 16 L340 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0 40 L50 36 L100 32 L150 24 L200 28 L250 14 L300 16 L340 6 L340 48 L0 48 Z" fill="currentColor" fill-opacity="0.08"></path>
+<!-- Data points -->
+<circle cx="50" cy="36" fill="currentColor" r="2.5"></circle>
+<circle cx="150" cy="24" fill="currentColor" r="2.5"></circle>
+<circle cx="250" cy="14" fill="currentColor" r="2.5"></circle>
+<circle class="text-tertiary" cx="340" cy="6" fill="currentColor" r="3.5"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-meta text-label-meta text-on-surface-variant pt-1">
+<span>周一</span>
+<span>周三</span>
+<span>周五</span>
+<span class="font-semibold text-primary">今日更新</span>
+</div>
+</div>
+</div>
+<!-- Full Ranking List (Rank 4 to 10+) -->
+<div class="px-margin-page mt-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-title-card text-title-card text-on-surface" id="list-section-title">班级名次总榜 (初二3班)</h3>
+<span class="font-label-meta text-label-meta text-on-surface-variant">共 46 位同学参与</span>
+</div>
+<!-- Card List Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xs flex flex-col gap-1" id="ranking-list">
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">4</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            梁
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">梁韵诗</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-label-meta bg-secondary-fixed text-on-secondary-fixed-variant">勤青领读标兵</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">打卡 32 天 · 研读《红星照耀中国》</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,740</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">5</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            程
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">程子轩</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-label-meta bg-surface-container-high text-on-surface-variant">打卡28天</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">提交书评 5 篇 · 精品笔记 2 篇</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,620</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">6</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            赵
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">赵若琳</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">晨读打卡 24 天 · 经典摘抄优选</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,480</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">7</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            孙
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">孙逸飞</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">读书会研讨主讲 · 连续打卡 19 天</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,315</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+<!-- Item 8: Current User (Highlighted) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-primary-fixed/35 shadow-xs">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-primary font-bold w-6 text-center">8</span>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold shrink-0 shadow-xs">
+            我
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-primary font-bold truncate">张子墨 (我)</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-label-meta bg-primary text-on-primary font-medium">当前</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary/80">打卡 12 天 · 《朝花夕拾》共读中</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-primary font-bold">1,280</div>
+<div class="font-label-meta text-label-meta text-primary/80">积分</div>
+</div>
+</div>
+<!-- Item 9 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">9</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            何
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">何思源</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">连续打卡 15 天 · 课标精读</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,190</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+<!-- Item 10 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-title-card text-title-card text-on-surface-variant font-bold w-6 text-center">10</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant shrink-0">
+            郑
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">郑敏萱</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">连续打卡 14 天 · 诗词诵读之星</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-title-card text-title-card text-on-surface font-semibold">1,050</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">积分</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Action: Boost Reading / Punch In Prompt -->
+<div class="px-margin-page mt-space-lg">
+<div class="bg-gradient-to-r from-primary to-primary-container p-space-md rounded-xl text-on-primary flex items-center justify-between shadow-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-on-primary/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[22px]">book</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-card text-title-card font-semibold">今日领读打卡尚未完成</span>
+<span class="font-label-meta text-label-meta text-on-primary/80">完成今日研读 +50 分，立即赶超前一名！</span>
+</div>
+</div>
+<button class="shrink-0 bg-surface-container-lowest text-primary font-body-medium text-body-medium font-bold px-3 py-1.5 rounded-lg active:scale-95 transition-transform shadow-sm" type="button">
+        去打卡
+      </button>
+</div>
+</div>
+<!-- Bottom Explanatory Footnote -->
+<div class="px-margin-page mt-space-lg mb-space-sm text-center">
+<p class="font-label-meta text-label-meta text-on-surface-variant leading-relaxed">
+      排行榜每周一凌晨 00:00 自动结算刷新，仅统计读书会健康打卡与名师研讨积分，弘扬书香校园风气。
+      <span class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-mono">[演示数据]</span>
+</p>
+</div>
+</div>
+<script>
+  // Interactive scope dataset simulation
+  const scopeData = {
+    class: {
+      scopeTitle: "初二 (3) 班 · 晨读共研组",
+      listTitle: "班级名次总榜 (初二3班)",
+      p1: { name: "沈嘉言", pts: "2,450" },
+      p2: { name: "苏沐雨", pts: "2,110" },
+      p3: { name: "韩泽宇", pts: "1,890" },
+      myRankText: '当前第 <span class="font-bold text-primary text-body-medium">8</span> 名 · 距前一名仅差 <span class="text-tertiary font-bold">35</span> 分',
+      myPercentile: "78.4%"
+    },
+    school: {
+      scopeTitle: "贵阳市第一实验初级中学 · 全校阅读榜",
+      listTitle: "全校名次总榜 (共 1,820 位在校生)",
+      p1: { name: "林书涵 (初三5班)", pts: "3,820" },
+      p2: { name: "沈嘉言 (初二3班)", pts: "2,450" },
+      p3: { name: "陆雨萌 (初一2班)", pts: "2,380" },
+      myRankText: '全校第 <span class="font-bold text-primary text-body-medium">142</span> 名 · 跻身全校前 <span class="text-tertiary font-bold">8%</span>',
+      myPercentile: "92.2%"
+    },
+    region: {
+      scopeTitle: "贵阳市云岩区教育局 · 初中段书香共建榜",
+      listTitle: "区域优学总榜 (涵盖全区 38 所初级中学)",
+      p1: { name: "周明轩 (贵阳七中)", pts: "5,190" },
+      p2: { name: "唐艺馨 (实验二中)", pts: "4,860" },
+      p3: { name: "陈浩宇 (云岩一初)", pts: "4,510" },
+      myRankText: '区域第 <span class="font-bold text-primary text-body-medium">680</span> 名 · 持续领跑书香积淀',
+      myPercentile: "85.6%"
+    }
+  };
+
+  function switchScope(scope) {
+    const tabs = ['class', 'school', 'region'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      if (t === scope) {
+        btn.className = "flex-1 py-2 px-1 text-center rounded-lg font-body-medium text-body-medium transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1";
+      } else {
+        btn.className = "flex-1 py-2 px-1 text-center rounded-lg font-body-medium text-body-medium transition-all duration-200 text-on-surface-variant flex items-center justify-center gap-1";
+      }
+    });
+
+    const info = scopeData[scope];
+    if (!info) return;
+
+    document.getElementById('scope-description').textContent = info.scopeTitle;
+    document.getElementById('list-section-title').textContent = info.listTitle;
+    document.getElementById('p1-name').textContent = info.p1.name;
+    document.getElementById('p1-pts').textContent = info.p1.pts;
+    document.getElementById('p2-name').textContent = info.p2.name;
+    document.getElementById('p2-pts').textContent = info.p2.pts;
+    document.getElementById('p3-name').textContent = info.p3.name;
+    document.getElementById('p3-pts').textContent = info.p3.pts;
+    document.getElementById('rank-gap-text').innerHTML = info.myRankText;
+    document.getElementById('my-percentile').textContent = info.myPercentile;
+  }
+</script></main><script>window.EP_PAGE="R11";</script><script src="../routes.js"></script></body></html>

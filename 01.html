@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}.top-bar-pt{padding-top:env(safe-area-inset-top,44px);}.header-offset{padding-top:calc(env(safe-area-inset-top,44px) + 44px);}.footer-offset{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 64px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-tertiary-fixed': '#2a1700', 'on-tertiary': '#ffffff', 'surface-container-lowest': '#ffffff', 'on-background': '#121c2a', 'error': '#ba1a1a', 'outline': '#6e7977', 'inverse-primary': '#78d7c8', 'primary-container': '#087f73', 'surface-container': '#e6eeff', 'outline-variant': '#bdc9c6', 'on-primary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'tertiary-fixed': '#ffddb8', 'secondary-container': '#5bb8fe', 'on-secondary-container': '#00476e', 'surface-variant': '#d9e3f7', 'error-container': '#ffdad6', 'on-surface-variant': '#3e4947', 'primary-fixed': '#95f3e4', 'inverse-on-surface': '#ebf1ff', 'on-primary-fixed': '#00201c', 'primary': '#00645a', 'on-error-container': '#93000a', 'tertiary-fixed-dim': '#ffb95f', 'background': '#f9f9ff', 'primary-fixed-dim': '#78d7c8', 'secondary-fixed': '#cce5ff', 'surface-container-high': '#dee9fd', 'on-tertiary-container': '#fff5ed', 'on-secondary-fixed': '#001d31', 'tertiary-container': '#9f6400', 'tertiary': '#7d4e00', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a60', 'on-primary-container': '#d6fff7', 'on-error': '#ffffff', 'surface-bright': '#f9f9ff', 'surface': '#f9f9ff', 'secondary': '#006398', 'on-surface': '#121c2a', 'on-secondary-fixed-variant': '#004b73', 'surface-dim': '#d0daef', 'surface-container-low': '#eff3ff', 'on-primary-fixed-variant': '#005048', 'inverse-surface': '#273140', 'surface-container-highest': '#d9e3f7', 'on-secondary': '#ffffff' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-md': '12px', 'space-xl': '20px', 'space-xs': '4px', 'capsule-safe-right': '96px', 'margin-page': '16px', 'space-3xl': '32px', 'gutter-grid': '12px', 'height-navbar': '44px', 'space-sm': '8px', 'height-tabbar': '56px', 'space-2xl': '24px', 'space-lg': '16px', 'space-2xs': '2px' }, 'fontFamily': { 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>html,body{background:#f3f8f5!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}body{padding-top:72px!important;padding-bottom:78px!important}main{padding-top:16px!important;padding-bottom:30px!important}#ep-header{height:72px;padding:10px 18px;box-sizing:border-box;position:fixed;inset:0 0 auto;z-index:999;background:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcece7;color:#087f73}#ep-header button{font-size:32px;width:30px}#ep-header div{text-align:center}#ep-header small{display:block;font-size:10px;font-weight:400;margin-top:3px}#ep-nav{height:72px;padding-bottom:8px;position:fixed;inset:auto 0 0;z-index:999;background:#fff;display:flex;justify-content:space-around;border-top:1px solid #dcece7}#ep-nav button{display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;font-size:11px;width:23%;color:#81948e}#ep-nav button.active{color:#087f73;font-weight:700}#ep-nav span{font-size:22px}</style><title>教育Plus｜首页｜一期交互演示</title><style id="v2-style">html,body{background:#f4f9f6!important;color:#21473f!important}body{padding-top:106px!important}#ep-header{height:106px!important; background:linear-gradient(120deg,#ffffff 12%,#e5f3ec 100%)!important;border:0!important;overflow:hidden}#ep-header:after{content:"";position:absolute;right:0;top:0;width:140px;height:106px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%20140%22%3E%3Cg%20fill%3D%22%238ebd5f%22%20opacity%3D%22.45%22%3E%3Cpath%20d%3D%22M160%200Q80%2025%2085%20115Q137%20105%20160%200%22%2F%3E%3Cpath%20d%3D%22M125%200Q44%208%2060%2063Q104%2067%20125%200%22%2F%3E%3Cpath%20d%3D%22M158%2044Q91%2062%20114%20111Q159%2091%20158%2044%22%2F%3E%3Cpath%20d%3D%22M70%200Q8%206%2025%2041Q62%2039%2070%200%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") right top/contain no-repeat}#ep-header div{position:relative;z-index:1;text-align:left!important;flex:1;padding-left:12px}#ep-header b{font-size:22px;letter-spacing:.2px}#ep-header small{font-size:11px!important;color:#5f8b80!important;margin-top:8px!important}#ep-header>span{z-index:1}h1,h2,h3,h4{color:#075c54!important}main>section,main>.rounded-xl,main>.rounded-2xl,main>.rounded-lg{border-radius:22px!important;box-shadow:0 5px 22px #1f625509!important;border-color:#eff5f1!important}.bg-primary{background-color:#168d78!important}.text-primary{color:#087f73!important}.bg-surface-container-low,.bg-surface-container,.bg-surface-container-high{background-color:#eaf5ee!important}button{transition:background .18s,transform .18s}button:active{transform:scale(.98)}#ep-nav{box-shadow:0 -5px 22px #18574406;border-top:1px solid #edf4ef!important}#ep-nav button.active{color:#159e69!important}#submit-checkin-btn,#checkin-btn{background:#efbd23!important;color:#fff!important;border-radius:30px!important}.v2-hero{position:relative;border-radius:23px;overflow:hidden;min-height:240px;background:#295d45;color:#fff;margin-bottom:16px;padding:26px 22px}.v2-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.v2-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c4025d9,#0c402525)}.v2-hero>div{position:relative;z-index:1}.v2-hero h1{color:#fff!important;font-size:26px;font-weight:700;line-height:1.45;margin-bottom:10px}.v2-hero p{font-size:13px;color:#fff;max-width:230px;line-height:1.8}.v2-hero button{margin-top:22px;background:#efbd23;color:white;padding:10px 24px;border-radius:28px;font-weight:700}.v2-card{background:#fff;border-radius:22px;padding:18px;margin:16px 0;box-shadow:0 5px 22px #1f625509}.v2-card h2{font-size:18px;font-weight:700;margin-bottom:14px}.v2-live{display:flex;gap:14px;align-items:center;cursor:pointer}.v2-live img{width:42%;height:110px;object-fit:cover;border-radius:12px}.v2-live h3{font-size:16px;font-weight:700}.v2-live p{font-size:12px;color:#6a817a;margin-top:8px}.v2-live span{font-size:13px;color:#168d78;display:block;margin-top:10px}</style><style id="audit-fixes">body{padding-top:78px!important}#ep-header{height:78px!important;padding:10px 12px}#ep-header b{font-size:19px}#ep-header small{margin-top:4px!important;font-size:10px!important}#ep-header:after{height:78px}h1.text-white,h2.text-white,h3.text-white,h4.text-white{color:white!important}.fixed.inset-0{z-index:2000!important;padding:12px!important;align-items:center!important}.fixed.inset-0>div{max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;border-radius:20px!important}button:focus-visible,[role=button]:focus-visible{outline:3px solid #e6b51c;outline-offset:2px}[id^=section-]{scroll-margin-top:90px}#youth-tabs{position:sticky;top:78px;z-index:40;background:#f4f9f6;padding:8px 0}#submission-form>div:last-child{position:sticky;bottom:-20px;background:white;padding:12px 0;margin-top:12px}#submission-modal h4{font-size:16px}#submission-modal button{flex-shrink:0}@media(max-width:360px){main{padding-left:12px!important;padding-right:12px!important}.v2-hero{min-height:205px;padding:20px 16px}.v2-hero h1{font-size:23px}#ep-header b{font-size:18px}#ep-header div{padding-left:5px}.tab-btn{font-size:14px!important}#checkin-btn,#submit-checkin-btn{white-space:nowrap;font-size:13px!important;padding:10px!important}}</style><style id="visual-polish">html,body{background:#f3f8f5!important}main.bg-surface{background:#f3f8f5!important}#ep-header small{color:#517269!important}button{min-height:36px}#ep-nav{height:64px!important}body{padding-bottom:72px!important}#ep-header{height:68px!important}body{padding-top:68px!important}#ep-header:after{height:68px}#ep-header b{font-size:18px}#youth-tabs{top:68px!important}main>div{min-width:0}.visual-wrap{display:flex!important;flex-wrap:wrap!important;gap:8px!important;align-items:center!important}.visual-wrap>*{margin-left:0!important}.visual-nowrap{white-space:nowrap;flex-shrink:0}.visual-line{flex-basis:100%;margin:0!important}.visual-meta{font-size:12px!important;line-height:1.6!important;color:#52675f!important}.visual-feed-head{display:flex!important;flex-wrap:wrap;gap:6px!important}.visual-feed-head>*{min-width:0}.visual-clear{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}.v2-hero{min-height:170px!important;padding:18px!important;margin-bottom:12px!important}.v2-hero h1{font-size:23px!important;margin-bottom:6px!important}.v2-hero button{margin-top:12px!important;padding:8px 22px!important;color:#244638!important}.visual-module-grid{gap:8px!important}.visual-module-grid>div{padding:10px 4px!important}.visual-location{display:flex!important;flex-wrap:wrap!important;gap:6px;align-items:center!important}.visual-location>div{min-width:0}.visual-location .visual-school{width:100%;font-size:12px!important}.visual-location>div:last-child{font-size:10px}.visual-points{display:flex!important;flex-wrap:wrap!important;gap:8px!important}.visual-points>span{margin:0!important}.visual-points>span:last-child{flex-basis:100%;font-size:12px!important;background:none!important;padding:0!important}.visual-course-meta{display:flex!important;flex-wrap:wrap;gap:8px!important}.visual-course-meta>span{margin:0!important;white-space:nowrap}.visual-course-meta>span:first-child{flex-basis:100%;white-space:normal}.visual-course-meta>span:nth-child(2){display:none}.visual-fullname{font-size:13px!important;line-height:1.5!important}.visual-entry{min-width:56px;flex-shrink:0;white-space:nowrap}.visual-intro{border:1px solid #dce9e2;border-radius:16px;padding:12px;font-size:13px;color:#52675f;background:#fff}.visual-intro summary{font-weight:600;color:#087f73;cursor:pointer}.visual-intro p{margin-top:8px}.visual-paper h1{font-size:22px!important}.visual-paper{padding:16px!important}.visual-tags{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:6px!important}.visual-tags>*{margin:0!important}</style><style>.visual-module-grid .text-outline,.visual-module-grid [class*=text-on-surface-variant]{color:#62786e!important}.visual-author{display:block!important}.visual-author>div:first-child{flex-wrap:nowrap!important;align-items:center!important;gap:8px!important}.visual-author>div:first-child>div:first-child{flex-shrink:0}.visual-author>div:first-child>div:last-child{min-width:0;flex:1}.visual-author>div:last-child{justify-content:flex-end;margin-top:4px;white-space:nowrap}.visual-paper{padding:8px 0!important}</style></head><body class="bg-surface font-body-default text-body-default text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed relative"><header id="ep-header"><button aria-label="返回首页" onclick="epGo(1)">‹</button><div><b>教育Plus · 首页</b><small>贵州教育资讯 · 权威教育服务入口</small></div><span>•••</span></header><main class="flex flex-col relative w-full header-offset footer-offset bg-surface px-margin-page flex-1"><section class="v2-hero"><img alt="校园共读活动示例" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPOuisD4kfaMGGh6pp55pCPhY4w6aptujBzzNM4EySGZG_4eWFcMdv1SKy3Arq2aT4Z6wrpVuroM4Di3EttLUEJcwtejRlUClkMytKzGlUGutlZALdjJ2m9MSHCE18SyD_aqml22LEr9JkopdzJjlihRHleJOwGI8lVMVhTTySceCEwEAn2YDZUahk7Kg8aeVpvmRGT2vGOSswL4DhAnyhoN70X_vjhZ8iAKKQYJwICkx73tsyJPD9"/><div><h1>读懂教育 · 服务成长</h1><p>政策 · 课程 · 活动 · 资讯与服务平台</p><button onclick="epGo(11)">立即浏览</button></div></section><div class="flex flex-col w-full pb-6 space-y-4"><div class="grid grid-cols-4 gap-y-3.5 gap-x-2 visual-module-grid">
+<!-- 1. 读书会 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(2)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">menu_book</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">读书会</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">打卡共读</span>
+</div>
+<!-- 2. 少年派 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(3)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">edit_note</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">少年派</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">创作赛事</span>
+</div>
+<!-- 3. 小记者 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(4)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">mic</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">小记者</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">社会实践</span>
+</div>
+<!-- 4. 致青春 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(5)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">致青春</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">校园风采</span>
+</div>
+<!-- 5. 公益课 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(6)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">co_present</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">公益课</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">思政名师</span>
+</div>
+<!-- 6. 科学港 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(7)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">science</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">科学港</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">科普答题</span>
+</div>
+<!-- 7. 填志愿 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(8)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">explore</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">填志愿</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">测评参考</span>
+</div>
+<!-- 8. 订报刊 -->
+<div class="flex flex-col items-center text-center group active:scale-95 transition-transform cursor-pointer" onclick="epGo(9)">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed/50 flex items-center justify-center mb-1.5 shadow-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">markunread_mailbox</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold leading-tight">订报刊</span>
+<span class="font-label-meta text-label-meta text-outline-variant mt-0.5">校园报刊</span>
+</div>
+</div>
+<!-- Campus Selector Bar & Demo Notice Tag (Guizhou Localized) -->
+<div class="flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl shadow-sm visual-location">
+<div class="flex items-center gap-1.5 min-w-0 visual-wrap">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+</div>
+<div class="flex items-center gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-medium">贵阳市</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant/90">· 贵阳市第一实验初级中学</span>
+</div>
+<button aria-label="切换学校" class="flex items-center text-primary ml-0.5 active:opacity-60 shrink-0" onclick="showToast('已切换至当前示范校区')">
+<span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</button>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-fixed/80 text-on-tertiary-fixed px-2 py-0.5 rounded-full shrink-0 border border-tertiary-container/20">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span class="font-label-meta text-label-meta font-medium">演示数据</span>
+</div>
+</div>
+<!-- Announcement Carousel Strip (Guizhou Topics) -->
+<div class="flex items-center bg-surface-container-lowest px-3 py-2.5 rounded-xl shadow-sm gap-2 border border-outline-variant/20">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed/60 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[18px]">campaign</span>
+</div>
+<div class="flex-1 overflow-hidden h-[20px] relative" id="notice-carousel">
+<div class="transition-transform duration-500 ease-in-out flex flex-col" id="notice-slider">
+<div class="h-[20px] flex items-center justify-between text-on-surface cursor-pointer" onclick="epGo(7)">
+<span class="font-label-caption text-label-caption">科学港 · 基础科学知识答题体验</span>
+<span class="font-label-meta text-label-meta text-primary font-medium shrink-0 ml-1">参与 &gt;</span>
+</div>
+<div class="h-[20px] flex items-center justify-between text-on-surface cursor-pointer" onclick="epGo(2)">
+<span class="font-label-caption text-label-caption">贵州教育报·“书香黔岭”青少年主题读书打卡开启</span>
+<span class="font-label-meta text-label-meta text-primary font-medium shrink-0 ml-1">打卡 &gt;</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 8 Core Kingkong Grid (Strictly 8 Modules with Interactive Routing) -->
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl shadow-sm border border-outline-variant/20">
+<section class="v2-card"><h2>名师课堂</h2><div class="v2-live" onclick="epGo(6)"><img alt="名师公益课堂示例" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFmVHmsXF6xUenM4LCZZbgvp9Wqa65wRVCDBN6YVGf_quptIHoDDHeCSrugSJitCXQhDrGhrRtsbbsf3jsvDEmudckpvz5k7aJVvQAdwq5pAtqvbsvwTBUL1FOCnF2N4NL6AZFFSxXNDGUjHJxXg59PWrliVc1XJ_-usdaG9X4EgrEnejMoqbEYyUncePF2k_Tc8VeX-1-hxaRI7aUmzdWhpmh9KvXWGY_o9O8oWk24EMAP3h1TRWV"/><div><h3>名师公益课</h3><p>思政课 · 名师课<br/>课程回放与配套课件</p><span>进入课堂 ›</span></div></div></section>
+</div>
+<!-- Reading Habit & Study Progress Card (Linked with Reading Club, No Coins) -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm relative overflow-hidden border border-outline-variant/20" id="study-progress-card">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-2 h-4 rounded-full bg-primary-container"></div>
+<span class="font-title-card text-title-card text-on-surface font-semibold">读书会打卡与共读进度</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-meta text-label-meta bg-primary-fixed/50 px-2 py-0.5 rounded-md cursor-pointer hover:bg-primary-fixed" onclick="epGo(2)">
+<span class="material-symbols-outlined text-[13px]">edit_calendar</span>
+<span>打卡表单 &gt;</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-3 rounded-xl mb-3">
+<div class="flex items-center gap-3 min-w-0">
+<!-- Circular Progress Ring SVG -->
+<div class="relative w-11 h-11 shrink-0 flex items-center justify-center">
+<svg class="w-11 h-11 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary transition-all duration-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" id="progress-circle-bar" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-caption text-label-caption font-bold text-primary" id="progress-text">75%</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold" id="reading-status-title">《阳明心学少年读本》今日已读 25 分钟</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant mt-0.5" id="reading-sub-target">连续打卡 <strong class="text-primary font-semibold" data-reading-days="" id="streak-days">12 天</strong> · 目标 30 分钟</span>
+</div>
+</div>
+<button class="shrink-0 bg-primary-container text-on-primary font-label-caption text-label-caption px-3.5 py-1.5 rounded-full shadow-sm active:scale-95 transition-transform flex items-center gap-1" id="checkin-btn" onclick="handleQuickCheckin()">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>快速打卡</span>
+</button>
+</div>
+<!-- Quick Week Badges -->
+<div class="grid grid-cols-7 gap-1 text-center">
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">一</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">二</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">三</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">四</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">五</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-primary-fixed/40">
+<span class="font-label-meta text-label-meta text-on-surface-variant">六</span>
+<span class="material-symbols-outlined text-[14px] text-primary mt-0.5">check_circle</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg transition-colors" id="day-today-badge">
+<span class="font-label-meta text-label-meta opacity-90" id="day-today-label">日</span>
+<span class="material-symbols-outlined text-[14px] mt-0.5" id="day-today-icon">schedule</span>
+</div>
+</div>
+</div>
+<!-- Popular Activities Stream (Guizhou Localized) -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-4 rounded-full bg-secondary"></div>
+<span class="font-headline-section text-headline-section text-on-surface font-semibold">热门活动推荐</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded">[演示数据]</span>
+</div>
+<a class="font-label-caption text-label-caption text-primary flex items-center font-medium" href="javascript:void(0)" onclick="switchTab('activities')">全部活动<span class="material-symbols-outlined text-[14px]">chevron_right</span></a>
+</div>
+<!-- Activity Card 1: 贵州青少年科创 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl shadow-sm flex flex-col space-y-2.5 border border-outline-variant/20">
+<div class="relative w-full h-28 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A bright Asian elementary classroom full of eager children holding vibrant illustrated storybooks, morning sunbeams streaming through clean glass windows, warm joyful scholastic mood in modern emerald tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPOuisD4kfaMGGh6pp55pCPhY4w6aptujBzzNM4EySGZG_4eWFcMdv1SKy3Arq2aT4Z6wrpVuroM4Di3EttLUEJcwtejRlUClkMytKzGlUGutlZALdjJ2m9MSHCE18SyD_aqml22LEr9JkopdzJjlihRHleJOwGI8lVMVhTTySceCEwEAn2YDZUahk7Kg8aeVpvmRGT2vGOSswL4DhAnyhoN70X_vjhZ8iAKKQYJwICkx73tsyJPD9"/>
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="bg-primary-container text-on-primary font-label-meta text-label-meta px-2 py-0.5 rounded-full shadow-sm">报名中</span>
+<span class="bg-inverse-surface/75 text-inverse-on-surface backdrop-blur-sm font-label-meta text-label-meta px-2 py-0.5 rounded-full">距截止 3天</span>
+</div>
+<span class="absolute bottom-2 right-2 bg-black/50 text-white backdrop-blur-sm font-label-meta text-label-meta px-2 py-0.5 rounded">活动内容示例</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-title-card text-title-card text-on-surface line-clamp-1 font-semibold">第二届“书香黔岭·润泽童心”全省中小学共读打卡季</span>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3 text-on-surface-variant font-label-meta text-label-meta">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px] text-primary">group</span> 2,480 人已报名</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px] text-secondary">workspace_premium</span> 阅读活动示例</span>
+</div>
+<button class="bg-primary text-on-primary font-label-caption text-label-caption px-3.5 py-1 rounded-full shadow-sm active:scale-95 transition-transform" onclick="epGo(2)">立即参与</button>
+</div>
+</div>
+</div>
+<!-- Activity Card 2: 贵州高校微电影与科创 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl shadow-sm flex flex-col space-y-2.5 border border-outline-variant/20">
+<div class="relative w-full h-28 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Young teen students in modern school science laboratory wearing goggles safely observing a glowing green liquid in a flask, high precision academic atmosphere with botanical light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI4pKU5I6I7wyvrI8kNVVJaD8--8mfJ2irqs5lK4etUgkpMrduvrpaaD3mdqgTtLmppxf6W_I-PmAsmb8UhIwlnA-X7DlkB4ieurefWZUIIFXrqa9f_bCnyx9wQu6YyXHbR5RUxu4xdwc9Tn0j21SAIkgf1gaJ0bZj6ooi4Y2ewtMr4Jn2zP--hA0OeXBZYn9b-41qdunoKGQ_l97LuqkcL6o6B-3WBHywPFTq_YFugdKl-0Zhebe4"/>
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="bg-secondary text-on-secondary font-label-meta text-label-meta px-2 py-0.5 rounded-full shadow-sm">进行中</span>
+<span class="bg-inverse-surface/75 text-inverse-on-surface backdrop-blur-sm font-label-meta text-label-meta px-2 py-0.5 rounded-full">开放体验</span>
+</div>
+<span class="absolute bottom-2 right-2 bg-black/50 text-white backdrop-blur-sm font-label-meta text-label-meta px-2 py-0.5 rounded">贵州大学·贵州师范大学</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-title-card text-title-card text-on-surface line-clamp-1 font-semibold">科学港 · 基础科学知识自测</span>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3 text-on-surface-variant font-label-meta text-label-meta">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px] text-secondary">group</span> 4,120 人已参与</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px] text-primary">emoji_events</span> 答题结果反馈</span>
+</div>
+<button class="bg-secondary text-on-secondary font-label-caption text-label-caption px-3.5 py-1 rounded-full shadow-sm active:scale-95 transition-transform" onclick="epGo(7)">立即答题</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Campus Hot News & Youth Highlights (Guizhou Localized + Interactive Likes/Bookmarks) -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-4 rounded-full bg-tertiary"></div>
+<span class="font-headline-section text-headline-section text-on-surface font-semibold">校园热点与实践</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded">[演示数据]</span>
+</div>
+<a class="font-label-caption text-label-caption text-primary flex items-center font-medium" href="javascript:void(0)" onclick="epGo(4)">更多实践<span class="material-symbols-outlined text-[14px]">chevron_right</span></a>
+</div>
+<!-- Highlight Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Item 1: 小记者生态采风 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/20">
+<div class="relative w-full h-24 rounded-lg overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A young student journalist wearing a press badge holding a small microphone interviewing a city botanist outside in a lush greenhouse, natural green light, realistic documentary style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfBvev63QvPPLBlLG0X1qqCml8sI6L97kO7Mu1-1dGOxAF9DtJ2suMWFeT5qeq3BnhvyQl0OO8LUjgvjLDczTavTVh0Xt0HCdpIBg7Udw93f9utU08zp4PkoE-pwXDD_G6Jqa9RbMIt0e5N36T6Yx3IT13cbF291MdKk7713yzntEUfI4xH02xWt10Ll7jJlmec7v0qpFpGLDdnvokIHD9QN4AgC5IPdVGegT4Brlz9B43DSz3G1l6"/>
+<span class="absolute bottom-1 left-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-md font-semibold">小记者实践</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold line-clamp-2 leading-snug">走进梵净山生物圈，贵州小记者对话生态科考专家</span>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-meta text-label-meta text-outline-variant">今天 10:20</span>
+<button class="flex items-center gap-1 text-outline hover:text-error transition-colors" data-liked="false" onclick="toggleLike(this, 328)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-meta text-label-meta count">328</span>
+</button>
+</div>
+</div>
+<!-- Item 2: 贵州高校微电影 / 致青春风采 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/20">
+<div class="relative w-full h-24 rounded-lg overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A high school campus courtyard stage with students performing choir singing, surrounded by blooming green willow trees and modern academic buildings, sunny dynamic vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPrV7oj4OpGwI8ZjARGT7LZlLRzzNpP2G4RBK8mfi6oKnA2Mz7BizOhUTfA32_-PIzpXk2uWk9ItlSlitoSRaExDnnfqAHrwB9sgljFDoqAdK4xCmjULgjekdemrTLZ4mB0bBMLrepTGDsW6RNBlEkEYx6HvekCmt4HuTPUD1GV10R_qIplfezR4H3qiVdXPGBNf2Gg2Ce8onZoWCSte48Bw4AUaVUDcFpTmFq0Sc_CpR8tbqwsD9n"/>
+<span class="absolute bottom-1 left-1 bg-surface-container-lowest/90 backdrop-blur-sm text-secondary font-label-meta text-label-meta px-1.5 py-0.5 rounded-md font-semibold">致青春风采</span>
+</div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold line-clamp-2 leading-snug">贵州高校校园动态：大学生戏剧社作品展示</span>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-meta text-label-meta text-outline-variant">昨天 16:45</span>
+<button class="flex items-center gap-1 text-outline hover:text-error transition-colors" data-liked="false" onclick="toggleLike(this, 196)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-meta text-label-meta count">196</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Checkin Modal Form Dialog -->
+<div aria-modal="true" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4" id="checkin-modal" role="dialog">
+<div class="bg-surface-container-lowest w-full max-w-sm rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl animate-in slide-in-from-bottom duration-300">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">menu_book</span>
+<span class="font-headline-section text-[17px] font-bold text-on-surface">读书会打卡登记</span>
+</div>
+<button aria-label="关闭弹窗" class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant" onclick="closeCheckinModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<form class="space-y-3.5 mt-4" onsubmit="event.preventDefault(); submitCheckinForm();">
+<div>
+<label class="font-label-caption text-label-caption text-on-surface font-medium block mb-1">今日阅读书目</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-3 py-2 text-body-default text-on-surface focus:outline-none focus:border-primary" id="modal-book-name" type="text" value="《阳明心学与青少年品格修养》"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="font-label-caption text-label-caption text-on-surface font-medium block mb-1">阅读时长 (分钟)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-3 py-2 text-body-default text-on-surface focus:outline-none focus:border-primary" id="modal-read-duration" min="5" type="number" value="30"/>
+</div>
+<div>
+<label class="font-label-caption text-label-caption text-on-surface font-medium block mb-1">已读至页码</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-3 py-2 text-body-default text-on-surface focus:outline-none focus:border-primary" id="modal-read-page" placeholder="例如: 56页" type="text" value="第 42 页"/>
+</div>
+</div>
+<div>
+<label class="font-label-caption text-label-caption text-on-surface font-medium block mb-1">今日读后心得 (可选)</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-3 py-2 text-body-default text-on-surface focus:outline-none focus:border-primary resize-none" id="modal-read-notes" placeholder="记录一句喜欢的格言或体会..." rows="2">知行合一，笃行不怠。在日常学习中体会践行的力量。</textarea>
+</div>
+<div class="bg-primary-fixed/40 p-2.5 rounded-xl flex items-center gap-2 text-primary font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[18px]">stars</span>
+<span>每日首次打卡可获 <strong>+15 学术积分</strong>，当日不重复累计</span>
+</div>
+<div class="pt-2 flex gap-2.5">
+<button class="flex-1 py-2.5 rounded-full border border-outline-variant text-on-surface font-label-caption font-medium" onclick="closeCheckinModal()" type="button">取消</button>
+<button class="flex-1 py-2.5 rounded-full bg-primary-container text-on-primary font-label-caption font-semibold shadow-md active:scale-95 transition-transform" type="submit">确认提交打卡</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Global Floating Toast for Simulated Navigation & Actions -->
+<div class="fixed top-16 inset-x-0 mx-auto w-max max-w-[85vw] px-4 py-2.5 rounded-full bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md shadow-lg text-[13px] font-medium z-50 pointer-events-none transition-all duration-300 opacity-0 -translate-y-3 flex items-center gap-2 text-center" id="global-toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed shrink-0" id="toast-icon">check_circle</span>
+<span id="toast-text">提示信息</span>
+</div>
+<!-- Simulated Tab Navigation (Interactive Tab Switching) -->
+<script>
+  // State management for check-in
+  let hasCheckedInToday = false;
+  let toastTimer = null;
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('global-toast');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast) return;
+    toastText.innerText = message;
+    toastIcon.innerText = icon;
+    toast.classList.remove('opacity-0', '-translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-3');
+    }, 2400);
+  }
+
+  // 8 Kingkong Navigation Simulation
+  function navigateToModule(moduleName, pageTarget) {
+    showToast(`正在跳转至 [${pageTarget}] ...`, 'explore');
+    // Simulate smooth link or context notification
+    setTimeout(() => {
+      if (moduleName === '读书会') {
+        const card = document.getElementById('study-progress-card');
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.classList.add('ring-2', 'ring-primary', 'transition-all');
+          setTimeout(() => card.classList.remove('ring-2', 'ring-primary'), 1500);
+        }
+      }
+    }, 600);
+  }
+
+  // Checkin Modal Control
+  function openCheckinModal() {
+    const modal = document.getElementById('checkin-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeCheckinModal() {
+    const modal = document.getElementById('checkin-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function completeCheckinUI() {
+    const btn = document.getElementById('checkin-btn');
+    const progressCircle = document.getElementById('progress-circle-bar');
+    const progressText = document.getElementById('progress-text');
+    const statusTitle = document.getElementById('reading-status-title');
+    const streakEl = document.getElementById('streak-days');
+    const dayTodayBadge = document.getElementById('day-today-badge');
+    const dayTodayIcon = document.getElementById('day-today-icon');
+
+    // Progress to 100%
+    if (progressCircle) progressCircle.setAttribute('stroke-dasharray', '100, 100');
+    if (progressText) progressText.innerText = '100%';
+    if (statusTitle) statusTitle.innerText = '《阳明心学少年读本》今日已读 30 分钟 (已达标)';
+    if (streakEl) streakEl.innerText = '8 天';
+
+    if (dayTodayBadge) {
+      dayTodayBadge.classList.add('bg-primary-container', 'text-on-primary');
+    }
+    if (dayTodayIcon) {
+      dayTodayIcon.innerText = 'check_circle';
+    }
+
+    if (btn) {
+      btn.classList.remove('bg-primary-container', 'text-on-primary');
+      btn.classList.add('bg-surface-variant', 'text-primary', 'cursor-default');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done_all</span><span>今日已打卡</span>';
+    }
+  }
+
+  function handleQuickCheckin() {
+    if (hasCheckedInToday) {
+      showToast('今日已完成读书会打卡，不可重复加分', 'info');
+      return;
+    }
+    hasCheckedInToday = true;
+    completeCheckinUI();
+    showToast('读书会打卡成功！获得 +15 积分', 'stars');
+  }
+
+  function submitCheckinForm() {
+    closeCheckinModal();
+    if (hasCheckedInToday) {
+      showToast('今日读书打卡已提交，不可重复加分', 'info');
+      return;
+    }
+    hasCheckedInToday = true;
+    completeCheckinUI();
+    showToast('打卡登记成功！+15 积分已入账', 'stars');
+  }
+
+  // Interactive Tab Switching
+  function switchTab(tabKey) {
+    const tabItems = document.querySelectorAll('.tab-item');
+    tabItems.forEach(item => {
+      if (item.getAttribute('data-tab') === tabKey) {
+        item.classList.add('text-primary', 'font-semibold');
+        item.classList.remove('text-outline');
+      } else {
+        item.classList.remove('text-primary', 'font-semibold');
+        item.classList.add('text-outline');
+      }
+    });
+
+    const tabNames = {
+      'home': '首页 (贵州教育报·教育Plus)',
+      'services': '服务大厅 (08服务汇聚)',
+      'activities': '活动赛事 (09贵州校园活动库)',
+      'profile': '个人中心 (10我的成长档案)'
+    };
+    showToast(`切换至 [${tabNames[tabKey] || tabKey}] 模拟视图`, 'swap_horiz');
+  }
+
+  // Interactive Likes and Bookmarks
+  function toggleLike(btn, baseCount) {
+    const isLiked = btn.getAttribute('data-liked') === 'true';
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const countSpan = btn.querySelector('.count');
+
+    if (!isLiked) {
+      btn.setAttribute('data-liked', 'true');
+      btn.classList.remove('text-outline');
+      btn.classList.add('text-error');
+      if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+      if (countSpan) countSpan.innerText = baseCount + 1;
+      showToast('点赞成功 +1');
+    } else {
+      btn.setAttribute('data-liked', 'false');
+      btn.classList.remove('text-error');
+      btn.classList.add('text-outline');
+      if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+      if (countSpan) countSpan.innerText = baseCount;
+      showToast('已取消点赞');
+    }
+  }
+
+  // Notice carousel auto-scroll animation
+  (function() {
+    var slider = document.getElementById('notice-slider');
+    var isSecond = false;
+    if (slider) {
+      setInterval(function() {
+        isSecond = !isSecond;
+        slider.style.transform = isSecond ? 'translateY(-20px)' : 'translateY(0px)';
+      }, 3500);
+    }
+  })();
+</script><nav id="ep-nav"><button class="active" onclick="epGo(1)"><span class="material-symbols-outlined">home</span>首页</button><button class="" onclick="epGo(11)"><span class="material-symbols-outlined">grid_view</span>服务</button><button class="" onclick="epGo(12)"><span class="material-symbols-outlined">event</span>活动</button><button class="" onclick="epGo(10)"><span class="material-symbols-outlined">person</span>我的</button></nav><script>
+function epGo(n){if(parent!==window)parent.postMessage({educationPlusRoute:n},location.origin);else location.href='index.html#'+n;}
+window.goHome=window.goToHome=()=>epGo(1);
+window.alert=(message)=>{const old=document.getElementById('ep-alert');if(old)old.remove();const d=document.createElement('dialog');d.id='ep-alert';d.style.cssText='padding:24px;border:0;border-radius:20px;max-width:330px;color:#204239;box-shadow:0 20px 90px #1235';const t=document.createElement('p');t.textContent=message;d.append(t);const b=document.createElement('button');b.textContent='我知道了';b.style.cssText='margin-top:20px;background:#087f73;color:white;padding:10px 30px;border-radius:20px';b.onclick=()=>d.remove();d.append(b);document.body.append(d);d.showModal();};
+// Replace root-navigation callbacks only. Scientific/campus tab callbacks stay local.
+if(1===1||1===11)window.switchTab=(k)=>epGo({home:1,services:11,activities:12,profile:10}[k]||1);
+document.querySelectorAll('input').forEach(e=>{if(e.id.includes('taxcode'))e.value='';});
+</script><script>function epRead(){try{return JSON.parse(localStorage.getItem('ep-reading-v3'))||{points:1280,days:12,checked:false}}catch(e){return {points:1280,days:12,checked:false}}}function epSync(){const r=epRead();document.querySelectorAll('[data-reading-points]').forEach(e=>e.textContent=r.points.toLocaleString());document.querySelectorAll('[data-reading-days]').forEach(e=>e.textContent=r.days+' 天');let q=localStorage.getItem('ep-quiz-v3');document.querySelectorAll('[data-quiz-score]').forEach(e=>e.textContent=q===null?'未作答':q+' 分');}window.addEventListener('storage',epSync);window.addEventListener('pageshow',epSync);epSync();document.querySelectorAll('.material-symbols-outlined').forEach(e=>e.setAttribute('aria-hidden','true'));document.querySelectorAll('[onclick]:not(button):not(a):not(input):not(label)').forEach(e=>{if(!e.querySelector('button,input,a')){e.setAttribute('role','button');e.tabIndex=0;e.addEventListener('keydown',k=>{if(k.key==='Enter'||k.key===' '){k.preventDefault();e.click();}})}});</script><script>let epDialog=null,epPriorFocus=null;function epModalSync(){const d=[...document.querySelectorAll('.fixed.inset-0')].find(e=>getComputedStyle(e).display!=='none'&&getComputedStyle(e).opacity!=='0'&&getComputedStyle(e).pointerEvents!=='none');if(d===epDialog)return;if(epDialog){document.querySelectorAll('[data-ep-inert]').forEach(e=>{e.inert=false;e.removeAttribute('data-ep-inert')});}if(d){epPriorFocus=document.activeElement;let child=d;while(child.parentElement&&child.parentElement!==document.documentElement){[...child.parentElement.children].filter(e=>e!==child&&!['SCRIPT','STYLE'].includes(e.tagName)).forEach(e=>{e.inert=true;e.setAttribute('data-ep-inert','')});child=child.parentElement;}}else if(epPriorFocus&&epPriorFocus.isConnected){epPriorFocus.focus();}epDialog=d;}new MutationObserver(epModalSync).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','style']});</script><script>window.EP_PAGE="1";</script><script src="routes.js"></script></body></html>

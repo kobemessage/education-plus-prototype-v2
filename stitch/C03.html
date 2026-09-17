@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">回放学习</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full pb-space-3xl">
+<!-- 顶部面包屑与状态提示栏 -->
+<div class="px-margin-page py-space-xs flex items-center justify-between">
+<button class="inline-flex items-center gap-space-xs text-primary font-body-medium text-body-medium active:opacity-75 transition-opacity" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back_ios</span>
+<span>课程详情</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">[演示数据]</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caption text-label-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        回放模式·第2讲
+      </span>
+</div>
+</div>
+<!-- 1. 视频播放器区域 (16:9 高清点播占位) -->
+<div class="w-full px-margin-page mt-space-xs">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-inverse-surface shadow-md flex flex-col justify-between p-space-sm text-on-primary select-none group">
+<!-- 播放器顶部浮层 -->
+<div class="flex items-center justify-between w-full z-10">
+<span class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-black/40 backdrop-blur-md text-white font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">slow_motion_video</span>
+          云端录播高清 HD
+        </span>
+<span class="text-white/80 font-label-caption text-label-caption">已缓存 92%</span>
+</div>
+<!-- 播放器正中提示区 -->
+<div class="flex flex-col items-center justify-center my-auto text-center px-space-md z-10">
+<div class="w-13 h-13 rounded-full bg-primary/90 flex items-center justify-center text-white shadow-lg mb-space-xs transform active:scale-90 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<p class="font-body-medium text-body-medium text-white font-medium drop-shadow-sm">视频演示占位，未接真实视频源</p>
+<p class="font-label-meta text-label-meta text-white/70 mt-space-2xs">点击知识点或时间轴可模拟定位播放</p>
+</div>
+<!-- 播放器底部控制条 -->
+<div class="flex flex-col w-full gap-space-xs z-10 bg-gradient-to-t from-black/80 to-transparent pt-3 -mx-space-sm -mb-space-sm px-space-sm pb-space-sm">
+<!-- 进度条轨道 -->
+<div class="w-full flex items-center gap-space-xs cursor-pointer py-1" onclick="triggerToast('已跳转至 22:15 进阶段落')">
+<div class="relative w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 bg-primary-fixed" style="width: 79%;"></div>
+</div>
+</div>
+<!-- 控制栏操作项 -->
+<div class="flex items-center justify-between font-label-caption text-label-caption">
+<div class="flex items-center gap-space-sm">
+<button class="w-6 h-6 flex items-center justify-center text-white active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<span class="font-label-meta text-label-meta text-white/90" id="video-timer">22:15 / 28:00</span>
+</div>
+<div class="flex items-center gap-space-md">
+<button class="px-2 py-0.5 rounded-full bg-white/20 text-white font-label-meta text-label-meta font-medium active:bg-white/30" onclick="toggleRate(this)" type="button">
+              1.25X
+            </button>
+<button class="w-6 h-6 flex items-center justify-center text-white active:scale-90" onclick="triggerToast('当前为全屏演示模式')" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. 正在学习课程信息 -->
+<div class="px-margin-page mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-meta text-label-meta font-semibold">思政先锋·红育筑基</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">42.8万人已学习</span>
+</div>
+<h2 class="font-title-card text-title-card text-on-surface leading-tight">
+        《弘扬长征精神·走好新时代青少年的品格之路》
+      </h2>
+<div class="flex items-center gap-space-xs text-primary font-body-medium text-body-medium font-semibold">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>第2讲《四渡赤水与战略智慧》</span>
+</div>
+</div>
+</div>
+<!-- 3. 课时知识点速览网格 -->
+<div class="px-margin-page mt-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bookmark_manager</span>
+<h3 class="font-title-card text-title-card text-on-surface">核心考点与素养点</h3>
+</div>
+<span class="font-label-meta text-label-meta text-outline">轻触时间戳快进定位</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 知识点1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between active:scale-[0.985] transition-all cursor-pointer" onclick="jumpTo('05:20', '考点一：实事求是思想路线的生动体现')">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-caption text-label-caption font-bold shrink-0 mt-0.5">
+            01
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">实事求是思想路线的生动体现</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">扎西会议与红军四次渡河的战机抉择复盘</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary font-label-caption text-label-caption shrink-0 ml-space-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>05:20</span>
+</div>
+</div>
+<!-- 知识点2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between active:scale-[0.985] transition-all cursor-pointer" onclick="jumpTo('14:10', '考点二：崇高理想信念的力量源泉')">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-caption text-label-caption font-bold shrink-0 mt-0.5">
+            02
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">崇高理想信念的力量源泉</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">长征精神第二维度：革命乐观主义精神解析</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary font-label-caption text-label-caption shrink-0 ml-space-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>14:10</span>
+</div>
+</div>
+<!-- 知识点3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between active:scale-[0.985] transition-all cursor-pointer" onclick="jumpTo('21:00', '考点三：当代青少年的攻坚克难思维')">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-caption text-label-caption font-bold shrink-0 mt-0.5">
+            03
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">当代青少年的攻坚克难思维</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">如何将逆境策略融入高强度学习与学业规划</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-primary font-label-caption text-label-caption shrink-0 ml-space-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>21:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. 4讲连贯目录抽屉列表 -->
+<div class="px-margin-page mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h3 class="font-title-card text-title-card text-on-surface">连贯讲义目录</h3>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant">共 4 讲 · 进阶必修</span>
+</div>
+<div class="space-y-space-xs">
+<!-- 讲目 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">第1讲《远征序曲与伟大转折的奠基》</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">时长 26:10 · 已学完</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded-md bg-surface-container text-on-surface font-label-caption text-label-caption shrink-0" onclick="triggerToast('正在载入第1讲回放视频')" type="button">重播</button>
+</div>
+<!-- 讲目 2 (当前正在播放) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container text-primary">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-5 h-5 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-primary animate-spin" style="animation-duration: 4s;">motion_photos_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium font-semibold text-primary truncate">第2讲《四渡赤水与战略智慧》</span>
+<span class="px-1.5 py-0.2 rounded bg-primary text-on-primary font-label-meta text-label-meta">播中</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary/80">时长 28:00 · 进度 79%</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">graphic_eq</span>
+</div>
+<!-- 讲目 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline">lock_open</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">第3讲《巧渡金沙江与飞夺泸定桥的精神魄力》</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">时长 31:40 · 未开始</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded-md bg-surface-container-low text-outline font-label-caption text-label-caption shrink-0" onclick="triggerToast('请先完成第2讲打卡')" type="button">待学</button>
+</div>
+<!-- 讲目 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline">lock_open</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">第4讲《雪山草地铸丰碑：新时代的接力奋斗》</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">时长 29:50 · 未开始</span>
+</div>
+</div>
+<button class="px-2 py-1 rounded-md bg-surface-container-low text-outline font-label-caption text-label-caption shrink-0" onclick="triggerToast('请按课时顺序学习')" type="button">待学</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. 底部辅助栏 (纯演示数据) -->
+<div class="mt-space-lg px-margin-page">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
+<!-- 下载讲义 (C04 模块导向) -->
+<button class="flex-1 h-12 rounded-xl bg-surface-container flex items-center justify-center gap-1.5 text-primary font-body-medium text-body-medium font-semibold active:scale-[0.985] transition-transform" onclick="triggerToast('已开始下载：C04《四渡赤水随堂研学手册.pdf》[演示数据]')" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>下载讲义 (C04)</span>
+</button>
+<!-- 完成本讲打卡 -->
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-1.5 font-body-medium text-body-medium font-semibold shadow-md active:scale-[0.985] transition-transform" onclick="completeCheckin(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>完成本讲打卡</span>
+</button>
+</div>
+</div>
+<!-- 悬浮微提示反馈 Toast 容器 -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 px-4 py-2 bg-inverse-surface/95 text-inverse-on-surface rounded-full font-label-caption text-label-caption shadow-xl pointer-events-none opacity-0 transition-opacity duration-300 z-50 flex items-center gap-1.5 max-w-[320px] text-center" id="toast-bubble">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">info</span>
+<span id="toast-msg">提示信息</span>
+</div>
+</div>
+<script>
+  function triggerToast(text) {
+    const toast = document.getElementById('toast-bubble');
+    const msg = document.getElementById('toast-msg');
+    if (!toast || !msg) return;
+    msg.innerText = text;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    clearTimeout(window.__toastTimeout);
+    window.__toastTimeout = setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2200);
+  }
+
+  function jumpTo(timestamp, title) {
+    const timer = document.getElementById('video-timer');
+    if (timer) timer.innerText = timestamp + ' / 28:00';
+    triggerToast('已跳转至 ' + timestamp + ' · ' + title);
+  }
+
+  function toggleRate(btn) {
+    const rates = ['1.0X', '1.25X', '1.5X', '2.0X'];
+    const current = btn.innerText.trim();
+    let idx = rates.indexOf(current);
+    idx = (idx + 1) % rates.length;
+    btn.innerText = rates[idx];
+    triggerToast('播放倍速已切换至 ' + rates[idx]);
+  }
+
+  function completeCheckin(btn) {
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">verified</span><span>打卡成功！</span>';
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+    triggerToast('打卡成功！已记录学时 +28分钟 [演示数据]');
+  }
+</script></main><script>window.EP_PAGE="C03";</script><script src="../routes.js"></script></body></html>

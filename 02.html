@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>教育Plus｜读书会｜一期交互演示</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9ff;
+      }
+      body {
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      .top-bar-pt {
+        padding-top: env(safe-area-inset-top, 44px);
+      }
+      .header-offset {
+        padding-top: calc(env(safe-area-inset-top, 44px) + 48px);
+      }
+      .pb-tab-safe {
+        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 64px);
+      }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#00201c",
+            "error": "#ba1a1a",
+            "tertiary": "#7d4e00",
+            "on-error-container": "#93000a",
+            "primary-container": "#087f73",
+            "surface-container": "#e6eeff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "secondary-container": "#5bb8fe",
+            "on-secondary-fixed-variant": "#004b73",
+            "surface-dim": "#d0daef",
+            "on-surface-variant": "#3e4947",
+            "on-background": "#121c2a",
+            "on-tertiary-fixed-variant": "#653e00",
+            "outline-variant": "#bdc9c6",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#9f6400",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-container-low": "#eff3ff",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#005048",
+            "background": "#f9f9ff",
+            "inverse-on-surface": "#ebf1ff",
+            "surface-container-lowest": "#ffffff",
+            "outline": "#6e7977",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#95f3e4",
+            "primary": "#00645a",
+            "inverse-primary": "#78d7c8",
+            "primary-fixed-dim": "#78d7c8",
+            "inverse-surface": "#273140",
+            "surface-container-high": "#dee9fd",
+            "secondary-fixed": "#cce5ff",
+            "surface-tint": "#006a60",
+            "tertiary-fixed": "#ffddb8",
+            "surface-variant": "#d9e3f7",
+            "surface-bright": "#f9f9ff",
+            "on-primary-container": "#d6fff7",
+            "on-surface": "#121c2a",
+            "secondary": "#006398",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#93ccff",
+            "on-secondary-container": "#00476e",
+            "surface": "#f9f9ff",
+            "on-tertiary-container": "#fff5ed",
+            "surface-container-highest": "#d9e3f7",
+            "on-secondary-fixed": "#001d31"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "20px",
+            "space-sm": "8px",
+            "margin-page": "16px",
+            "height-tabbar": "56px",
+            "space-2xs": "2px",
+            "space-md": "12px",
+            "space-3xl": "32px",
+            "height-navbar": "44px",
+            "space-xs": "4px",
+            "space-2xl": "24px",
+            "capsule-safe-right": "96px",
+            "gutter-grid": "12px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""],
+            "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""]
+          },
+          "fontSize": {
+            "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }],
+            "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>html,body{background:#f3f8f5!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}body{padding-top:72px!important;padding-bottom:78px!important}main{padding-top:16px!important;padding-bottom:30px!important}#ep-header{height:72px;padding:10px 18px;box-sizing:border-box;position:fixed;inset:0 0 auto;z-index:999;background:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcece7;color:#087f73}#ep-header button{font-size:32px;width:30px}#ep-header div{text-align:center}#ep-header small{display:block;font-size:10px;font-weight:400;margin-top:3px}#ep-nav{height:72px;padding-bottom:8px;position:fixed;inset:auto 0 0;z-index:999;background:#fff;display:flex;justify-content:space-around;border-top:1px solid #dcece7}#ep-nav button{display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;font-size:11px;width:23%;color:#81948e}#ep-nav button.active{color:#087f73;font-weight:700}#ep-nav span{font-size:22px}</style><style id="v2-style">html,body{background:#f4f9f6!important;color:#21473f!important}body{padding-top:106px!important}#ep-header{height:106px!important; background:linear-gradient(120deg,#ffffff 12%,#e5f3ec 100%)!important;border:0!important;overflow:hidden}#ep-header:after{content:"";position:absolute;right:0;top:0;width:140px;height:106px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%20140%22%3E%3Cg%20fill%3D%22%238ebd5f%22%20opacity%3D%22.45%22%3E%3Cpath%20d%3D%22M160%200Q80%2025%2085%20115Q137%20105%20160%200%22%2F%3E%3Cpath%20d%3D%22M125%200Q44%208%2060%2063Q104%2067%20125%200%22%2F%3E%3Cpath%20d%3D%22M158%2044Q91%2062%20114%20111Q159%2091%20158%2044%22%2F%3E%3Cpath%20d%3D%22M70%200Q8%206%2025%2041Q62%2039%2070%200%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") right top/contain no-repeat}#ep-header div{position:relative;z-index:1;text-align:left!important;flex:1;padding-left:12px}#ep-header b{font-size:22px;letter-spacing:.2px}#ep-header small{font-size:11px!important;color:#5f8b80!important;margin-top:8px!important}#ep-header>span{z-index:1}h1,h2,h3,h4{color:#075c54!important}main>section,main>.rounded-xl,main>.rounded-2xl,main>.rounded-lg{border-radius:22px!important;box-shadow:0 5px 22px #1f625509!important;border-color:#eff5f1!important}.bg-primary{background-color:#168d78!important}.text-primary{color:#087f73!important}.bg-surface-container-low,.bg-surface-container,.bg-surface-container-high{background-color:#eaf5ee!important}button{transition:background .18s,transform .18s}button:active{transform:scale(.98)}#ep-nav{box-shadow:0 -5px 22px #18574406;border-top:1px solid #edf4ef!important}#ep-nav button.active{color:#159e69!important}#submit-checkin-btn,#checkin-btn{background:#efbd23!important;color:#fff!important;border-radius:30px!important}.v2-hero{position:relative;border-radius:23px;overflow:hidden;min-height:240px;background:#295d45;color:#fff;margin-bottom:16px;padding:26px 22px}.v2-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.v2-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c4025d9,#0c402525)}.v2-hero>div{position:relative;z-index:1}.v2-hero h1{color:#fff!important;font-size:26px;font-weight:700;line-height:1.45;margin-bottom:10px}.v2-hero p{font-size:13px;color:#fff;max-width:230px;line-height:1.8}.v2-hero button{margin-top:22px;background:#efbd23;color:white;padding:10px 24px;border-radius:28px;font-weight:700}.v2-card{background:#fff;border-radius:22px;padding:18px;margin:16px 0;box-shadow:0 5px 22px #1f625509}.v2-card h2{font-size:18px;font-weight:700;margin-bottom:14px}.v2-live{display:flex;gap:14px;align-items:center;cursor:pointer}.v2-live img{width:42%;height:110px;object-fit:cover;border-radius:12px}.v2-live h3{font-size:16px;font-weight:700}.v2-live p{font-size:12px;color:#6a817a;margin-top:8px}.v2-live span{font-size:13px;color:#168d78;display:block;margin-top:10px}</style><style id="audit-fixes">body{padding-top:78px!important}#ep-header{height:78px!important;padding:10px 12px}#ep-header b{font-size:19px}#ep-header small{margin-top:4px!important;font-size:10px!important}#ep-header:after{height:78px}h1.text-white,h2.text-white,h3.text-white,h4.text-white{color:white!important}.fixed.inset-0{z-index:2000!important;padding:12px!important;align-items:center!important}.fixed.inset-0>div{max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;border-radius:20px!important}button:focus-visible,[role=button]:focus-visible{outline:3px solid #e6b51c;outline-offset:2px}[id^=section-]{scroll-margin-top:90px}#youth-tabs{position:sticky;top:78px;z-index:40;background:#f4f9f6;padding:8px 0}#submission-form>div:last-child{position:sticky;bottom:-20px;background:white;padding:12px 0;margin-top:12px}#submission-modal h4{font-size:16px}#submission-modal button{flex-shrink:0}@media(max-width:360px){main{padding-left:12px!important;padding-right:12px!important}.v2-hero{min-height:205px;padding:20px 16px}.v2-hero h1{font-size:23px}#ep-header b{font-size:18px}#ep-header div{padding-left:5px}.tab-btn{font-size:14px!important}#checkin-btn,#submit-checkin-btn{white-space:nowrap;font-size:13px!important;padding:10px!important}}</style><style id="visual-polish">html,body{background:#f3f8f5!important}main.bg-surface{background:#f3f8f5!important}#ep-header small{color:#517269!important}button{min-height:36px}#ep-nav{height:64px!important}body{padding-bottom:72px!important}#ep-header{height:68px!important}body{padding-top:68px!important}#ep-header:after{height:68px}#ep-header b{font-size:18px}#youth-tabs{top:68px!important}main>div{min-width:0}.visual-wrap{display:flex!important;flex-wrap:wrap!important;gap:8px!important;align-items:center!important}.visual-wrap>*{margin-left:0!important}.visual-nowrap{white-space:nowrap;flex-shrink:0}.visual-line{flex-basis:100%;margin:0!important}.visual-meta{font-size:12px!important;line-height:1.6!important;color:#52675f!important}.visual-feed-head{display:flex!important;flex-wrap:wrap;gap:6px!important}.visual-feed-head>*{min-width:0}.visual-clear{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}.v2-hero{min-height:170px!important;padding:18px!important;margin-bottom:12px!important}.v2-hero h1{font-size:23px!important;margin-bottom:6px!important}.v2-hero button{margin-top:12px!important;padding:8px 22px!important;color:#244638!important}.visual-module-grid{gap:8px!important}.visual-module-grid>div{padding:10px 4px!important}.visual-location{display:flex!important;flex-wrap:wrap!important;gap:6px;align-items:center!important}.visual-location>div{min-width:0}.visual-location .visual-school{width:100%;font-size:12px!important}.visual-location>div:last-child{font-size:10px}.visual-points{display:flex!important;flex-wrap:wrap!important;gap:8px!important}.visual-points>span{margin:0!important}.visual-points>span:last-child{flex-basis:100%;font-size:12px!important;background:none!important;padding:0!important}.visual-course-meta{display:flex!important;flex-wrap:wrap;gap:8px!important}.visual-course-meta>span{margin:0!important;white-space:nowrap}.visual-course-meta>span:first-child{flex-basis:100%;white-space:normal}.visual-course-meta>span:nth-child(2){display:none}.visual-fullname{font-size:13px!important;line-height:1.5!important}.visual-entry{min-width:56px;flex-shrink:0;white-space:nowrap}.visual-intro{border:1px solid #dce9e2;border-radius:16px;padding:12px;font-size:13px;color:#52675f;background:#fff}.visual-intro summary{font-weight:600;color:#087f73;cursor:pointer}.visual-intro p{margin-top:8px}.visual-paper h1{font-size:22px!important}.visual-paper{padding:16px!important}.visual-tags{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:6px!important}.visual-tags>*{margin:0!important}</style><style>.visual-module-grid .text-outline,.visual-module-grid [class*=text-on-surface-variant]{color:#62786e!important}.visual-author{display:block!important}.visual-author>div:first-child{flex-wrap:nowrap!important;align-items:center!important;gap:8px!important}.visual-author>div:first-child>div:first-child{flex-shrink:0}.visual-author>div:first-child>div:last-child{min-width:0;flex:1}.visual-author>div:last-child{justify-content:flex-end;margin-top:4px;white-space:nowrap}.visual-paper{padding:8px 0!important}</style></head>
+<body class="bg-surface font-body-default text-body-default text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed"><header id="ep-header"><button aria-label="返回首页" onclick="epGo(1)">‹</button><div><b>教育Plus · 读书会</b><small>贵州教育资讯 · 权威教育服务入口</small></div><span>•••</span></header>
+<!-- 顶部导航栏 -->
+<!-- 主内容区 -->
+<main class="flex flex-col relative w-full header-offset pb-tab-safe bg-surface px-margin-page flex-1">
+<div class="flex flex-col w-full space-y-space-md pt-2">
+<!-- 演示数据标签栏 -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-medium text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>贵州省中小学书香校园共读工程</span>
+</div>
+<div class="flex items-center space-x-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+<span>第 14 期黔青悦读</span>
+</div>
+</div>
+<!-- 核心新增模块：三个核心入口卡片（领读员培训、名家谈阅读、读后感） -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- 入口 1: 领读员培训 -->
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-primary/40" onclick="handleQuickNav('领读员培训')">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/60 flex items-center justify-center text-primary mb-1.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">record_voice_over</span>
+</div>
+<span class="font-title-card text-[13px] text-on-surface font-semibold">领读员培训</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">名师领读课堂</span>
+</button>
+<!-- 入口 2: 名家谈阅读 -->
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-tertiary/40" onclick="handleQuickNav('名家谈阅读')">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-tertiary mb-1.5 group-hover:bg-tertiary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<span class="font-title-card text-[13px] text-on-surface font-semibold">名家谈阅读</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">贵州教育名家</span>
+</button>
+<!-- 入口 3: 读后感 -->
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-secondary/40" onclick="handleQuickNav('读后感专栏')">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-1.5 group-hover:bg-secondary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+</div>
+<span class="font-title-card text-[13px] text-on-surface font-semibold">读后感精选</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">全省优秀习作</span>
+</button>
+</div>
+<!-- 1. 当前共读书目与阅读态势卡片 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-surface-container-high/40">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-primary-fixed/25 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex-1 pr-3">
+<div class="flex items-center space-x-1.5">
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary-fixed/60 text-primary font-label-caption text-[11px] font-semibold">
+                贵州省共读焦点
+              </span>
+<span class="text-on-surface-variant text-[11px]">全省 12.8 万学子共读</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-on-surface mt-1.5 tracking-tight font-bold">
+              《人类群星闪耀时·精注特辑》
+            </h2>
+<p class="text-on-surface-variant font-label-caption text-label-caption line-clamp-1 mt-0.5">
+              [奥] 茨威格 · 领读导师：贵州大学中文系特聘专家
+            </p>
+</div>
+<!-- 进度环形微图 -->
+<div class="relative flex items-center justify-center w-14 h-14 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<circle class="text-surface-variant" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="18" cy="18" fill="none" r="15.915" stroke="currentColor" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="3.2"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-title-card text-[12px] leading-tight text-primary font-bold">68%</span>
+</div>
+</div>
+</div>
+<!-- 读书统计指标与主打卡按钮 -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 p-space-md rounded-lg">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+<div>
+<div class="text-on-surface-variant font-label-caption text-label-caption">本周累计共读</div>
+<div class="font-title-card text-title-card text-on-surface font-bold">4.2 <span class="text-[11px] font-normal text-on-surface-variant">小时</span></div>
+</div>
+</div>
+<button class="h-10 px-4 rounded-full bg-primary hover:bg-primary/95 active:scale-95 transition-all text-on-primary font-title-card text-body-medium shadow-sm flex items-center space-x-1.5" onclick="scrollToCheckin()">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>打卡写感悟</span>
+</button>
+</div>
+</div>
+<!-- 2. 本期读书会阅读积分展示栏（仅保留积分与打卡规则，去除兑换文具礼品及金币） -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-surface-container-high/50 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-11 h-11 rounded-full bg-primary-fixed/60 flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[24px]">military_tech</span>
+</div>
+<div class="visual-wrap">
+<div class="flex items-center space-x-1.5 visual-points">
+<span class="text-on-surface-variant text-label-caption font-medium visual-nowrap">我的阅读积分：</span>
+<span class="font-display-stat text-[22px] leading-none text-primary font-bold tracking-tight visual-nowrap" data-reading-points="" id="user-total-points">1,280</span>
+<span class="text-on-surface-variant font-label-caption text-label-caption visual-nowrap">分</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-primary font-label-meta text-label-meta">贵阳市第一实验初级中学 · 八年级(3)班</span>
+</div>
+<p class="text-on-surface-variant font-label-meta text-label-meta mt-0.5">
+              每日打卡 +20 积分 · 获贵州名师点评 +30 积分 · 入选全省展播 +50 积分
+            </p>
+</div>
+</div>
+<button class="text-primary hover:underline text-[12px] font-medium shrink-0 flex items-center space-x-0.5 pl-2" onclick="showScoreRule()">
+<span>积分说明</span>
+<span class="material-symbols-outlined text-[14px]">help_outline</span>
+</button>
+</div>
+<!-- 3. 每日打卡与心得专区：真实打卡交互卡片 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md border border-surface-container-high/50" id="quick-checkin-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_calendar</span>
+<h3 class="font-title-card text-title-card text-on-surface font-bold">今日打卡记感悟</h3>
+</div>
+<div class="flex items-center space-x-1 text-primary font-label-caption text-label-caption font-medium bg-primary-fixed/30 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span id="streak-counter">已连续打卡 12 天</span>
+</div>
+</div>
+<!-- 友好校验错误提示条 (默认隐藏) -->
+<div class="hidden rounded-lg bg-error-container/80 text-error px-3 py-2 flex items-center space-x-2 text-[12px] font-medium animate-shake" id="checkin-error">
+<span class="material-symbols-outlined text-[18px] shrink-0">error</span>
+<span id="checkin-error-msg">请输入阅读页码及打卡心得感悟</span>
+</div>
+<!-- 快捷页码与心得输入 -->
+<div class="space-y-space-sm">
+<div class="flex items-center space-x-2">
+<div class="flex-1 flex items-center h-10 px-3 rounded-lg bg-surface-container-low text-on-surface text-body-medium focus-within:ring-1 focus-within:ring-primary">
+<span class="text-on-surface-variant font-label-caption text-label-caption shrink-0 mr-2">今日阅读至：</span>
+<input class="w-full bg-transparent focus:outline-none text-right font-title-card text-primary placeholder-on-surface-variant/50 text-[14px]" id="page-input" min="1" placeholder="如：142" type="number"/>
+<span class="text-on-surface-variant font-label-caption text-label-caption ml-1">页</span>
+</div>
+<button class="h-10 px-3 rounded-lg bg-surface-container-high text-primary font-label-caption text-label-caption shrink-0 active:scale-95 transition-all hover:bg-surface-container" onclick="fillQuote()">
+              引用好词名句
+            </button>
+</div>
+<div class="relative">
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface placeholder-on-surface-variant/60 font-body-default text-body-default focus:outline-none focus:ring-1 focus:ring-primary resize-none transition-all" id="note-input" placeholder="写下今天读书的深刻启发、名句摘抄或简短感悟评注..." rows="3"></textarea>
+</div>
+</div>
+<!-- 提交按钮 -->
+<button class="w-full h-11 rounded-full bg-primary hover:bg-primary/90 text-on-primary font-title-card text-body-medium flex items-center justify-center space-x-1.5 shadow-sm active:scale-98 transition-all" id="submit-checkin-btn" onclick="handlePublish()">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>发布今日打卡 (读书会积分 +20)</span>
+</button>
+</div>
+<!-- 4. 精选心得动态流 (支持点赞切换和收藏切换) -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h3 class="font-title-card text-title-card text-on-surface font-bold">精选读书心得动态</h3>
+</div>
+<span class="text-on-surface-variant font-label-meta text-label-meta">贵州各校师生实时研读</span>
+</div>
+<!-- 心得动态容器，新打卡内容prepend到此处 -->
+<div class="space-y-space-sm" id="dynamic-posts-container">
+<!-- 动态卡片 1：贵阳市实验三中 带有贵州名师点评 -->
+<div class="feed-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-2.5 border border-surface-container-high/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-title-card text-label-caption font-bold">
+                  程
+                </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface">程子轩 · 贵阳市实验三中 高一(2)班</div>
+<div class="text-on-surface-variant font-label-meta text-label-meta">今日 09:24 读至第 185 页</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-meta text-label-meta font-medium">连续打卡 28 天</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface pl-1 leading-relaxed">
+              读到《滑铁卢的一分钟》，格鲁希元帅的犹豫让人扼腕叹息。茨威格用极具张力的笔触将命运的关键抉择展现得淋漓尽致：命运鄙视那些迟疑不决者，只青睐果断勇敢的心！
+            </p>
+<!-- 贵州名师王老师置顶反馈 -->
+<div class="rounded-lg bg-surface-container-low p-2.5 flex items-start space-x-2 border-l-2 border-primary">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">rate_review</span>
+<div class="text-label-caption font-label-caption leading-relaxed">
+<span class="font-semibold text-primary">贵州名师王老师（贵阳实验三中语文名师工作室）:</span>
+<span class="text-on-surface-variant"> 抓住关键意象了！历史的偶然与必然在此刻交汇，周五读书会晨读期待你带大家继续深入展开！</span>
+</div>
+</div>
+<!-- 点赞与收藏交互 -->
+<div class="flex items-center justify-end space-x-5 pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer like-btn" onclick="toggleLike(this, 26)">
+<span class="material-symbols-outlined text-[17px]">thumb_up</span>
+<span class="like-count">26</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-tertiary transition-colors cursor-pointer fav-btn" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[17px]">bookmark</span>
+<span class="fav-text">收藏</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer" onclick="showToast('已进入互动评论区')">
+<span class="material-symbols-outlined text-[17px]">chat_bubble_outline</span>
+<span>4</span>
+</button>
+</div>
+</div>
+<!-- 动态卡片 2：贵州大学附中 -->
+<div class="feed-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-2.5 border border-surface-container-high/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-title-card text-label-caption font-bold">
+                  梁
+                </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface">梁韵诗 · 贵州大学附中 初三(5)班</div>
+<div class="text-on-surface-variant font-label-meta text-label-meta">昨天 21:15 读至第 112 页</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed/40 text-tertiary font-label-meta text-label-meta font-medium">黔青领读标兵</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface pl-1 leading-relaxed">
+              “那些极少数的真正群星闪耀的时刻，不仅照亮了几个世纪，也照亮了每一个阅读它们的平凡灵魂。” 今晚在贵大附中图书馆自习重温这段，内心的学习动力瞬间被点燃！
+            </p>
+<!-- 点赞与收藏交互 -->
+<div class="flex items-center justify-end space-x-5 pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer like-btn" onclick="toggleLike(this, 42)">
+<span class="material-symbols-outlined text-[17px]">thumb_up</span>
+<span class="like-count">42</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-tertiary transition-colors cursor-pointer fav-btn" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[17px]">bookmark</span>
+<span class="fav-text">收藏</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer" onclick="showToast('已进入互动评论区')">
+<span class="material-symbols-outlined text-[17px]">chat_bubble_outline</span>
+<span>8</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. 综合阅读打卡三级排行榜（班级榜、全校榜、全省/区域榜） -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-md border border-surface-container-high/40">
+<div class="flex items-center justify-between border-b-0 pb-1">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">leaderboard</span>
+<h3 class="font-title-card text-title-card text-on-surface font-bold">阅读打卡排行榜</h3>
+</div>
+<!-- 三级选项卡切换 -->
+<div class="flex items-center bg-surface-container-high rounded-full p-0.5">
+<button class="rank-tab-btn px-2.5 py-1 rounded-full font-label-caption text-label-caption bg-surface-container-lowest text-primary shadow-xs font-semibold" onclick="switchRankTab('class', this)">班级榜</button>
+<button class="rank-tab-btn px-2.5 py-1 rounded-full font-label-caption text-label-caption text-on-surface-variant font-medium" onclick="switchRankTab('school', this)">全校榜</button>
+<button class="rank-tab-btn px-2.5 py-1 rounded-full font-label-caption text-label-caption text-on-surface-variant font-medium" onclick="switchRankTab('province', this)">全省/区域榜</button>
+</div>
+</div>
+<!-- 排行榜列表区 (默认：班级榜 - 贵阳市实验三中) -->
+<div class="space-y-2" id="rank-list">
+<!-- TOP 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/50">
+<div class="flex items-center space-x-3">
+<div class="w-6 flex items-center justify-center">
+<span class="w-5 h-5 rounded-full bg-[#F59E0B] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">1</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-primary font-bold">
+                沈
+              </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface flex items-center space-x-1.5">
+<span class="font-semibold">沈嘉言</span>
+<span class="material-symbols-outlined text-[#F59E0B] text-[16px]">military_tech</span>
+</div>
+<div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 42 天</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-card text-body-medium text-primary font-bold">2,450 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+</div>
+</div>
+<!-- TOP 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+<div class="flex items-center space-x-3">
+<div class="w-6 flex items-center justify-center">
+<span class="w-5 h-5 rounded-full bg-[#94A3B8] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">2</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-secondary font-bold">
+                苏
+              </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface font-semibold">苏沐雨</div>
+<div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 35 天</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-card text-body-medium text-on-surface font-bold">2,110 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+</div>
+</div>
+<!-- TOP 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+<div class="flex items-center space-x-3">
+<div class="w-6 flex items-center justify-center">
+<span class="w-5 h-5 rounded-full bg-[#D97706] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">3</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-tertiary font-bold">
+                韩
+              </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface font-semibold">韩泽宇</div>
+<div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 30 天</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-card text-body-medium text-on-surface font-bold">1,890 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+</div>
+</div>
+</div>
+<!-- 我的排名固定底衬 -->
+<div class="rounded-lg bg-primary-fixed/30 p-space-md flex items-center justify-between border border-primary/20">
+<div class="flex items-center space-x-3">
+<span class="w-6 text-center font-title-card text-primary text-title-card font-bold">8</span>
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-card text-label-caption font-bold">
+              我
+            </div>
+<div>
+<div class="font-title-card text-body-medium text-on-surface font-semibold">我的班级排名：第 8 名</div>
+<div class="text-primary font-label-meta text-label-meta">距前一名仅差 35 读书会积分，加油！</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-card text-title-card text-primary font-bold" data-reading-points="" id="my-rank-score">1,280</span>
+<span class="text-on-surface-variant text-label-meta">分</span>
+</div>
+</div>
+</div>
+<!-- 6. 推荐共读活动 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md border border-surface-container-high/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">local_library</span>
+<h3 class="font-title-card text-title-card text-on-surface font-bold">推荐共读书目</h3>
+</div>
+<button class="text-on-surface-variant hover:text-primary font-label-caption text-label-caption flex items-center space-x-0.5" onclick="showToast('更多书库可在文末或导航栏浏览')">
+<span>书目总目</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<!-- 书目 1 -->
+<div class="rounded-lg bg-surface-container-low/40 p-space-md flex items-center justify-between space-x-3">
+<div class="w-12 h-16 rounded-md bg-surface-container-high shrink-0 flex flex-col items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+<span class="text-[9px] font-bold mt-0.5">必读推荐</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-card text-body-medium text-on-surface truncate font-semibold">《昆虫记·名师导读精本》</h4>
+<p class="text-on-surface-variant font-label-caption text-label-caption mt-0.5 line-clamp-1">[法] 法布尔 · 贵阳名师导读版</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-meta text-label-meta">贵州各校 3,410 人在读</span>
+</div>
+</div>
+<button class="h-8 px-3.5 rounded-full bg-primary hover:bg-primary/90 text-on-primary font-title-card text-label-caption shrink-0 active:scale-95 transition-all" onclick="handleJoinBook(this)">
+            加入共读
+          </button>
+</div>
+<!-- 书目 2 -->
+<div class="rounded-lg bg-surface-container-low/40 p-space-md flex items-center justify-between space-x-3">
+<div class="w-12 h-16 rounded-md bg-tertiary-fixed/40 shrink-0 flex flex-col items-center justify-center text-tertiary shadow-xs">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+<span class="text-[9px] font-bold mt-0.5">红润黔中</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-card text-body-medium text-on-surface truncate font-semibold">《觉醒年代·青年读本》</h4>
+<p class="text-on-surface-variant font-label-caption text-label-caption mt-0.5 line-clamp-1">贵州省优秀中学生党史经典阅读推荐</p>
+<div class="flex items-center space-x-2 mt-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-meta text-label-meta">2,820 人在读</span>
+</div>
+</div>
+<button class="h-8 px-3.5 rounded-full bg-primary hover:bg-primary/90 text-on-primary font-title-card text-label-caption shrink-0 active:scale-95 transition-all" onclick="handleJoinBook(this)">
+            加入共读
+          </button>
+</div>
+</div>
+<!-- 页脚标语 -->
+<div class="text-center py-3 text-on-surface-variant font-label-meta text-label-meta">
+        贵州教育报 · 建设书香校园 · 伴黔山学子向阳生长
+      </div>
+</div>
+</main>
+<!-- 底部四个Tab导航栏 (支持切换) -->
+<!-- 轻量全局通知弹窗 (Toast) -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9999] px-4 py-2.5 rounded-xl bg-inverse-surface/90 backdrop-blur-md text-inverse-on-surface font-body-medium text-body-medium shadow-xl opacity-0 pointer-events-none transition-opacity duration-300 max-w-[85vw] text-center" id="toast">
+    提示信息
+  </div>
+<script>
+    // 状态控制
+    let currentPoints = JSON.parse(localStorage.getItem('ep-reading-v3')||'{"points":1280}').points;
+    let hasCheckedInToday = JSON.parse(localStorage.getItem('ep-reading-v3')||'{}').checked||false;
+    let currentStreakDays = JSON.parse(localStorage.getItem('ep-reading-v3')||'{"days":12}').days;
+
+    // 显示 Toast
+    function showToast(text, duration = 2200) {
+      const toast = document.getElementById('toast');
+      toast.textContent = text;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, duration);
+    }
+
+    // 返回首页
+    function handleGoHome() {
+      showToast('正在返回贵州教育报·教育Plus 首页...');
+      setTimeout(() => {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.reload();
+        }
+      }, 500);
+    }
+
+    // 核心入口导航
+    function handleQuickNav(moduleName) {
+      showToast('正在前往【贵州教育报·' + moduleName + '】专栏...');
+    }
+
+    // 平滑滚动至打卡区
+    function scrollToCheckin() {
+      const card = document.getElementById('quick-checkin-card');
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          document.getElementById('note-input').focus();
+        }, 400);
+      }
+    }
+
+    // 引用金句快捷填充
+    function fillQuote() {
+      const quotes = [
+        '“一个天才的瞬间往往决定了未来数十载的壮阔，勇敢迈出每一步。”',
+        '“命运鄙视那些迟疑不决者，只青睐果断勇敢的心！”',
+        '“读书点亮黔山少年的心灯，以真知照亮未来之路。”'
+      ];
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('note-input').value = randomQuote;
+      clearError();
+    }
+
+    // 清除错误红字提示
+    function clearError() {
+      const errBox = document.getElementById('checkin-error');
+      errBox.classList.add('hidden');
+    }
+
+    // 显示错误红字提示
+    function showError(msg) {
+      const errBox = document.getElementById('checkin-error');
+      const errMsg = document.getElementById('checkin-error-msg');
+      errMsg.textContent = msg;
+      errBox.classList.remove('hidden');
+    }
+
+    // 监听输入，输入时自动清除校验报错
+    document.getElementById('page-input').addEventListener('input', clearError);
+    document.getElementById('note-input').addEventListener('input', clearError);
+
+    // 打卡提交核心逻辑
+    function handlePublish() {
+      const pageVal = document.getElementById('page-input').value.trim();
+      const noteVal = document.getElementById('note-input').value.trim();
+
+      // 1. 若输入框为空，弹出红字友好校验
+      if (!pageVal || !noteVal) {
+        showError('请输入阅读页码及打卡心得感悟');
+        return;
+      }
+      clearError();
+
+      // 2. 区分首次打卡与重复打卡
+      if (!hasCheckedInToday) {
+        hasCheckedInToday = true;
+        currentStreakDays += 1;
+        currentPoints += 20; localStorage.setItem('ep-reading-v3',JSON.stringify({points:currentPoints,days:currentStreakDays,checked:true}));
+
+        // 更新界面积分及连打天数
+        document.getElementById('user-total-points').textContent = currentPoints.toLocaleString();
+        document.getElementById('my-rank-score').textContent = currentPoints.toLocaleString();
+        document.getElementById('streak-counter').textContent = `已连续打卡 ${currentStreakDays} 天`;
+
+        // 弹出成功提示
+        showToast('打卡成功！已记录今日打卡，读书会积分 +20', 2600);
+
+        // 动态将该条心得置入下方心得动态首位
+        prependNewPost(pageVal, noteVal);
+
+        // 清空输入框
+        document.getElementById('page-input').value = '';
+        document.getElementById('note-input').value = '';
+      } else {
+        // 重复打卡处理
+        showToast('今日已完成打卡，记录已更新，不重复增加积分', 2600);
+        prependNewPost(pageVal, noteVal, true);
+        document.getElementById('page-input').value = '';
+        document.getElementById('note-input').value = '';
+      }
+    }
+
+    // 动态插入心得卡片
+    function prependNewPost(page, note, isUpdate = false) {
+      const container = document.getElementById('dynamic-posts-container');
+      const newCard = document.createElement('div');
+      newCard.className = 'feed-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-2.5 border border-primary/30 animate-fade-in';
+
+      const now = new Date();
+      const timeStr = '刚刚 ' + String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+
+      newCard.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-card text-label-caption font-bold">
+              我
+            </div>
+            <div>
+              <div class="font-title-card text-body-medium text-on-surface flex items-center space-x-1.5">
+                <span class="font-semibold">我 · 贵阳市实验三中 初二(3)班</span>
+                ${isUpdate ? '<span class="text-[10px] text-tertiary bg-tertiary-fixed/40 px-1 rounded">更新打卡</span>' : '<span class="text-[10px] text-primary bg-primary-fixed/40 px-1 rounded">新打卡</span>'}
+              </div>
+              <div class="text-on-surface-variant font-label-meta text-label-meta">${timeStr} 读至第 ${page} 页</div>
+            </div>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-meta text-label-meta font-medium">连续打卡 ${currentStreakDays} 天</span>
+        </div>
+        <p class="font-body-default text-body-default text-on-surface pl-1 leading-relaxed">
+          ${escapeHtml(note)}
+        </p>
+        <div class="flex items-center justify-end space-x-5 pt-1 text-on-surface-variant font-label-caption text-label-caption">
+          <button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer like-btn" onclick="toggleLike(this, 1)">
+            <span class="material-symbols-outlined text-[17px]">thumb_up</span>
+            <span class="like-count">1</span>
+          </button>
+          <button class="flex items-center space-x-1 hover:text-tertiary transition-colors cursor-pointer fav-btn" onclick="toggleFavorite(this)">
+            <span class="material-symbols-outlined text-[17px]">bookmark</span>
+            <span class="fav-text">收藏</span>
+          </button>
+          <button class="flex items-center space-x-1 hover:text-primary transition-colors cursor-pointer" onclick="showToast('已进入互动评论区')">
+            <span class="material-symbols-outlined text-[17px]">chat_bubble_outline</span>
+            <span>0</span>
+          </button>
+        </div>
+      `;
+
+      container.prepend(newCard);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
+    }
+
+    // 点赞切换（高亮及数字 +1 / -1）
+    function toggleLike(btn, baseCount) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const countSpan = btn.querySelector('.like-count');
+      const isLiked = btn.classList.contains('text-primary');
+
+      if (isLiked) {
+        btn.classList.remove('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        countSpan.textContent = baseCount;
+        showToast('已取消点赞');
+      } else {
+        btn.classList.add('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        countSpan.textContent = baseCount + 1;
+        showToast('点赞成功！');
+      }
+    }
+
+    // 收藏切换
+    function toggleFavorite(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const favText = btn.querySelector('.fav-text');
+      const isFav = btn.classList.contains('text-tertiary');
+
+      if (isFav) {
+        btn.classList.remove('text-tertiary');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        favText.textContent = '收藏';
+        showToast('已取消收藏');
+      } else {
+        btn.classList.add('text-tertiary');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        favText.textContent = '已收藏';
+        showToast('已收藏该条心得至个人书签');
+      }
+    }
+
+    // 加入共读书目
+    function handleJoinBook(btn) {
+      btn.disabled = true;
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      btn.textContent = '已加入';
+      showToast('已加入该书目！贵州教育报领读日程已同步至您的日历');
+    }
+
+    // 积分规则说明弹窗
+    function showScoreRule() {
+      showToast('积分规则：每日阅读打卡+20分，获名师点评+30分，全省展播+50分。');
+    }
+
+    // 三级排行榜切换（班级榜、全校榜、全省/区域榜）
+    function switchRankTab(type, el) {
+      document.querySelectorAll('.rank-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+        btn.classList.add('text-on-surface-variant', 'font-medium');
+      });
+      el.classList.remove('text-on-surface-variant', 'font-medium');
+      el.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+
+      const rankList = document.getElementById('rank-list');
+      if (type === 'class') {
+        rankList.innerHTML = `
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/50">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#F59E0B] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">1</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-primary font-bold">沈</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface flex items-center space-x-1.5">
+                  <span class="font-semibold">沈嘉言</span>
+                  <span class="material-symbols-outlined text-[#F59E0B] text-[16px]">military_tech</span>
+                </div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 42 天</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-primary font-bold">2,450 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#94A3B8] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">2</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-secondary font-bold">苏</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface font-semibold">苏沐雨</div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 35 天</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-on-surface font-bold">2,110 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#D97706] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">3</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-tertiary font-bold">韩</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface font-semibold">韩泽宇</div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 30 天</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-on-surface font-bold">1,890 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+        `;
+      } else if (type === 'school') {
+        rankList.innerHTML = `
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/50">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#F59E0B] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">1</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center font-title-card text-body-medium text-primary font-bold">张</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface flex items-center space-x-1.5">
+                  <span class="font-semibold">张敬修 · 高三(1)班</span>
+                  <span class="material-symbols-outlined text-[#F59E0B] text-[16px]">military_tech</span>
+                </div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵州大学附中 · 连续打卡 88 天</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-primary font-bold">4,820 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#94A3B8] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">2</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center font-title-card text-body-medium text-secondary font-bold">刘</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface font-semibold">刘雨菲 · 初二(1)班</div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市实验三中 · 连续打卡 72 天</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-on-surface font-bold">3,980 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+        `;
+      } else {
+        // 全省/区域榜
+        rankList.innerHTML = `
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/50">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#F59E0B] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">1</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center font-title-card text-body-medium text-tertiary font-bold">贵</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface font-semibold">贵州大学附属中学</div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市 · 人均读书会积分 2,860 分</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-primary font-bold">98,520 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/30">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 flex items-center justify-center">
+                <span class="w-5 h-5 rounded-full bg-[#94A3B8] text-white flex items-center justify-center font-bold text-[11px] shadow-sm">2</span>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-title-card text-body-medium text-primary font-bold">实</div>
+              <div>
+                <div class="font-title-card text-body-medium text-on-surface font-semibold">贵阳市实验三中</div>
+                <div class="text-on-surface-variant font-label-meta text-label-meta">贵阳市 · 人均读书会积分 2,420 分</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-title-card text-body-medium text-on-surface font-bold">86,400 <span class="text-label-meta font-normal text-on-surface-variant">分</span></div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // 底部 Tab 点击切换
+    function switchBottomTab(index, name) {
+      const tabs = document.querySelectorAll('.tab-item');
+      tabs.forEach((tab, i) => {
+        const icon = tab.querySelector('.material-symbols-outlined');
+        const text = tab.querySelector('span:last-child');
+        if (i === index) {
+          tab.classList.remove('text-on-surface-variant');
+          tab.classList.add('text-primary');
+          text.classList.add('font-bold');
+          text.classList.remove('font-medium');
+          icon.style.fontVariationSettings = "'FILL' 1";
+        } else {
+          tab.classList.remove('text-primary');
+          tab.classList.add('text-on-surface-variant');
+          text.classList.remove('font-bold');
+          text.classList.add('font-medium');
+          icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      });
+      if (index !== 1) {
+        showToast('已切换至【' + name + '】板块');
+      }
+    }
+  </script>
+<nav id="ep-nav"><button class="" onclick="epGo(1)"><span class="material-symbols-outlined">home</span>首页</button><button class="active" onclick="epGo(11)"><span class="material-symbols-outlined">grid_view</span>服务</button><button class="" onclick="epGo(12)"><span class="material-symbols-outlined">event</span>活动</button><button class="" onclick="epGo(10)"><span class="material-symbols-outlined">person</span>我的</button></nav><script>
+function epGo(n){if(parent!==window)parent.postMessage({educationPlusRoute:n},location.origin);else location.href='index.html#'+n;}
+window.goHome=window.goToHome=()=>epGo(1);
+window.alert=(message)=>{const old=document.getElementById('ep-alert');if(old)old.remove();const d=document.createElement('dialog');d.id='ep-alert';d.style.cssText='padding:24px;border:0;border-radius:20px;max-width:330px;color:#204239;box-shadow:0 20px 90px #1235';const t=document.createElement('p');t.textContent=message;d.append(t);const b=document.createElement('button');b.textContent='我知道了';b.style.cssText='margin-top:20px;background:#087f73;color:white;padding:10px 30px;border-radius:20px';b.onclick=()=>d.remove();d.append(b);document.body.append(d);d.showModal();};
+// Replace root-navigation callbacks only. Scientific/campus tab callbacks stay local.
+if(2===1||2===11)window.switchTab=(k)=>epGo({home:1,services:11,activities:12,profile:10}[k]||1);
+document.querySelectorAll('input').forEach(e=>{if(e.id.includes('taxcode'))e.value='';});
+</script><script>function epRead(){try{return JSON.parse(localStorage.getItem('ep-reading-v3'))||{points:1280,days:12,checked:false}}catch(e){return {points:1280,days:12,checked:false}}}function epSync(){const r=epRead();document.querySelectorAll('[data-reading-points]').forEach(e=>e.textContent=r.points.toLocaleString());document.querySelectorAll('[data-reading-days]').forEach(e=>e.textContent=r.days+' 天');let q=localStorage.getItem('ep-quiz-v3');document.querySelectorAll('[data-quiz-score]').forEach(e=>e.textContent=q===null?'未作答':q+' 分');}window.addEventListener('storage',epSync);window.addEventListener('pageshow',epSync);epSync();document.getElementById('streak-counter').textContent='已连续打卡 '+epRead().days+' 天';document.querySelectorAll('.material-symbols-outlined').forEach(e=>e.setAttribute('aria-hidden','true'));document.querySelectorAll('[onclick]:not(button):not(a):not(input):not(label)').forEach(e=>{if(!e.querySelector('button,input,a')){e.setAttribute('role','button');e.tabIndex=0;e.addEventListener('keydown',k=>{if(k.key==='Enter'||k.key===' '){k.preventDefault();e.click();}})}});</script><script>let epDialog=null,epPriorFocus=null;function epModalSync(){const d=[...document.querySelectorAll('.fixed.inset-0')].find(e=>getComputedStyle(e).display!=='none'&&getComputedStyle(e).opacity!=='0'&&getComputedStyle(e).pointerEvents!=='none');if(d===epDialog)return;if(epDialog){document.querySelectorAll('[data-ep-inert]').forEach(e=>{e.inert=false;e.removeAttribute('data-ep-inert')});}if(d){epPriorFocus=document.activeElement;let child=d;while(child.parentElement&&child.parentElement!==document.documentElement){[...child.parentElement.children].filter(e=>e!==child&&!['SCRIPT','STYLE'].includes(e.tagName)).forEach(e=>{e.inert=true;e.setAttribute('data-ep-inert','')});child=child.parentElement;}}else if(epPriorFocus&&epPriorFocus.isConnected){epPriorFocus.focus();}epDialog=d;}new MutationObserver(epModalSync).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','style']});</script><script>window.EP_PAGE="2";</script><script src="routes.js"></script></body></html>

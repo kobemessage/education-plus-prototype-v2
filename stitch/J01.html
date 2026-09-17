@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.25rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface-container-low font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[200px] flex items-center justify-center gap-1.5"><h1 class="font-headline-section text-headline-section text-on-surface truncate">作品详情</h1><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline text-[10px] font-normal">[演示数据]</span></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><button aria-label="分享海报" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" onclick="showToast('正在生成见报纪念分享海报...')" type="button"><span class="material-symbols-outlined text-[18px]">share</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface-container-low pb-safe"><div class="flex flex-col w-full pb-36">
+<!-- 顶部文章标题区与刊发信息卡片 -->
+<div class="px-margin-page pt-space-md">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-surface-container/60">
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-caption text-label-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>小记者头条见报
+</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-caption text-label-caption">
+校园人物专访
+</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline">[演示数据]</span>
+</div>
+<h2 class="font-headline-page text-[22px] leading-[30px] font-bold text-on-surface mt-1">
+《一张报纸的铅字印记：探访贵州教育报社新闻编辑部》
+</h2>
+<div class="mt-3 pt-3 border-t border-surface-container-low flex items-center justify-between text-on-surface-variant font-label-meta text-label-meta">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">newspaper</span>
+<span>刊登于《贵州教育报》2025年第18期 · 校园小记者专版</span>
+</div>
+</div>
+<div class="mt-2.5 flex items-center gap-4 text-outline font-label-meta text-label-meta">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> 3,680 次阅读
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 1,150 字
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> 2025-05-18
+</span>
+</div>
+</div>
+</div>
+<!-- 作者小记者与指导老师档案卡片 -->
+<div class="px-margin-page mt-space-md">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-surface-container/60">
+<div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 rounded-full bg-primary"></span>
+<h3 class="font-title-card text-title-card text-on-surface font-semibold">作者与指导老师</h3>
+</div>
+<span class="font-label-meta text-label-meta text-outline">[演示数据]</span>
+</div>
+<div class="flex items-start gap-space-md pt-1">
+<div class="w-13 h-13 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant shrink-0 ring-2 ring-primary/20 p-2">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-section text-[17px] text-on-surface font-bold">林奕辰</h4>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-meta text-label-meta font-medium">在册小记者</span>
+</div>
+<p class="font-body-medium text-body-medium text-on-surface-variant mt-0.5">贵阳第一实验小学 · 五年级3班</p>
+<p class="font-label-meta text-label-meta text-outline mt-1 font-mono">小记者证号：GZXJZ-2024-0829</p>
+<div class="mt-3 pt-2.5 border-t border-dashed border-surface-container flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment_ind</span>
+<span class="font-body-default text-body-default">指导老师：<span class="font-semibold text-on-surface">林静</span>（校融媒体中心辅导员）</span>
+</div>
+<button class="text-primary font-label-caption text-label-caption flex items-center gap-0.5 active:opacity-75" onclick="showToast('跳转小记者主页 J04')">
+<span>TA的主页</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 作品正文排版专区 -->
+<div class="px-margin-page mt-space-md">
+<article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-surface-container/60 space-y-4">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 rounded-full bg-primary"></span>
+<h3 class="font-title-card text-title-card text-on-surface font-semibold">采风专访正文</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-meta text-label-meta font-medium">报刊头条选登</span>
+</div>
+<!-- 现场抓拍配图 -->
+<div class="space-y-1.5">
+<div class="relative w-full h-52 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional movable lead type printing press blocks, newspaper proof sheets and modern editorial computer desk in newspaper press room, warm scholarly atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeB-KEvYwYpLHFyZQ8kBGbu3JtNJ4FGPvTocQSDOCq2U4nN__TvfeMarbwWYIzmKScvA61ACw776G7TQZxnAEbF7l6Dy2ZAahZBOR0XZY4vrQ1qOrxmo52ByjILh0KHyT8pedpH-NRtCNRrWSauqpiNm8AwyMCwB7Xd6w3UqkzqNyGAfyRjlTuA0iSQ43Mvx-WOaPfyyEbmDP9XvmGKWdjE4dSmyYXECiSWDurnckXzOD9uzSVM24R"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-3 text-surface-container-lowest">
+<p class="font-label-caption text-label-caption leading-relaxed flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">photo_camera</span>
+在铅字与排版台上，聆听老报人的初心
+</p>
+</div>
+</div>
+<p class="font-label-meta text-label-meta text-outline text-right">摄影记录 / 小记者 林奕辰</p>
+</div>
+<!-- 正文段落 1 -->
+<p class="font-body-default text-body-default text-on-surface leading-[26px] tracking-wide text-justify indent-7">
+初夏清晨，晨光穿透贵州教育报社历史陈列厅的玻璃窗。迎面扑来的墨香与泛黄的旧报纸，将我们瞬间带回了数十年前铅字印刷的岁月。一张张泛黄却字迹刚劲的版样，凝聚着一代代教育新闻工作者的执着与坚守。
+</p>
+<!-- 正文段落 2 -->
+<p class="font-body-default text-body-default text-on-surface leading-[26px] tracking-wide text-justify indent-7">
+步入现代化全媒体采编中心，清脆的键盘敲击声与热烈的版面校对探讨声交织在一起。在新闻编辑部，我有幸坐在资深校对台旁，亲眼见证一篇稿件如何经历三审三校的严格淬炼。“标点符号也是有温度的，事实与逻辑更是新闻的生命线。”老编辑专注的眼神，让我深深体会到严谨作风背后的沉甸力量。
+</p>
+<!-- 采访金句引用块 -->
+<blockquote class="my-4 p-4 rounded-xl bg-surface-container-low border-l-4 border-primary relative">
+<span class="material-symbols-outlined text-primary/30 text-[32px] absolute top-2 right-3 pointer-events-none select-none">format_quote</span>
+<p class="font-body-medium text-body-medium text-primary font-semibold italic leading-relaxed">
+“用清澈的双眼观察时代，用质朴的文字记录真实。”
+</p>
+<div class="mt-2 text-right">
+<span class="font-label-caption text-label-caption text-on-surface-variant">— 报社老编辑在采编台前对小记者的寄语</span>
+</div>
+</blockquote>
+<!-- 正文段落 3 -->
+<p class="font-body-default text-body-default text-on-surface leading-[26px] tracking-wide text-justify indent-7">
+从铅与火的排版台，到光与电的激光照排，再到如今数智融合的融媒体云端，改变的是传播媒介与技术形态，不变的是新闻人求真求实的初心。握紧手中的采访本，我明白了一名小记者的笔头，不仅记录着校园的故事，也连接着更广阔的社会与明天。
+</p>
+<div class="pt-2 flex items-center justify-between text-label-meta text-outline border-t border-surface-container-low">
+<span>版权声明：贵州教育报校园专版独家刊发</span>
+<span>[演示数据]</span>
+</div>
+</article>
+</div>
+<!-- 报社编辑深度点评专区 -->
+<div class="px-margin-page mt-space-md">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-surface-container/60">
+<div class="flex items-center justify-between mb-space-sm pb-space-xs border-b border-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 rounded-full bg-tertiary"></span>
+<h3 class="font-title-card text-title-card text-on-surface font-semibold">报社编辑深度点评</h3>
+</div>
+<span class="inline-flex items-center gap-1 text-tertiary font-label-caption text-label-caption font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>特优推荐作品
+</span>
+</div>
+<!-- 点评专家身份 -->
+<div class="flex items-center gap-space-md mt-2 p-3 rounded-xl bg-surface-container-low/70">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container shrink-0 ring-2 ring-tertiary/20">
+<img class="w-full h-full object-cover" data-alt="Senior newspaper editor portrait with glasses and scholarly warm demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvbv5DH_jg1yaFwnjfMCh41_3uolSAVgOzSrOgal_J7q9FYgpcXYuW51gqgwuuduIR-GAaFIra0byFLfqkDgcZTGrkXUjFl_Lhxj6JK1EkcJmVVomiIKaSIV2ohToe7SER6VxeX038JNFfhHHWXRa3pa2ks88ob2VPlZ6Sd6L7hVH-IQ4rGqcZ9dPcswblFmGBclEJ29tBYh2ucxO0djVLxsmipwqML_QPbVLTytild3tZhsE7tNug"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-body-medium text-body-medium text-on-surface font-bold">王树德</h4>
+<span class="px-2 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-meta text-[11px] font-semibold">特级编辑</span>
+</div>
+<p class="font-label-meta text-label-meta text-outline mt-0.5">《贵州教育报》资深副总编 · 全省新闻奖评委</p>
+</div>
+</div>
+<!-- 编辑评语 -->
+<div class="mt-3 p-3.5 rounded-xl bg-surface-container-low/40 border border-surface-container">
+<p class="font-body-default text-body-default text-on-surface leading-[24px]">
+“这篇专访切口精准、观察细腻，不仅呈现了新闻生产的全流程，更难能可贵的是小作者展现出的独立思考与人文关怀，行文自然流畅，特此推荐见报并收入优秀作品库。”
+</p>
+</div>
+<!-- 综合素养雷达评级 -->
+<div class="mt-4 pt-3 border-t border-surface-container-low">
+<div class="flex items-center justify-between mb-2.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">专业素养综合评定</span>
+<span class="font-label-meta text-label-meta text-primary font-bold">综合评级：卓越 (A+)</span>
+</div>
+<div class="space-y-2.5">
+<!-- 敏锐度 -->
+<div>
+<div class="flex justify-between font-label-caption text-label-caption mb-1">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>新闻敏锐度</span>
+<span class="font-bold text-primary">96 分</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 96%"></div>
+</div>
+</div>
+<!-- 文字表达 -->
+<div>
+<div class="flex justify-between font-label-caption text-label-caption mb-1">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span>文字表达力</span>
+<span class="font-bold text-secondary">95 分</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 95%"></div>
+</div>
+</div>
+<!-- 思辨深度 -->
+<div>
+<div class="flex justify-between font-label-caption text-label-caption mb-1">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span>思辨深度</span>
+<span class="font-bold text-tertiary">94 分</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full transition-all duration-500" style="width: 94%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 快速推荐通道与作品导航 -->
+<div class="px-margin-page mt-space-md mb-2">
+<div class="grid grid-cols-2 gap-3">
+<button class="p-3.5 rounded-2xl bg-surface-container-lowest border border-surface-container/60 shadow-sm flex flex-col justify-between items-start text-left active:scale-[0.98] transition-all hover:border-primary/40" onclick="showToast('正在前往 J04 记者专属专栏...')" type="button">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[18px]">library_books</span>
+</div>
+<span class="font-body-medium text-body-medium font-bold text-on-surface leading-tight">查看该记者更多作品</span>
+<span class="font-label-meta text-label-meta text-primary mt-1 flex items-center gap-0.5">进入J04专栏 <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</button>
+<button class="p-3.5 rounded-2xl bg-surface-container-lowest border border-surface-container/60 shadow-sm flex flex-col justify-between items-start text-left active:scale-[0.98] transition-all hover:border-primary/40" onclick="showToast('正在前往 J02 小记者在线投稿专区...')" type="button">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+</div>
+<span class="font-body-medium text-body-medium font-bold text-on-surface leading-tight">我也要投稿参评</span>
+<span class="font-label-meta text-label-meta text-secondary mt-1 flex items-center gap-0.5">进入J02投稿 <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</button>
+</div>
+</div>
+</div>
+<!-- 底部固定交互操作栏 -->
+<aside class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)] z-40 border-t border-surface-container/50">
+<div class="h-16 px-margin-page flex items-center justify-between gap-2">
+<!-- 点赞 -->
+<button class="flex flex-col items-center justify-center flex-1 h-12 text-on-surface-variant active:scale-90 transition-transform" id="like-btn" onclick="toggleLike()" type="button">
+<span class="material-symbols-outlined text-[22px]" id="like-icon">favorite_border</span>
+<span class="font-label-meta text-label-meta mt-0.5" id="like-count">368</span>
+</button>
+<!-- 收藏 -->
+<button class="flex flex-col items-center justify-center flex-1 h-12 text-on-surface-variant active:scale-90 transition-transform" id="star-btn" onclick="toggleStar()" type="button">
+<span class="material-symbols-outlined text-[22px]" id="star-icon">bookmark_border</span>
+<span class="font-label-meta text-label-meta mt-0.5" id="star-count">142</span>
+</button>
+<!-- 评论 -->
+<button class="flex flex-col items-center justify-center flex-1 h-12 text-on-surface-variant active:scale-95 transition-transform" onclick="showToast('正在打开读者评议区...')" type="button">
+<span class="material-symbols-outlined text-[22px]">mode_comment</span>
+<span class="font-label-meta text-label-meta mt-0.5">评论 (29)</span>
+</button>
+<!-- 分享见报海报按钮 -->
+<button class="flex-[2] h-11 rounded-full bg-primary hover:bg-primary-container text-on-primary font-headline-section text-[14px] flex items-center justify-center gap-1.5 shadow-md shadow-primary/20 active:scale-[0.985] transition-all" onclick="showToast('已生成见报纪念海报，长按可保存')" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>分享见报海报</span>
+</button>
+</div>
+</aside>
+<!-- 轻量交互轻提示 (Toast) -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-inverse-surface/90 backdrop-blur-sm text-inverse-on-surface px-space-xl py-space-sm rounded-full font-body-medium text-body-medium shadow-xl opacity-0 pointer-events-none transition-opacity duration-200 z-50 text-center" id="toast-message">
+操作成功
+</div>
+</main>
+<script>
+  let liked = false;
+  let starred = false;
+
+  function showToast(text) {
+    const toast = document.getElementById('toast-message');
+    if (!toast) return;
+    toast.innerText = text;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 1800);
+  }
+
+  function toggleLike() {
+    liked = !liked;
+    const icon = document.getElementById('like-icon');
+    const count = document.getElementById('like-count');
+    if (liked) {
+      icon.innerText = 'favorite';
+      icon.classList.add('text-error');
+      count.innerText = '369';
+      showToast('已为林奕辰小记者的报道点赞！');
+    } else {
+      icon.innerText = 'favorite_border';
+      icon.classList.remove('text-error');
+      count.innerText = '368';
+    }
+  }
+
+  function toggleStar() {
+    starred = !starred;
+    const icon = document.getElementById('star-icon');
+    const count = document.getElementById('star-count');
+    if (starred) {
+      icon.innerText = 'bookmark';
+      icon.classList.add('text-tertiary');
+      count.innerText = '143';
+      showToast('已收录至我的精彩作品集');
+    } else {
+      icon.innerText = 'bookmark_border';
+      icon.classList.remove('text-tertiary');
+      count.innerText = '142';
+    }
+  }
+</script><script>window.EP_PAGE="J01";</script><script src="../routes.js"></script></body></html>

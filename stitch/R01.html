@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 领读员培训列表</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">领读员培训列表</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- 顶栏副标题区与演示标识 -->
+<div class="flex flex-col gap-space-xs mb-space-md px-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-primary/10 text-primary px-space-sm py-space-2xs rounded-full font-label-caption text-label-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span>
+        公益研训专区
+      </span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta px-1.5 py-0.5 rounded">演示数据</span>
+</div>
+<h2 class="font-headline-page text-headline-page text-on-surface tracking-tight">领读员培训专区</h2>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+      贵州省中小学青年骨干领读教师专业成长课程
+    </p>
+</div>
+<!-- 领读员研习专区核心卡片 -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-primary-container text-on-primary p-space-lg shadow-sm mb-space-lg">
+<!-- 装饰背景图案 (纯CSS/SVG) -->
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-white/10 pointer-events-none blur-xl"></div>
+<div class="absolute right-4 bottom-2 opacity-15 pointer-events-none">
+<span class="material-symbols-outlined text-[96px] text-white">auto_stories</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-on-primary-container tracking-wider uppercase font-body-medium">
+            2025年春季学期 · 第四期教研
+          </span>
+<div class="flex items-baseline gap-space-2xs mt-0.5">
+<span class="font-display-stat text-display-stat font-bold text-white tracking-tight">1,420</span>
+<span class="font-label-caption text-label-caption text-on-primary-container">位在学骨干教师</span>
+</div>
+</div>
+<span class="bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full font-label-caption text-label-caption text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          研训示例
+        </span>
+</div>
+<!-- 认证成长成长通道说明 -->
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-space-sm flex items-center gap-space-sm text-on-primary">
+<div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-on-primary-container">psychology_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caption text-label-caption font-semibold text-white">纯公益乡村及城镇领读教研计划</span>
+<span class="font-label-meta text-label-meta text-on-primary-container/90 truncate">完成8门通识与实务课程，即可申报“贵州省中小学领读导师认证”</span>
+</div>
+</div>
+<!-- 进度指示微卡 -->
+<div class="flex items-center justify-between font-label-meta text-label-meta text-on-primary-container pt-space-2xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">workspace_premium</span>
+          结业颁发学时证明与证书
+        </span>
+<span class="text-white/80">无需任何费用</span>
+</div>
+</div>
+</div>
+<!-- 分类筛选标签 (横向滚动) -->
+<div class="w-full overflow-x-auto pb-space-sm mb-space-sm scrollbar-none" id="tag-filter-container">
+<div class="flex items-center gap-space-sm whitespace-nowrap min-w-max px-space-2xs">
+<button class="filter-tab active px-space-md py-1.5 rounded-full font-label-caption text-label-caption transition-all bg-primary text-on-primary shadow-sm" data-category="all">
+        全部课程
+      </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-caption text-label-caption transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="read-strategy">
+        领读技巧
+      </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-caption text-label-caption transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="deep-reading">
+        书目精读
+      </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-caption text-label-caption transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="interaction">
+        师生共读互动
+      </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-caption text-label-caption transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-category="whole-book">
+        整本书阅读
+      </button>
+</div>
+</div>
+<!-- 课程列表流 -->
+<div class="flex flex-col gap-space-md" id="course-list">
+<!-- 课程 1：在学中 -->
+<div class="course-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all relative flex flex-col gap-space-md active:scale-[0.99] cursor-pointer" data-category="whole-book read-strategy" onclick="openCourseDetail('c1')">
+<div class="flex gap-space-md">
+<!-- 课程封面图 -->
+<div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A teacher guiding students in a vibrant Chinese classroom library, natural morning sunlight streaming across bookshelves, wooden reading table, green plant accents, cinematic education photography, editorial documentary style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO6lDSm7_dzxJgpXczwNeEv_541QwFWCE4GfM0RbfBCKOu1WbCuTDFNes9ESXDPUQwUKb9diMzhkRx2CSx-MraRcq72ReX93oNfoZOYMaMsJ6xw8Acgdw5XYmR-wihkI0ln4Yig95GWpolGIGRJQJpflZXXJY7d6-LmBMD19C2HWOyUo3K_ikOWnUXOs7Dj0IvDvecVMich6o-sHSTgm0GceUANYKL09IL5QTodr07A1fKDGxj8lrc"/>
+<div class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest px-1.5 py-0.5 rounded font-label-meta text-label-meta">
+            4课时
+          </div>
+</div>
+<!-- 课程信息 -->
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-body-medium">
+                重点推进
+              </span>
+<span class="text-tertiary-container font-label-meta text-label-meta font-body-medium flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-0.5">timer</span>85分钟
+              </span>
+</div>
+<h3 class="font-title-card text-title-card text-on-surface line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+              《整本书阅读领读策略与课堂实践》
+            </h3>
+</div>
+<div class="flex items-center gap-space-xs pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">person_check</span>
+<span class="truncate">张远明 · 贵州省骨干语文教研员</span>
+</div>
+</div>
+</div>
+<!-- 学习进度条与操作按钮 -->
+<div class="flex items-center justify-between pt-space-xs gap-space-md">
+<div class="flex flex-col flex-1 gap-1">
+<div class="flex justify-between font-label-meta text-label-meta text-on-surface-variant">
+<span>研习进度</span>
+<span class="text-primary font-body-medium">已学 40%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 40%"></div>
+</div>
+</div>
+<button class="shrink-0 bg-primary text-on-primary hover:bg-primary-container px-space-md py-2 rounded-xl font-label-caption text-label-caption font-body-medium flex items-center gap-1 shadow-sm transition-all active:scale-95" onclick="event.stopPropagation(); openCourseDetail('c1');">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+          继续学习
+        </button>
+</div>
+</div>
+<!-- 课程 2：未开始 -->
+<div class="course-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all relative flex flex-col gap-space-md active:scale-[0.99] cursor-pointer" data-category="interaction deep-reading" onclick="openCourseDetail('c2')">
+<div class="flex gap-space-md">
+<div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm literary discussion group between high school mentor and teenagers in modern library, soft warm tones, emotional counseling atmosphere, focused expressions, classic books open on table, contemporary educational setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjgfu5jgYYUrT6DIp1JOjF4pMe0Y395IUD-Hw_jmJOMquSNNv-Ge82PP3EcPFuHgH8wU_lpDqtWxhNJTy_kMUGGEQFX9g3yORhaBPagBH4Brup3iL2KY9V4cVERnUnaa3xsCrxj8gMMDNYyG-whG_xn5qV-NclN0pZ6dIt5S-py1iL31ZR8MUbO9WBepkdDZCk4dKK9EJFhvukz6bcY3jZE5U830R3V1O9eXRoknBInF9dibSrjFHq"/>
+<div class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest px-1.5 py-0.5 rounded font-label-meta text-label-meta">
+            3课时
+          </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="bg-secondary/10 text-secondary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-body-medium">
+                心理与共读
+              </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-0.5">schedule</span>60分钟
+              </span>
+</div>
+<h3 class="font-title-card text-title-card text-on-surface line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+              《经典名著青少年共读心理疏导与引导》
+            </h3>
+</div>
+<div class="flex items-center gap-space-xs pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+<span class="truncate">孙老师 · 贵州师大特聘副教授</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs gap-space-md">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>未开始学习 · 建议安排整块备课时段</span>
+</div>
+<button class="shrink-0 bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-space-md py-2 rounded-xl font-label-caption text-label-caption font-body-medium flex items-center gap-1 transition-all active:scale-95" onclick="event.stopPropagation(); openCourseDetail('c2');">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+          开始学习
+        </button>
+</div>
+</div>
+<!-- 课程 3：未开始 (落地策略) -->
+<div class="course-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all relative flex flex-col gap-space-md active:scale-[0.99] cursor-pointer" data-category="read-strategy deep-reading" onclick="openCourseDetail('c3')">
+<div class="flex gap-space-md">
+<div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="An experienced master Chinese language teacher standing in front of classroom chalkboard demonstrating text comparison cluster reading diagrams, calm confident atmosphere, soft academic lighting, school interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4LJXYnMwyOnXIEyelq46giDzWwxQX7rwtJLQ2LPTHhmoR1ZEuB9CGLZtdAoaCffXl1JuhMeuHx8NaUWrCvxa_HJXAmQj6LRVvqoHyeHyfgUPnuoKlYJYyLnYtcDFBs7vt63xU1SgUqNT7R3VjC9CmpYAwpDoHgIamTt6CUbeTxSTbKc8L0qmRYxFvg26YgbMwNs062Zw-cuel2QCkmdnTvBzkxEpfZ631OGOflFXicCl5T2c150t6"/>
+<div class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest px-1.5 py-0.5 rounded font-label-meta text-label-meta">
+            5课时
+          </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-body-medium">
+                名师实录
+              </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-0.5">schedule</span>110分钟
+              </span>
+</div>
+<h3 class="font-title-card text-title-card text-on-surface line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+              《群文阅读教学在班级读书会中的落地策略》
+            </h3>
+</div>
+<div class="flex items-center gap-space-xs pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">military_tech</span>
+<span class="truncate">钱思齐 · 贵阳一中特级教师</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs gap-space-md">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>未开始学习 · 包含教学案与活动任务单</span>
+</div>
+<button class="shrink-0 bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-space-md py-2 rounded-xl font-label-caption text-label-caption font-body-medium flex items-center gap-1 transition-all active:scale-95" onclick="event.stopPropagation(); openCourseDetail('c3');">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+          开始学习
+        </button>
+</div>
+</div>
+<!-- 课程 4：已学完 -->
+<div class="course-card group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all relative flex flex-col gap-space-md active:scale-[0.99] cursor-pointer" data-category="read-strategy interaction" onclick="openCourseDetail('c4')">
+<div class="flex gap-space-md">
+<div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Elementary students reciting Chinese poetry outdoors on a mountain view campus pavilion in Guizhou, early morning dawn light, clear energetic voices, lush greenery background, documentary style photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVP4XG5vzk4cAlHk27hibEixuKof5NC0v-L57RhMNN1b9lpxj0rwyGA8v8zngnYxH7AaXY512T9vlkA9oHfx-3_wKffxESDs3815WP1NAVIUtiRHkUKaxkyoEWA_UMCzdmM3hxikIRx4sNTG3ysHjmQST6ohg1BnYK7fotL_Q3IYEt0pgQ7HCqbKvl7t_aQ62nwuwbD31HLRE38S4KgdbaxSe4oQd44ACgUV9GP9NDqgWmASTb8lvP"/>
+<div class="absolute bottom-1 right-1 bg-on-surface/75 text-surface-container-lowest px-1.5 py-0.5 rounded font-label-meta text-label-meta">
+            2课时
+          </div>
+<!-- 已完成角标 -->
+<div class="absolute top-1 left-1 bg-primary text-white p-0.5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-body-medium">
+                诵读通识
+              </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-0.5">schedule</span>45分钟
+              </span>
+</div>
+<h3 class="font-title-card text-title-card text-on-surface line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+              《小学生晨读习惯养成与诵读技巧解析》
+            </h3>
+</div>
+<div class="flex items-center gap-space-xs pt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">record_voice_over</span>
+<span class="truncate">王老师 · 贵阳实验三中语文名师</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs gap-space-md">
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>已完成研习并计入研修课时</span>
+</div>
+<button class="shrink-0 bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-2 rounded-xl font-label-caption text-label-caption font-body-medium flex items-center gap-1 transition-all active:scale-95" onclick="event.stopPropagation(); openCourseDetail('c4');">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+          查看回放
+        </button>
+</div>
+</div>
+</div>
+<!-- 底部公益研训免责与导引微注 -->
+<div class="mt-space-xl p-space-md rounded-2xl bg-surface-container-low text-center flex flex-col items-center gap-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">volunteer_activism</span>
+<span>教育部全民阅读行动配套 · 贵州教师公益数字研修平台</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline">全过程免收培训费用 · 不设商业考级与商品链接 [演示数据]</span>
+</div>
+<!-- 模拟课程详情轻量底部抽屉弹窗 (交互演示) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex flex-col justify-end transition-opacity duration-300 opacity-0 pointer-events-none" id="course-modal" onclick="closeCourseModal()">
+<div class="w-full max-w-[390px] mx-auto bg-surface-container-lowest rounded-t-3xl p-space-xl flex flex-col gap-space-lg shadow-2xl transform translate-y-full transition-transform duration-300" onclick="event.stopPropagation()">
+<div class="w-12 h-1 bg-outline-variant rounded-full mx-auto -mt-1"></div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-primary font-body-medium">研修课程详情</span>
+<h4 class="font-headline-section text-headline-section text-on-surface mt-1" id="modal-title">课程标题</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-90" onclick="closeCourseModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center justify-between text-on-surface font-label-caption text-label-caption">
+<span class="text-on-surface-variant">主讲名师</span>
+<span class="font-body-medium" id="modal-teacher">--</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-caption text-label-caption">
+<span class="text-on-surface-variant">课程总时长</span>
+<span class="font-body-medium" id="modal-duration">--</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-caption text-label-caption">
+<span class="text-on-surface-variant">当前研修状态</span>
+<span class="font-body-medium text-primary" id="modal-status">--</span>
+</div>
+</div>
+<div class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+        本研训基于省教育科学规划重点课题成果设计，为一线教师提供真实班级读书会实战指南，支持回放及配套研修任务单下载。
+      </div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-body-medium text-body-medium font-semibold shadow-sm text-center active:scale-95 transition-all" onclick="simulateAction()">
+          进入课堂播放
+        </button>
+</div>
+</div>
+</div>
+<!-- 轻提示 Toast -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-caption text-label-caption opacity-0 pointer-events-none transition-all duration-300 shadow-lg" id="toast">
+    正在载入研修课堂...
+  </div>
+</div>
+<script>
+  // 标签切换过滤逻辑
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const courseCards = document.querySelectorAll('.course-card');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // 样式切换
+      filterTabs.forEach(t => {
+        t.classList.remove('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+        t.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      tab.classList.add('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+      tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+      const cat = tab.dataset.category;
+
+      // 列表筛选动效
+      courseCards.forEach(card => {
+        if (cat === 'all' || card.dataset.category.includes(cat)) {
+          card.style.display = 'flex';
+          setTimeout(() => { card.style.opacity = '1'; }, 10);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => { card.style.display = 'none'; }, 200);
+        }
+      });
+    });
+  });
+
+  // 课程模拟数据
+  const courseData = {
+    c1: {
+      title: "《整本书阅读领读策略与课堂实践》",
+      teacher: "张远明 · 贵州省骨干语文教研员",
+      duration: "4课时 / 85分钟",
+      status: "已研学 40% (可直接续播)"
+    },
+    c2: {
+      title: "《经典名著青少年共读心理疏导与引导》",
+      teacher: "孙老师 · 贵州师范大学文学院特聘副教授",
+      duration: "3课时 / 60分钟",
+      status: "未开始学习"
+    },
+    c3: {
+      title: "《群文阅读教学在班级读书会中的落地策略》",
+      teacher: "钱思齐 · 贵阳一中特级教师",
+      duration: "5课时 / 110分钟",
+      status: "未开始学习 (含备课包)"
+    },
+    c4: {
+      title: "《小学生晨读习惯养成与诵读技巧解析》",
+      teacher: "王老师 · 贵阳实验三中语文名师",
+      duration: "2课时 / 45分钟",
+      status: "已学完 (可无限次回看)"
+    }
+  };
+
+  const modal = document.getElementById('course-modal');
+  const modalContent = modal.querySelector('div');
+
+  function openCourseDetail(id) {
+    const data = courseData[id];
+    if (!data) return;
+
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-teacher').textContent = data.teacher;
+    document.getElementById('modal-duration').textContent = data.duration;
+    document.getElementById('modal-status').textContent = data.status;
+
+    modal.classList.remove('pointer-events-none', 'opacity-0');
+    modal.classList.add('opacity-100');
+    modalContent.classList.remove('translate-y-full');
+    modalContent.classList.add('translate-y-0');
+  }
+
+  function closeCourseModal() {
+    modal.classList.remove('opacity-100');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modalContent.classList.remove('translate-y-0');
+    modalContent.classList.add('translate-y-full');
+  }
+
+  function simulateAction() {
+    closeCourseModal();
+    const toast = document.getElementById('toast');
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2200);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="R01";</script><script src="../routes.js"></script></body></html>

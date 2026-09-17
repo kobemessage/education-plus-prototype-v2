@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">阅读积分</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full pb-10">
+<div class="px-margin-page pt-3 flex flex-col gap-4">
+<!-- Top Meta Status Badge -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">
+          [演示数据]
+        </span>
+<span class="font-label-meta text-label-meta text-outline">学期动态实时结算</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-caption text-label-caption">素养档案已同步</span>
+</div>
+</div>
+<!-- Points Summary Card -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-container via-primary to-[#065b53] p-5 text-on-primary shadow-sm flex flex-col gap-4">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/5 pointer-events-none blur-xl"></div>
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white/10 to-transparent rounded-bl-full pointer-events-none"></div>
+<!-- Top Badges Row -->
+<div class="flex items-center justify-between relative z-10">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-on-primary font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]">school</span>
+<span>贵阳实验三中 · 初二(3)班</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-caption text-label-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>书香先锋 Lv.4</span>
+</div>
+</div>
+<!-- Main Balance Display -->
+<div class="flex flex-col relative z-10 pt-1">
+<span class="font-label-caption text-label-caption text-on-primary-container/80">当前可用阅读积分</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-display-stat text-display-stat text-[38px] leading-[44px] font-bold tracking-tight">1,280</span>
+<span class="font-title-card text-title-card text-on-primary-container font-medium">分</span>
+</div>
+</div>
+<!-- Semester Subtitle Stats -->
+<div class="flex items-center gap-2 py-2 px-3 rounded-xl bg-black/10 backdrop-blur-sm relative z-10">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">trending_up</span>
+<p class="font-label-caption text-label-caption text-on-primary/90 flex-1 truncate">
+          本学期累计获得 1,420 分 | 本周新增 <span class="text-tertiary-fixed font-semibold">+80</span> 分
+        </p>
+</div>
+<!-- Quick Action Trigger -->
+<div class="flex items-center justify-between pt-1 relative z-10">
+<span class="font-label-meta text-label-meta text-on-primary/70">更新于今日 21:30</span>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/20 hover:bg-white/25 active:scale-95 transition-all text-on-primary font-label-caption text-label-caption backdrop-blur-md" onclick="document.getElementById('points-rules-section').scrollIntoView({behavior: 'smooth'})" type="button">
+<span>查看积分规则</span>
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- Quick Visual Stats Strip -->
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container-lowest shadow-sm text-center">
+<span class="font-label-meta text-label-meta text-outline">连续打卡</span>
+<span class="font-title-card text-title-card text-primary font-bold mt-0.5">12 <span class="font-label-caption text-label-caption font-normal">天</span></span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container-lowest shadow-sm text-center">
+<span class="font-label-meta text-label-meta text-outline">推优心得</span>
+<span class="font-title-card text-title-card text-tertiary font-bold mt-0.5">3 <span class="font-label-caption text-label-caption font-normal">篇</span></span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container-lowest shadow-sm text-center">
+<span class="font-label-meta text-label-meta text-outline">领读共读</span>
+<span class="font-title-card text-title-card text-secondary font-bold mt-0.5">5 <span class="font-label-caption text-label-caption font-normal">次</span></span>
+</div>
+</div>
+<!-- Filter Pills / Tab Switcher -->
+<div class="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar" id="tab-filter-group">
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-caption text-label-caption shadow-sm shrink-0 font-medium active:scale-95 transition-transform" data-filter="all" type="button">
+        全部明细
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caption text-label-caption shrink-0 font-medium active:scale-95 transition-transform" data-filter="checkin" type="button">
+        打卡获得
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caption text-label-caption shrink-0 font-medium active:scale-95 transition-transform" data-filter="teacher" type="button">
+        名师评选
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-caption text-label-caption shrink-0 font-medium active:scale-95 transition-transform" data-filter="activity" type="button">
+        活动奖励
+      </button>
+</div>
+<!-- Points Breakdown List Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-headline-section text-headline-section text-on-surface">获得明细</h2>
+<span class="font-label-meta text-label-meta text-outline">共 5 笔记录</span>
+</div>
+<div class="flex flex-col gap-2.5" id="ledger-list">
+<!-- Item 1: 打卡 -->
+<div class="ledger-item flex items-start justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm active:scale-[0.99] transition-transform" data-category="checkin">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/50 flex items-center justify-center shrink-0 text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">今日阅读打卡完成</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-primary font-label-meta text-label-meta rounded-md shrink-0">第12天</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">auto_stories</span>
+<span class="truncate">关联书目《人类群星闪耀时》</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-1">2025-05-18 21:30</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-title-card text-title-card text-primary font-bold">+20 <span class="text-label-meta font-normal">分</span></span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-meta text-label-meta mt-1">日常打卡</span>
+</div>
+</div>
+<!-- Item 2: 名师推优 -->
+<div class="ledger-item flex items-start justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm active:scale-[0.99] transition-transform" data-category="teacher">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">读后感入选全省优秀展播</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[13px]">military_tech</span>
+<span class="truncate">名师特聘点评推优奖励</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-1">2025-05-16 14:20</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-title-card text-title-card text-tertiary font-bold">+50 <span class="text-label-meta font-normal">分</span></span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-meta text-label-meta mt-1">省级展播</span>
+</div>
+</div>
+<!-- Item 3: 每日打卡 -->
+<div class="ledger-item flex items-start justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm active:scale-[0.99] transition-transform" data-category="checkin">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/50 flex items-center justify-center shrink-0 text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">每日阅读打卡</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5 truncate">连续第11天打卡达成</span>
+<span class="font-label-meta text-label-meta text-outline mt-1">2025-05-15 20:15</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-title-card text-title-card text-primary font-bold">+20 <span class="text-label-meta font-normal">分</span></span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-meta text-label-meta mt-1">日常打卡</span>
+</div>
+</div>
+<!-- Item 4: 课堂共读拓展 -->
+<div class="ledger-item flex items-start justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm active:scale-[0.99] transition-transform" data-category="activity">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/40 flex items-center justify-center shrink-0 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">班级共读书目领读互动心得</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">forum</span>
+<span class="truncate">课堂拓展与书友互评</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-1">2025-05-14 16:45</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-title-card text-title-card text-secondary font-bold">+30 <span class="text-label-meta font-normal">分</span></span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-meta text-label-meta mt-1">共读研讨</span>
+</div>
+</div>
+<!-- Item 5: 里程碑打卡 -->
+<div class="ledger-item flex items-start justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm active:scale-[0.99] transition-transform" data-category="checkin">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/50 flex items-center justify-center shrink-0 text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">每日阅读打卡（里程碑奖励）</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5 truncate">连续第10天里程碑额外+10分已合并</span>
+<span class="font-label-meta text-label-meta text-outline mt-1">2025-05-13 21:00</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-title-card text-title-card text-primary font-bold">+20 <span class="text-label-meta font-normal">分</span></span>
+<span class="inline-flex px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-meta text-label-meta mt-1">阶段达标</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reading Points Rules Section -->
+<div class="flex flex-col gap-3 pt-2" id="points-rules-section">
+<div class="flex items-center gap-2 px-0.5">
+<span class="material-symbols-outlined text-primary text-[20px]">help_center</span>
+<h2 class="font-headline-section text-headline-section text-on-surface">阅读积分规则与说明</h2>
+</div>
+<div class="rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3.5">
+<!-- Rule 1 -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed/60 text-primary flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+            1
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">每日阅读打卡</span>
+<span class="font-label-meta text-label-meta px-1.5 py-0.2 rounded bg-primary/10 text-primary">+20分 / 天</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">
+              每日按时完成打卡即得 +20分，连续打卡满 7 天触发额外激励 +30分。
+            </p>
+</div>
+</div>
+<!-- Rule 2 -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+            2
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">读书心得与读后感</span>
+<span class="font-label-meta text-label-meta px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant">+30 ~ +50分</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">
+              提交原创读后感并通过审核 +30分；获特聘名师点评推优入选展播再奖 +50分。
+            </p>
+</div>
+</div>
+<!-- Rule 3 -->
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+            3
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">共读书会互动交流</span>
+<span class="font-label-meta text-label-meta px-1.5 py-0.2 rounded bg-secondary-container/30 text-on-secondary-container">+10分 / 次</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">
+              参与班级或年级共读书会主题讨论、观点争鸣与同伴互评，每次有效发言 +10分。
+            </p>
+</div>
+</div>
+<!-- Important Notice Box -->
+<div class="p-3 rounded-xl bg-surface-container-high/60 flex items-start gap-2 mt-1">
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption font-semibold text-on-surface">积分性质与效力告知</span>
+<p class="font-label-meta text-label-meta text-on-surface-variant mt-0.5 leading-relaxed">
+              读书会积分为省中小学校园书香建设荣誉评定与阅读素养成长档案重要参考，不设商业商城兑换或现金折现。
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab Filter Interaction
+  const tabs = document.querySelectorAll('#tab-filter-group .filter-tab');
+  const items = document.querySelectorAll('#ledger-list .ledger-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Toggle Active Tab Styling
+      tabs.forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        t.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+      const filter = tab.getAttribute('data-filter');
+
+      // Filter Item Display
+      items.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></main><script>window.EP_PAGE="R10";</script><script src="../routes.js"></script></body></html>

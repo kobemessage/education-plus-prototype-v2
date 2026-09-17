@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 共读书库</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><button aria-label="返回上一级" class="w-11 h-11 -ml-space-sm flex items-center justify-center text-on-surface hover:text-primary active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight truncate max-w-[170px]">共读书库</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-safe bg-surface mt-11 min-h-[calc(100vh-44px)]"><div class="flex flex-col w-full pb-space-2xl gap-space-lg">
+<!-- Search & Discovery Bar -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest rounded-xl p-space-xs shadow-sm">
+<div class="flex items-center flex-1 px-space-sm gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="w-full bg-transparent font-body-default text-body-default text-on-surface placeholder:text-outline focus:outline-none" id="book-search-input" placeholder="输入书名、作者或关键词（如：人类群星、昆虫记）" type="text"/>
+</div>
+<button class="bg-primary text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-lg active:scale-95 transition-transform flex items-center gap-space-2xs" id="search-btn" type="button">
+<span>检索</span>
+</button>
+</div>
+<!-- Category Pills Filter -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-2xs -mx-margin-page px-margin-page">
+<button class="cat-chip whitespace-nowrap px-space-md py-space-xs rounded-full font-body-medium text-label-caption bg-primary text-on-primary shadow-sm transition-all" data-category="all" type="button">
+        全部书目(18)
+      </button>
+<button class="cat-chip whitespace-nowrap px-space-md py-space-xs rounded-full font-body-medium text-label-caption bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="literature" type="button">
+        经典文学(6)
+      </button>
+<button class="cat-chip whitespace-nowrap px-space-md py-space-xs rounded-full font-body-medium text-label-caption bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="science" type="button">
+        科普探索(4)
+      </button>
+<button class="cat-chip whitespace-nowrap px-space-md py-space-xs rounded-full font-body-medium text-label-caption bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="mindset" type="button">
+        思想励志(4)
+      </button>
+<button class="cat-chip whitespace-nowrap px-space-md py-space-xs rounded-full font-body-medium text-label-caption bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" data-category="history" type="button">
+        历史传统(4)
+      </button>
+</div>
+</section>
+<!-- Featured Spotlight Book -->
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary-container to-secondary text-on-primary p-space-lg shadow-md">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full bg-on-primary/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="inline-flex items-center gap-space-2xs bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-space-2xs rounded-full font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>本期共读焦点</span>
+</div>
+<span class="font-label-meta text-label-meta bg-on-primary/20 text-on-primary px-space-xs py-space-2xs rounded">
+        [演示数据]
+      </span>
+</div>
+<div class="flex gap-space-md items-center">
+<div class="w-20 h-28 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Book cover of Decisive Moments in History by Stefan Zweig, artistic vintage scholarly design with starry constellations and warm bronze tones, clean academic typography, premium publication style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdR6d02QfI0gTbywKeNwUBtwUWyEhlPxkes_hD1Ha0JRzmdVXnhVYphOGiqbvGNy8fFuyhon5_maYxXhgaiBoU9JAy6ozHBRKQgMn1P3uMgcMLLCAI915VdZPMAdp0V-JQhU7keqHndCEpzRisRiBy4twPmAc9vdcX4l1Skhno3e97amk5Qywy7Deso-Ml3WPIUt-Rf_qik3TFa-rXvZEQVYIh-vH2gzUx_IUZApxxtgVa2EDh6cSV"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 justify-between py-space-2xs">
+<div>
+<h2 class="font-title-card text-title-card text-on-primary truncate">
+            人类群星闪耀时·精注特辑
+          </h2>
+<p class="font-label-caption text-label-caption text-primary-fixed truncate mt-space-2xs">
+            [奥] 斯蒂芬·茨威格 著
+          </p>
+</div>
+<div class="flex items-center gap-space-2xs mt-space-sm text-on-primary-container font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>全省 12.8 万学子共读中</span>
+</div>
+<button class="mt-space-sm self-start inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary px-space-md py-space-xs rounded-full font-body-medium text-label-caption shadow-sm active:scale-95 transition-transform" onclick="handleAction('人类群星闪耀时·精注特辑')" type="button">
+<span>查看书目详情</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Books Listing Header -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 rounded-full bg-primary"></span>
+<h3 class="font-headline-section text-headline-section text-on-surface">共读精选书目</h3>
+</div>
+<span class="font-label-meta text-label-meta text-outline">每周四更新共读进度</span>
+</div>
+<!-- Book Cards List -->
+<div class="flex flex-col gap-space-md" id="book-list">
+<!-- Item 1 -->
+<article class="book-card p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm" data-category="science">
+<div class="flex gap-space-md">
+<div class="w-20 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of Souvenirs Entomologiques by Jean-Henri Fabre, fresh botanical and cicada scientific illustration, soft emerald green background with academic serif typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC27dmRkX5__U4HnBMWZMTHhLpAbprahW4WabQaJaqq9nNPi-ANZ3XRIhRxSbmfP1siNautIr-1fwLTERoGjZcKQzAbl3FyCXY5vDIKTpmq7Ymc7eeYuXRGs1k22wegU82o9fL0MO_SUYMnkIW8rrfcEkqGVPMIcLehz4JXSTPdvrIwC-9dKuyzFsq_mSjAoxNxUAkpj-4q8mUyAuvGhm37KOzwcB_cyJ_ORk06R5B5m32KPXTqZoPU"/>
+</div>
+<div class="flex flex-col justify-between min-w-0 flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<h4 class="font-title-card text-title-card text-on-surface truncate">昆虫记·名师导读精本</h4>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-low px-space-xs py-space-2xs rounded">[演示数据]</span>
+</div>
+<p class="font-body-default text-label-caption text-on-surface-variant truncate mt-space-2xs">
+              [法] 法布尔 · 贵阳名师导读版
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full font-label-meta text-label-meta bg-surface-container text-secondary">
+              小学高年级 / 初中
+            </span>
+<span class="inline-flex items-center gap-space-2xs font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
+              3,410 人正在共读
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs border-t-0">
+<div class="flex items-center gap-space-2xs text-outline font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">military_tech</span>
+<span>第3期·微观生命之美</span>
+</div>
+<button class="bg-primary-container text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-full active:scale-95 transition-transform" onclick="handleAction('昆虫记·名师导读精本')" type="button">
+          查看详情 / 加入共读
+        </button>
+</div>
+</article>
+<!-- Item 2 -->
+<article class="book-card p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm" data-category="history mindset">
+<div class="flex gap-space-md">
+<div class="w-20 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of The Age of Awakening youth edition, solemn red and parchment retro textures, striking typography celebrating modern Chinese history and youth vitality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxo6qM5pxC36nowX06TYU77UcPNJOPxktppq2jfN6zjOW3nCZ3Jfe8bVh-otdrvd3SpuTIXyUiKYazmb2Mp5OvBLyJHE_aUWN_wIwFQizHJkmcEtEBWkpkQcpN4S4K_6g6Bfy0Kv0W0u4rS56ph1J98UkJtyffGM30ld57x4IZEu1rZr2pIp6Z2B-axYzFT4NkKIOsR-Zf1CE3n7gGegnTrZOQ-reN7Sh1iCPdhY-dqY-qcQylvZjy"/>
+</div>
+<div class="flex flex-col justify-between min-w-0 flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<h4 class="font-title-card text-title-card text-on-surface truncate">觉醒年代·青年读本</h4>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-low px-space-xs py-space-2xs rounded">[演示数据]</span>
+</div>
+<p class="font-body-default text-label-caption text-on-surface-variant truncate mt-space-2xs">
+              贵州省优秀中学生党史经典书单
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full font-label-meta text-label-meta bg-error-container text-on-error-container">
+              初中 / 高中
+            </span>
+<span class="inline-flex items-center gap-space-2xs font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
+              2,820 人正在共读
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div class="flex items-center gap-space-2xs text-outline font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-primary">bookmark_added</span>
+<span>第1期·青年使命与求索</span>
+</div>
+<button class="bg-primary-container text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-full active:scale-95 transition-transform" onclick="handleAction('觉醒年代·青年读本')" type="button">
+          查看详情 / 加入共读
+        </button>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="book-card p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm" data-category="literature">
+<div class="flex gap-space-md">
+<div class="w-20 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of The Old Man and the Sea by Ernest Hemingway, deep ocean waves with minimalist fishing boat silhouette, artistic deep teal and azure palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiJQU4intQKb-EY3dIMMgh8Nc46hfg57NQbCRK2Y2G6v5rmWC43dWxY4fYPHfEdf2tD1MMGVP5QySOQwVRCEXBzwtIHlM9wn8FU_2pIFpteP0b3qP6ekqap7VyjkMqJ4WLrDKlebYkQ6KuLGXrKLhlzbh-K1beeKdG1khCVnidmldx1ZkinXwVY9KOM5vIsnCl9YpRFx-fm8h9MANDEPi5YnoorwPeUeUb-x8WIJhCxuQpLm9ZdCuV"/>
+</div>
+<div class="flex flex-col justify-between min-w-0 flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<h4 class="font-title-card text-title-card text-on-surface truncate">老人与海·精编双语注疏本</h4>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-low px-space-xs py-space-2xs rounded">[演示数据]</span>
+</div>
+<p class="font-body-default text-label-caption text-on-surface-variant truncate mt-space-2xs">
+              [美] 海明威 · 特级教师推荐
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full font-label-meta text-label-meta bg-surface-container text-secondary">
+              初中 / 高中
+            </span>
+<span class="inline-flex items-center gap-space-2xs font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
+              3,052 人正在共读
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div class="flex items-center gap-space-2xs text-outline font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span>双语注疏 · 韧性成长</span>
+</div>
+<button class="bg-primary-container text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-full active:scale-95 transition-transform" onclick="handleAction('老人与海·精编双语注疏本')" type="button">
+          查看详情 / 加入共读
+        </button>
+</div>
+</article>
+<!-- Item 4 -->
+<article class="book-card p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm" data-category="history mindset">
+<div class="flex gap-space-md">
+<div class="w-20 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of Wang Yangming philosophy for adolescents, serene Chinese mountain landscape with bamboo forest and classical calligraphy, tranquil jade and warm cream shades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEEEVbKu6YSr773M8ad0WPgk82m4eMhjPC3wl4-yh-ljbahj8qfhrxOb0Tld70B57XjRGZe6DJYLJQsE3YlECxEa89NIezIbFh0VIIerdSJ_lRBdSmpOC7lNay4PXl3wfZqZwM2WJ9AUkamOx7VpBHan0zChja1eOGjumV-lSgj2ZlEMOEkjFbZrPE9WYSzVcat7JPhol2gPfRUl5g_SXTrZC1mi53bf5pq1C2FPB9KLxKTyoB4qa"/>
+</div>
+<div class="flex flex-col justify-between min-w-0 flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<h4 class="font-title-card text-title-card text-on-surface truncate">知行合一：王阳明心学青少年读本</h4>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-low px-space-xs py-space-2xs rounded">[演示数据]</span>
+</div>
+<p class="font-body-default text-label-caption text-on-surface-variant truncate mt-space-2xs">
+              贵州教育报 · 经典导读书系
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full font-label-meta text-label-meta bg-tertiary-fixed text-on-tertiary-fixed">
+              全学段通用
+            </span>
+<span class="inline-flex items-center gap-space-2xs font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
+              4,120 人正在共读
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div class="flex items-center gap-space-2xs text-outline font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-primary">flag</span>
+<span>贵州本土特色心学溯源</span>
+</div>
+<button class="bg-primary-container text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-full active:scale-95 transition-transform" onclick="handleAction('知行合一：王阳明心学青少年读本')" type="button">
+          查看详情 / 加入共读
+        </button>
+</div>
+</article>
+<!-- Item 5 -->
+<article class="book-card p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm" data-category="literature mindset">
+<div class="flex gap-space-md">
+<div class="w-20 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of Ordinary World by Lu Yao, atmospheric yellow loess plateau landscape with warm golden sun rays, inspirational literature book jacket design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBE87zjc9hA2O0IE8Y5bXUysioEl_HBMr4eSdUzHTS5gF7akzQDaMIfBhVZTTgWtbtsgGo8uhVRnxIHvcSJu5wWfjl6R6hxa0N9AXG2k3X_c0IEu2TLUKtKtCzeJgf9U2lveGZnSzO1T9upVK7y_THma1qb4okUI3-W28vy79H3PrVpMa9Lzz5AJdJRIgHX9mDlMN-aS55lmv4xm5AzQCFNrSJwUnf-lck-lHlJHRzqzsONAGgVVAQ"/>
+</div>
+<div class="flex flex-col justify-between min-w-0 flex-1">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<h4 class="font-title-card text-title-card text-on-surface truncate">平凡的世界·青少年精编版</h4>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-low px-space-xs py-space-2xs rounded">[演示数据]</span>
+</div>
+<p class="font-body-default text-label-caption text-on-surface-variant truncate mt-space-2xs">
+              路遥 著 · 经典励志
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full font-label-meta text-label-meta bg-surface-container text-secondary">
+              中学 / 高中精读
+            </span>
+<span class="inline-flex items-center gap-space-2xs font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
+              5,600 人正在共读
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div class="flex items-center gap-space-2xs text-outline font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-tertiary">workspace_premium</span>
+<span>茅盾文学奖经典书目</span>
+</div>
+<button class="bg-primary-container text-on-primary font-body-medium text-label-caption px-space-md py-space-xs rounded-full active:scale-95 transition-transform" onclick="handleAction('平凡的世界·青少年精编版')" type="button">
+          查看详情 / 加入共读
+        </button>
+</div>
+</article>
+</div>
+<!-- Empty Search Feedback State (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center py-space-3xl px-space-lg text-center bg-surface-container-lowest rounded-2xl shadow-sm" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">menu_book</span>
+</div>
+<p class="font-title-card text-title-card text-on-surface">未找到匹配书目</p>
+<p class="font-body-default text-label-caption text-outline mt-space-xs">
+      换个关键词试试，或点击上方分类浏览全部推荐书籍
+    </p>
+<button class="mt-space-md px-space-lg py-space-xs bg-surface-container text-primary font-body-medium text-label-caption rounded-full" onclick="resetFilter()" type="button">
+      重置筛选
+    </button>
+</div>
+<!-- Non-commercial Public Service Note -->
+<footer class="mt-space-md p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm text-outline">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-space-2xs min-w-0">
+<p class="font-body-default text-label-meta leading-relaxed">
+        所有书目均由贵州省中小学书香校园建设专家组审定推荐，属纯公益共读导读项目。本平台不含商业销售与购书商城。
+      </p>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="bg-outline-variant/30 text-on-surface-variant font-label-meta text-[10px] px-space-xs py-0.5 rounded">
+          公益阅读
+        </span>
+<span class="bg-outline-variant/30 text-on-surface-variant font-label-meta text-[10px] px-space-xs py-0.5 rounded">
+          专家导引
+        </span>
+<span class="bg-outline-variant/30 text-on-surface-variant font-label-meta text-[10px] px-space-xs py-0.5 rounded">
+          [演示数据]
+        </span>
+</div>
+</div>
+</footer>
+<!-- Toast / Feedback element -->
+<div class="fixed bottom-16 inset-x-0 mx-auto w-max max-w-[320px] px-space-lg py-space-sm bg-inverse-surface text-inverse-on-surface rounded-full shadow-lg font-body-medium text-label-caption flex items-center gap-space-xs opacity-0 pointer-events-none transition-opacity duration-300 z-50" id="action-toast">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">check_circle</span>
+<span id="toast-text">已为您载入共读书目详情</span>
+</div>
+</div>
+<script>
+  function handleAction(bookTitle) {
+    const toast = document.getElementById('action-toast');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.textContent = `已进入《${bookTitle}》导读与共读打卡`;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2200);
+  }
+
+  const chips = document.querySelectorAll('.cat-chip');
+  const cards = document.querySelectorAll('.book-card');
+  const emptyState = document.getElementById('empty-state');
+  const searchInput = document.getElementById('book-search-input');
+  const searchBtn = document.getElementById('search-btn');
+
+  let activeCategory = 'all';
+
+  function applyFilter() {
+    const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category') || '';
+      const textContent = card.innerText.toLowerCase();
+
+      const matchesCat = activeCategory === 'all' || cardCategory.includes(activeCategory);
+      const matchesQuery = !query || textContent.includes(query);
+
+      if (matchesCat && matchesQuery) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('flex');
+      }
+    });
+
+    if (emptyState) {
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      chip.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+      activeCategory = chip.getAttribute('data-category') || 'all';
+      applyFilter();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFilter);
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', applyFilter);
+  }
+
+  function resetFilter() {
+    if (searchInput) searchInput.value = '';
+    activeCategory = 'all';
+    chips.forEach((c, index) => {
+      if (index === 0) {
+        c.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      } else {
+        c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      }
+    });
+    applyFilter();
+  }
+</script></main><script>window.EP_PAGE="R07";</script><script src="../routes.js"></script></body></html>

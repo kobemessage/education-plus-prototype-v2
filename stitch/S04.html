@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[180px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">投稿进度</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full px-margin-page pb-space-2xl space-y-space-md">
+<!-- 筛选标签栏 (Filter Bar) -->
+<div class="flex items-center space-x-space-xs py-space-xs overflow-x-auto no-scrollbar" id="tab-filter-group">
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-caption text-label-caption flex items-center gap-1 shadow-sm transition-all active:scale-95" onclick="filterList('all', this)" type="button">
+<span>全部</span>
+<span class="opacity-90 font-label-meta text-label-meta">(3)</span>
+</button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption flex items-center gap-1 hover:bg-surface-container transition-all active:scale-95" onclick="filterList('pending', this)" type="button">
+<span>待审核</span>
+<span class="opacity-80 font-label-meta text-label-meta">(1)</span>
+</button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption flex items-center gap-1 hover:bg-surface-container transition-all active:scale-95" onclick="filterList('approved', this)" type="button">
+<span>已入库/通过</span>
+<span class="opacity-80 font-label-meta text-label-meta">(1)</span>
+</button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption flex items-center gap-1 hover:bg-surface-container transition-all active:scale-95" onclick="filterList('rejected', this)" type="button">
+<span>退回修改</span>
+<span class="opacity-80 font-label-meta text-label-meta">(1)</span>
+</button>
+</div>
+<!-- 提示 Banner -->
+<div class="flex items-center justify-between px-space-md py-2 rounded-xl bg-surface-container-low text-on-surface-variant shadow-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-label-meta text-label-meta text-on-surface">作品评审全程保密公开，支持实时补充材料</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-label-meta text-[10px] leading-tight">演示数据</span>
+</div>
+<!-- 卡片列表容器 -->
+<div class="flex flex-col space-y-space-md" id="cards-container">
+<!-- 卡片 1: 退回修改 (重点展示) -->
+<div class="status-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all" data-status="rejected">
+<!-- 头部状态与标题 -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error font-label-caption text-label-caption font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">replay</span>
+              退回修改·需重新提交
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">才艺书画</span>
+</div>
+<h2 class="font-title-card text-title-card text-on-surface truncate">《黔山古韵硬笔行草条幅》</h2>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Traditional Chinese calligraphy work banner mounted on silk scroll featuring fluid cursive strokes with warm parchment texture and seal stamps in balanced studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC1ozobeezVo7mYLyJJ1Ul8qjSxnIb4A_CAVfy4gAzqHRsBTzWwq2mu6-ufGe22ruvfH4V1-_vIUk43c_LXxKOby7E6fH51rqc9Bx-GZrBZwmMMFjRso9xijFiwcm2TMMCZXxGHzRQWMwjsPQJGKS3zYkz69HYJ9jdh4oXBY3oleZSQOXHFZ_sodcKsErlY0rMJYjoWiD1g0LZ-0t3LGM91SRVx8llfbLgUiRio5nkCO3T2YFzlP4g"/>
+</div>
+</div>
+<!-- 评审元信息 -->
+<div class="space-y-1 text-on-surface-variant font-label-caption text-label-caption">
+<div class="flex items-center justify-between">
+<span class="text-outline">审核评委</span>
+<span class="text-on-surface font-body-medium">省书协专家评审组</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">审核时间</span>
+<span>2025-05-18 10:30</span>
+</div>
+</div>
+<!-- 退回原因提示框 (柔和浅红背景) -->
+<div class="p-space-md rounded-xl bg-error-container/40 flex items-start space-x-2.5">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">assignment_late</span>
+<div class="flex-1">
+<div class="font-body-medium text-error mb-0.5">退回评审反馈意见</div>
+<p class="font-body-default text-label-caption text-on-surface-variant leading-relaxed">
+            作品格式请上传清晰平整的书画原件扫描件或照片，并修正第3行落款处错别字“贵陽”繁体误写。修改后可直接重新提交。
+          </p>
+</div>
+</div>
+<!-- 交互操作按钮 -->
+<div class="grid grid-cols-5 gap-space-sm pt-1">
+<button class="col-span-2 py-2.5 rounded-lg bg-surface-container-low text-primary font-body-medium text-body-medium flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="previewOrigin()" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+<span>查看原稿</span>
+</button>
+<button class="col-span-3 py-2.5 rounded-lg bg-primary-container text-on-primary font-body-medium text-body-medium shadow-sm flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="resubmitWork()" type="button">
+<span class="material-symbols-outlined text-[18px]">drive_file_rename_outline</span>
+<span>重新修改并提交</span>
+</button>
+</div>
+</div>
+<!-- 卡片 2: 待审核 -->
+<div class="status-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all" data-status="pending">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-caption text-label-caption font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">hourglass_top</span>
+              待审核·专家评审中
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">文学文稿</span>
+</div>
+<h2 class="font-title-card text-title-card text-on-surface truncate">《观山湖春行散文诗》</h2>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Open literary manuscript paper notebook with fountain pen resting peacefully beside a window overlooking a tranquil green spring lake in natural soft morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4qUgCtcu4KxcRB_VocR5sug3-ennBohNE3KV3i6GDt_w1PHtnFdnpFYkOKOhvv_rWj8mkLC-wYe5DFIaDnud3Liv9aClFcf37C7XL9UCN0QnIJ_VUh_ebFspX5cNFlYeZI5ppNu2RS4DPEjX7Rs35nN_HAzpEWkcZqsk6KxVfvU0kycJ3cC-ibm2vPqCYtD44rD8TyyZIOzSMefObj7iLwf-5AOZYLkQpWRVJXvqwD4cJnux6Z_Nx"/>
+</div>
+</div>
+<div class="space-y-1 text-on-surface-variant font-label-caption text-label-caption">
+<div class="flex items-center justify-between">
+<span class="text-outline">提交时间</span>
+<span>2025-05-17 16:40</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">当前流转</span>
+<span class="text-secondary font-body-medium">省青年文联散文专审第2组</span>
+</div>
+</div>
+<!-- 状态说明 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">schedule</span>
+<p class="font-body-default text-label-caption text-on-surface-variant leading-relaxed">
+          稿件已分配初审导师，预计3个工作日内完成初审批注与评选登记。
+        </p>
+</div>
+<div class="flex justify-end pt-1">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium flex items-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>查看预览</span>
+</button>
+</div>
+</div>
+<!-- 卡片 3: 已通过 / 入选展播 -->
+<div class="status-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all" data-status="approved">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caption text-label-caption font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+              已通过·入选展播
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta">才艺书画·国画设色</span>
+</div>
+<h2 class="font-title-card text-title-card text-on-surface truncate">《赤水丹霞秋意图》</h2>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Magnificent Chinese watercolor landscape painting featuring red Danxia landform peaks enveloped in gentle autumn morning mist and golden forest foliage in traditional fine-brush style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAogxDd03sGvkZGmIKn6EZbP_v90X0AKxMDCyo3GYLcSenDEr6-cqCGXoRjEF61VLIwDswsNzNv9PNsu12IyC0WfqhkdshnBfJIVVbEkS_XUySjuW1LEGsXZpDa7ooXGr0hvLb-JMgi9Buenz8kZtJbgKCgy_CnkkTNMWrnKsiDVWZyLZGG3jmg6cJNSL9IaA5p4_F0UybL4yPnFOrvH8LgOspH4n9iL9H9Q7lBrMB7YiPzU60b8Gdv"/>
+</div>
+</div>
+<div class="space-y-1 text-on-surface-variant font-label-caption text-label-caption">
+<div class="flex items-center justify-between">
+<span class="text-outline">入库时间</span>
+<span>2025-05-10</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">作品编号</span>
+<span class="font-mono text-on-surface">GY-2025-A0892</span>
+</div>
+</div>
+<!-- 成功荣耀说明 -->
+<div class="p-space-md rounded-xl bg-tertiary-fixed/30 flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0">workspace_premium</span>
+<p class="font-body-default text-label-caption text-tertiary leading-relaxed">
+          已获名师推荐，进入全省优秀作品库，并已上线全省高校线上数字文化长廊。
+        </p>
+</div>
+<!-- 操作按钮群 -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-2.5 rounded-lg bg-surface-container-low text-primary font-body-medium text-body-medium flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+<span>查看作品</span>
+</button>
+<button class="py-2.5 rounded-lg bg-primary text-on-primary font-body-medium text-body-medium flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+<span>查看证书</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 底部安全与合规保障通知 -->
+<div class="pt-space-md flex flex-col items-center justify-center space-y-1 text-center">
+<div class="flex items-center space-x-1.5 text-outline">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span class="font-label-meta text-label-meta">官方评审不向参赛师生收取任何评审或认证费用</span>
+</div>
+<p class="font-label-meta text-label-meta text-outline-variant">如遇以评审入库名义收费，请立即向校园纪检平台反馈</p>
+</div>
+</div>
+<script>
+  function filterList(type, element) {
+    // 切换 Tab 高亮
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary');
+      tab.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+    });
+    element.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    element.classList.add('bg-primary', 'text-on-primary');
+
+    // 过滤卡片
+    const cards = document.querySelectorAll('.status-card');
+    cards.forEach(card => {
+      if (type === 'all' || card.getAttribute('data-status') === type) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function previewOrigin() {
+    // 模拟轻触查看原图弹层
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-caption text-label-caption shadow-lg z-50 transition-opacity';
+    toast.innerText = '正在调取原件高清扫描图...';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.remove();
+    }, 1600);
+  }
+
+  function resubmitWork() {
+    // 模拟跳转重新上传页面
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary px-4 py-2 rounded-full font-label-caption text-label-caption shadow-lg z-50 transition-opacity';
+    toast.innerText = '正在进入修订编辑草稿箱...';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.remove();
+    }, 1600);
+  }
+</script></main><script>window.EP_PAGE="S04";</script><script src="../routes.js"></script></body></html>

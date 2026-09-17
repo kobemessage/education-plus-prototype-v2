@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans,+PingFang+SC,+-apple-system,+sans-serif:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#9f6400", "on-tertiary-fixed-variant": "#653e00", "background": "#f9f9ff", "primary-container": "#087f73", "primary": "#00645a", "secondary-container": "#5bb8fe", "on-tertiary": "#ffffff", "on-tertiary-container": "#fff5ed", "on-secondary-container": "#00476e", "tertiary-fixed": "#ffddb8", "tertiary": "#7d4e00", "on-primary": "#ffffff", "on-surface": "#121c2a", "on-secondary-fixed": "#001d31", "on-background": "#121c2a", "primary-fixed": "#95f3e4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#e6eeff", "secondary-fixed-dim": "#93ccff", "on-secondary": "#ffffff", "primary-fixed-dim": "#78d7c8", "surface-container-high": "#dee9fd", "surface-container-low": "#eff3ff", "inverse-primary": "#78d7c8", "on-primary-container": "#d6fff7", "on-primary-fixed": "#00201c", "on-tertiary-fixed": "#2a1700", "error": "#ba1a1a", "surface-tint": "#006a60", "outline-variant": "#bdc9c6", "outline": "#6e7977", "surface-container-highest": "#d9e3f7", "surface-variant": "#d9e3f7", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed-variant": "#004b73", "inverse-on-surface": "#ebf1ff", "surface-dim": "#d0daef", "error-container": "#ffdad6", "surface-bright": "#f9f9ff", "surface": "#f9f9ff", "secondary-fixed": "#cce5ff", "inverse-surface": "#273140", "on-error-container": "#93000a", "on-surface-variant": "#3e4947", "on-primary-fixed-variant": "#005048", "secondary": "#006398" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" }, "spacing": { "space-md": "12px", "space-2xl": "24px", "height-navbar": "44px", "margin-page": "16px", "space-xl": "20px", "height-tabbar": "56px", "space-2xs": "2px", "gutter-grid": "12px", "space-lg": "16px", "space-xs": "4px", "capsule-safe-right": "96px", "space-sm": "8px", "space-3xl": "32px" }, "fontFamily": { "headline-section": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "display-stat": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-default": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-caption": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "body-medium": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "label-meta": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "title-card": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""], "headline-page": ["\"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif\""] }, "fontSize": { "headline-section": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-stat": ["26px", { "lineHeight": "32px", "fontWeight": "700" }], "body-default": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-caption": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "body-medium": ["14px", { "lineHeight": "22px", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "title-card": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-page": ["20px", { "lineHeight": "28px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-14 flex items-center justify-between px-margin-page relative"><button aria-label="返回" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface rounded-full active:scale-95 transition-transform" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="absolute left-1/2 -translate-x-1/2 pointer-events-none text-center max-w-[200px] truncate"><h1 class="font-headline-section text-headline-section text-on-surface truncate">小记者投稿进度</h1></div><div class="flex items-center gap-space-sm pl-capsule-safe-right"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-meta text-label-meta">[演示数据]</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 bg-surface pb-safe"><div class="flex flex-col w-full px-margin-page pb-28 space-y-space-md">
+<!-- 状态分类筛选项 Tabs (四态) -->
+<div class="sticky top-14 z-40 bg-surface/95 backdrop-blur-sm -mx-margin-page px-margin-page pt-space-sm pb-space-xs border-b border-surface-container">
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-1" id="tabFilterGroup">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-semibold transition-all bg-primary text-on-primary shadow-sm" data-tab="all" onclick="filterArticles('all', this)" type="button">
+          全部 (3)
+        </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-medium transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface" data-tab="pending" onclick="filterArticles('pending', this)" type="button">
+          待初审 (1)
+        </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-medium transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface" data-tab="modifying" onclick="filterArticles('modifying', this)" type="button">
+          修改中 (1)
+        </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-medium transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface" data-tab="published" onclick="filterArticles('published', this)" type="button">
+          已录用/已刊发 (1)
+        </button>
+</div>
+</div>
+<!-- 稿件列表容器 -->
+<div class="space-y-space-md pt-space-xs" id="articleList">
+<!-- 卡片 1: 修改中 (重点呈现编辑退回批注与重投闭环) -->
+<div class="article-card bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-outline-variant/30 flex flex-col space-y-space-sm relative overflow-hidden" data-status="modifying">
+<!-- 顶部状态与编号 -->
+<div class="flex items-center justify-between gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-caption text-label-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error mr-1.5 animate-pulse"></span>
+            修改中·专家已批注
+          </span>
+<span class="font-mono text-label-meta text-on-surface-variant">GZ-XJZ-20250520-092</span>
+</div>
+<!-- 标题与分类 -->
+<div>
+<h2 class="font-title-card text-title-card text-on-surface leading-snug font-bold">
+            《山地大棚里的“智慧密码”：探访省农科院现代农业基地》
+          </h2>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="inline-flex items-center text-primary font-medium">
+<span class="material-symbols-outlined text-[14px] mr-0.5">category</span>
+              观察手记
+            </span>
+<span>·</span>
+<span>投稿于 2025-05-20</span>
+</div>
+</div>
+<!-- 编辑部审改意见警示框 -->
+<div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/80 rounded-xl p-space-sm flex items-start space-x-space-sm">
+<span class="material-symbols-outlined text-amber-600 text-[20px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">error</span>
+<div class="space-y-1">
+<div class="font-label-caption text-[12px] font-bold text-amber-900 leading-snug">编辑部审改意见</div>
+<p class="font-body-default text-[13px] text-amber-950 leading-relaxed">
+              “文章观察非常敏锐，第一部分数据详实！但第二部分专家采访对话建议补充2组具体问答，且第三张配图分辨率略低，请补充修改后重新提交。”
+            </p>
+<div class="text-right font-label-meta text-[11px] text-amber-800/90 font-medium">
+              —— 责编：王老师（贵州教育报编辑部）
+            </div>
+</div>
+</div>
+<!-- 截止提示 -->
+<div class="flex items-center justify-between text-error font-label-caption text-label-caption px-1">
+<span class="inline-flex items-center space-x-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>请于3日内完成修改重投</span>
+</span>
+<span class="text-on-surface-variant font-label-meta">倒计时：68小时</span>
+</div>
+<!-- 交互操作按钮组 -->
+<div class="pt-space-xs grid grid-cols-2 gap-space-sm">
+<button class="h-10 rounded-xl bg-surface-container-low text-on-surface-variant font-body-medium text-body-medium flex items-center justify-center space-x-1 active:scale-95 transition-all" onclick="showToast('正在打开初版稿件原稿预览...', 'visibility')" type="button">
+<span class="material-symbols-outlined text-[17px]">visibility</span>
+<span>查看原稿</span>
+</button>
+<button class="h-10 rounded-xl bg-primary text-on-primary font-body-medium text-body-medium flex items-center justify-center space-x-1 shadow-sm active:scale-95 transition-all" onclick="showToast('正在进入J02 采写编辑与重投页面...', 'edit_document')" type="button">
+<span class="material-symbols-outlined text-[17px]">edit_document</span>
+<span>进入修改重投 (J02)</span>
+</button>
+</div>
+</div>
+<!-- 卡片 2: 待初审 -->
+<div class="article-card bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-outline-variant/30 flex flex-col space-y-space-sm relative overflow-hidden" data-status="pending">
+<!-- 顶部状态与编号 -->
+<div class="flex items-center justify-between gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caption text-label-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5 animate-pulse"></span>
+            待初审·排队中
+          </span>
+<span class="font-mono text-label-meta text-on-surface-variant">GZ-XJZ-20250522-105</span>
+</div>
+<!-- 标题与分类 -->
+<div>
+<h2 class="font-title-card text-title-card text-on-surface leading-snug font-bold">
+            《书香浸润的大山小学：走访黔西乡村图书角手记》
+          </h2>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="inline-flex items-center text-primary font-medium">
+<span class="material-symbols-outlined text-[14px] mr-0.5">newspaper</span>
+              校园新闻
+            </span>
+<span>·</span>
+<span>投稿于 2025-05-22</span>
+</div>
+</div>
+<!-- 审核进度提醒条 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center space-x-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">hourglass_top</span>
+<span class="font-label-caption text-label-caption">预计2个工作日内完成初审</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caption text-[11px] font-semibold">
+            当前排队：第4位
+          </div>
+</div>
+<!-- 操作按钮 -->
+<div class="pt-space-xs grid grid-cols-2 gap-space-sm">
+<button class="h-10 rounded-xl bg-surface-container-low text-on-surface font-body-medium text-body-medium flex items-center justify-center space-x-1 active:scale-95 transition-all" onclick="showToast('正在打开稿件内容预览...', 'menu_book')" type="button">
+<span class="material-symbols-outlined text-[17px]">menu_book</span>
+<span>查看稿件</span>
+</button>
+<button class="h-10 rounded-xl bg-surface-container text-error font-body-medium text-body-medium flex items-center justify-center space-x-1 active:scale-95 transition-all" onclick="confirmRecall()" type="button">
+<span class="material-symbols-outlined text-[17px]">undo</span>
+<span>撤回送审</span>
+</button>
+</div>
+</div>
+<!-- 卡片 3: 已录用 / 已刊发 -->
+<div class="article-card bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-outline-variant/30 flex flex-col space-y-space-sm relative overflow-hidden" data-status="published">
+<!-- 成功印记角标 -->
+<div class="absolute -right-4 -top-4 w-16 h-16 pointer-events-none opacity-20">
+<span class="material-symbols-outlined text-primary text-[64px]">verified</span>
+</div>
+<!-- 顶部状态与编号 -->
+<div class="flex items-center justify-between gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-caption text-label-caption font-semibold">
+<span class="material-symbols-outlined text-[14px] mr-1 text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+            已刊发·见报
+          </span>
+<span class="font-mono text-label-meta text-on-surface-variant">GZ-XJZ-20250510-041</span>
+</div>
+<!-- 标题与分类 -->
+<div>
+<h2 class="font-title-card text-title-card text-on-surface leading-snug font-bold">
+            《一张报纸的铅字印记：探访贵州教育报社新闻编辑部》
+          </h2>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-label-caption text-label-caption">
+<span class="inline-flex items-center text-primary font-medium">
+<span class="material-symbols-outlined text-[14px] mr-0.5">assignment_ind</span>
+              人物专访
+            </span>
+<span>·</span>
+<span>已录用入库</span>
+</div>
+</div>
+<!-- 刊发信息卡 -->
+<div class="bg-primary/5 border border-primary/15 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_stories</span>
+<span class="font-label-caption text-label-caption text-on-surface">已刊发于 2025年第18期校园小记者专版</span>
+</div>
+<span class="font-label-meta text-primary font-bold">见报荣誉</span>
+</div>
+<!-- 操作按钮 -->
+<div class="pt-space-xs grid grid-cols-2 gap-space-sm">
+<button class="h-10 rounded-xl bg-surface-container-low text-primary font-body-medium text-body-medium flex items-center justify-center space-x-1 active:scale-95 transition-all" onclick="showToast('正在前往 J01 查看见报文章...', 'newspaper')" type="button">
+<span class="material-symbols-outlined text-[17px]">newspaper</span>
+<span>查看见报文章 (J01)</span>
+</button>
+<button class="h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-body-medium text-body-medium flex items-center justify-center space-x-1 active:scale-95 transition-all" onclick="showToast('正在前往 J06 查看荣誉录用证书...', 'workspace_premium')" type="button">
+<span class="material-symbols-outlined text-[17px]">workspace_premium</span>
+<span>荣誉证书 (J06)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部固定主操作按钮：撰写新采写文稿 (进入J02) -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/90 backdrop-blur-xl border-t border-surface-container px-margin-page py-3 pb-safe z-50">
+<button class="w-full h-12 rounded-full bg-primary-container text-on-primary font-body-medium text-body-medium font-semibold flex items-center justify-center space-x-space-xs shadow-[0_4px_16px_rgba(8,127,115,0.28)] active:scale-[0.985] transition-all" onclick="showToast('正在前往 J02 撰写新采写文稿...', 'edit')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+<span>撰写新采写文稿 (进入J02)</span>
+</button>
+</div>
+<!-- 轻量提示弹层 Toast -->
+<div class="fixed left-1/2 -translate-x-1/2 bottom-20 px-4 py-2.5 rounded-full bg-inverse-surface/90 text-inverse-on-surface font-label-caption text-label-caption shadow-xl z-50 flex items-center space-x-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="interactiveToast">
+<span class="material-symbols-outlined text-[18px] text-inverse-primary" id="toastIcon">check_circle</span>
+<span id="toastMsg">提示信息</span>
+</div>
+<script>
+  function filterArticles(tabKey, targetBtn) {
+    // 切换按钮高亮样式
+    const buttons = document.querySelectorAll('#tabFilterGroup button');
+    buttons.forEach(btn => {
+      btn.className = 'shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-medium transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface';
+    });
+    targetBtn.className = 'shrink-0 px-3.5 py-1.5 rounded-full font-label-caption text-label-caption font-semibold transition-all bg-primary text-on-primary shadow-sm';
+
+    // 筛选卡片
+    const cards = document.querySelectorAll('#articleList .article-card');
+    cards.forEach(card => {
+      const status = card.getAttribute('data-status');
+      if (tabKey === 'all' || status === tabKey) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function confirmRecall() {
+    if (confirm('确定要撤回该稿件吗？撤回后稿件将退回到您的草稿箱中。')) {
+      showToast('稿件已成功撤回，已保存至草稿箱', 'done_all');
+    }
+  }
+
+  function showToast(msg, icon = 'check_circle') {
+    const toast = document.getElementById('interactiveToast');
+    const msgEl = document.getElementById('toastMsg');
+    const iconEl = document.getElementById('toastIcon');
+    if (!toast) return;
+
+    msgEl.textContent = msg;
+    iconEl.textContent = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+    }, 2400);
+  }
+</script></main><script>window.EP_PAGE="J03";</script><script src="../routes.js"></script></body></html>

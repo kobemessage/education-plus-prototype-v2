@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 外部服务接入说明</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">外部服务接入说明</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Top Navigation & Return Bar -->
+<div class="flex items-center justify-between py-space-sm mb-space-xs">
+<button class="flex items-center gap-space-2xs text-on-surface hover:text-primary active:scale-95 transition-all text-left" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_back_ios_new</span>
+<span class="font-headline-section text-headline-section text-on-surface">外部服务接入与授权说明</span>
+</button>
+<span class="bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta px-space-xs py-space-2xs rounded">
+      [演示数据]
+    </span>
+</div>
+<!-- Trust & Neutrality Statement Hero Card -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-lg shadow-sm mb-space-lg">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary-fixed/25 pointer-events-none blur-xl"></div>
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-title-card text-title-card text-primary font-bold">客观中立与边界声明</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed text-justify">
+<strong class="font-body-medium text-on-surface">贵州教育报·教育Plus</strong> 平台不自建商业化 AI 志愿分析模型，不假装已完成全量第三方 API 直连。本页如实公开当前各升学服务模块的接入进度、原始数据来源与合规授权边界，守护学子考后决策透明度。
+        </p>
+</div>
+</div>
+<!-- Micro KPI indicators -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-md pt-space-md bg-surface-container-lowest/80 rounded-xl p-space-sm">
+<div class="flex flex-col items-center text-center">
+<span class="font-display-stat text-display-stat text-primary">100%</span>
+<span class="font-label-meta text-label-meta text-outline">公开数据源核验</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-display-stat text-display-stat text-secondary">0</span>
+<span class="font-label-meta text-label-meta text-outline">商业算法隐性推荐</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-display-stat text-display-stat text-tertiary">公益</span>
+<span class="font-label-meta text-label-meta text-outline">省级主流报媒定位</span>
+</div>
+</div>
+</div>
+<!-- Section Title -->
+<div class="flex items-center justify-between mb-space-sm px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-1 h-3.5 bg-primary rounded-full"></span>
+<h2 class="font-headline-section text-headline-section text-on-surface">服务接入真实进度清单</h2>
+</div>
+<span class="font-label-caption text-label-caption text-outline">按日人工校验维护</span>
+</div>
+<!-- Service List Container -->
+<div class="flex flex-col gap-space-md mb-space-xl">
+<!-- Item 1: 历年投档库 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">database</span>
+<h3 class="font-title-card text-title-card text-on-surface truncate">院校专业历年投档库</h3>
+</div>
+<span class="shrink-0 font-label-caption text-label-caption px-space-sm py-0.5 rounded-full bg-primary-fixed/40 text-primary font-medium">
+          已对接公开发布数据
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-default text-body-default bg-surface-container-low/60 rounded-xl p-space-sm">
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">数据源头：</span>
+<span class="text-on-surface">贵州省招生考试院历史公开统计年鉴、各批次最低位次投档表。</span>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">交付形式：</span>
+<span class="text-on-surface">支持客观位次、分段多维检索，无加权修改或人为竞价排名。</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          已完成历史 3 年数据人工校验
+        </span>
+<span class="font-label-meta text-label-meta text-primary font-medium">状态：稳定可用</span>
+</div>
+</div>
+<!-- Item 2: 新高考政策章程库 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">policy</span>
+<h3 class="font-title-card text-title-card text-on-surface truncate">新高考政策与高校章程</h3>
+</div>
+<span class="shrink-0 font-label-caption text-label-caption px-space-sm py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-medium">
+          官方原文同步核验
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-default text-body-default bg-surface-container-low/60 rounded-xl p-space-sm">
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">数据源头：</span>
+<span class="text-on-surface">教育部“阳光高考”平台官方发布高校招生章程、省招考委正规文件。</span>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">核验规范：</span>
+<span class="text-on-surface">采编团队逐校核查体检受限、单科要求、选科组合对应关系。</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          每日官方信息比对同步
+        </span>
+<span class="font-label-meta text-label-meta text-secondary font-medium">状态：人工审核归档</span>
+</div>
+</div>
+<!-- Item 3: 学科学业测评工具 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0">psychology</span>
+<h3 class="font-title-card text-title-card text-on-surface truncate">学业/学科测评工具</h3>
+</div>
+<span class="shrink-0 font-label-caption text-label-caption px-space-sm py-0.5 rounded-full bg-tertiary-fixed/60 text-tertiary font-medium">
+          第三方联调评估中
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-default text-body-default bg-surface-container-low/60 rounded-xl p-space-sm">
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">接入阶段：</span>
+<span class="text-on-surface">第三方服务待技术联调与数据授权确认，暂不向普通考生开放。</span>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">准入原则：</span>
+<span class="text-on-surface">拟引入具备高校或教育研究资质的专业测量机构，拒绝无科学依据的营销题库。</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          签署隐私安全协议前不上架
+        </span>
+<span class="font-label-meta text-label-meta text-tertiary font-medium">状态：技术准入评审</span>
+</div>
+</div>
+<!-- Item 4: 志愿参考草案工具 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">format_list_bulleted_add</span>
+<h3 class="font-title-card text-title-card text-on-surface truncate">志愿参考草案工具</h3>
+</div>
+<span class="shrink-0 font-label-caption text-label-caption px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">
+          离线原型模拟中
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-default text-body-default bg-surface-container-low/60 rounded-xl p-space-sm">
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">边界界定：</span>
+<span class="text-on-surface">仅支持考生自行挑选目标代码进行离线排序，无任何商业算法干预。</span>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="font-body-medium text-outline shrink-0">核心目的：</span>
+<span class="text-on-surface">帮助考生与家长建立梯度志愿思维（冲稳保垫），不代做投档最终决断。</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<span class="font-label-meta text-label-meta text-outline flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+          不收集考生完整账号密码
+        </span>
+<span class="font-label-meta text-label-meta text-on-surface-variant font-medium">状态：内部测试</span>
+</div>
+</div>
+</div>
+<!-- Editorial Compliance Pledge (Four Sacred Declarations) -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-md">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<h2 class="font-headline-section text-headline-section text-on-surface">贵州教育报·严正合规承诺</h2>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-bold text-[14px] shrink-0 mt-0.5">
+          1
+        </div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">绝不向考生收取升学志愿中介费</span>
+<span class="font-body-default text-body-default text-on-surface-variant">所有基于官方公开年鉴的检索工具均为全省学子提供公益开放，拒绝捆绑销售高价辅导套餐。</span>
+</div>
+</div>
+<!-- 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-bold text-[14px] shrink-0 mt-0.5">
+          2
+        </div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">严禁向第三方机构非法买卖学籍档案</span>
+<span class="font-body-default text-body-default text-on-surface-variant">严格遵循国家网络安全法与个人信息保护法，不缓存考生高考准考证密码，严防隐私泄露。</span>
+</div>
+</div>
+<!-- 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-bold text-[14px] shrink-0 mt-0.5">
+          3
+        </div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">不提供未经官方核实的“保过录取概率”</span>
+<span class="font-body-default text-body-default text-on-surface-variant">升学录取受全省当年报考心理动态波动影响，坚决杜绝误导性“99%精准录取”虚假承诺宣传。</span>
+</div>
+</div>
+<!-- 4 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-bold text-[14px] shrink-0 mt-0.5">
+          4
+        </div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">坚守党媒采编权威，践行纯公益信息普惠</span>
+<span class="font-body-default text-body-default text-on-surface-variant">发挥媒体桥梁监督作用，重点关切农村偏远生源及新高考首届政策难点，传递正统招考资讯。</span>
+</div>
+</div>
+</div>
+<!-- Editorial Badge Sign-off -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low/40 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-caption text-label-caption text-on-surface font-medium">贵州教育报社 编审监管</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline">监督电话：0851-8661XXXX</span>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-12 bg-primary text-on-primary rounded-full font-body-medium text-body-medium flex items-center justify-center gap-space-xs shadow-md active:scale-95 transition-all" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>返回升学服务目录 (V01)</span>
+</button>
+<button class="w-full h-10 bg-surface-container-high text-on-surface-variant rounded-xl font-label-caption text-label-caption flex items-center justify-center gap-space-2xs active:bg-surface-variant transition-all" id="feedbackBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>接入合规问题咨询与线索反馈 (演示通道)</span>
+</button>
+</div>
+<!-- Micro Interaction Toast Script -->
+<script>
+    (function() {
+      const btn = document.getElementById('feedbackBtn');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const toast = document.createElement('div');
+          toast.className = 'fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full text-xs shadow-lg flex items-center gap-2 transition-opacity duration-300';
+          toast.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary-fixed">check_circle</span> 感谢您的关注！[演示数据] 当前服务边界处于报备公示期。';
+          document.body.appendChild(toast);
+          setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+          }, 2400);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="V02";</script><script src="../routes.js"></script></body></html>

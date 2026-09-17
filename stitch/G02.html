@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 消息列表与通知详情</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">消息列表与通知详情</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-6 space-y-space-md" id="notification-root">
+<!-- Top Action & Demonstration Badges -->
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button aria-label="返回上级页面" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<span class="font-title-card text-title-card text-on-surface">消息与通知中心</span>
+<span class="font-label-meta text-label-meta text-outline">教育协同 · 研学与审校即时通告</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-meta text-label-meta px-space-xs py-space-2xs bg-surface-container-highest text-on-surface-variant rounded-DEFAULT">[演示数据]</span>
+<button class="flex items-center gap-1 font-label-caption text-label-caption text-primary hover:opacity-80 active:scale-95 transition-all" id="mark-all-read-btn" type="button">
+<span class="material-symbols-outlined text-[15px]">done_all</span>
+<span>全部已读</span>
+</button>
+</div>
+</div>
+<!-- Category Pills Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-2xs">
+<button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-caption text-label-caption bg-primary text-on-primary shadow-sm flex items-center gap-1 transition-all" data-filter="all" type="button">
+<span>全部消息</span>
+<span class="px-1.5 py-0.2 bg-on-primary/20 text-on-primary rounded-full text-[10px]" id="unread-count-badge">3</span>
+</button>
+<button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-caption text-label-caption bg-surface-container-lowest text-on-surface-variant shadow-sm flex items-center gap-1 hover:text-primary transition-all" data-filter="audit" type="button">
+<span>审核动态</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error" id="audit-dot"></span>
+</button>
+<button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-caption text-label-caption bg-surface-container-lowest text-on-surface-variant shadow-sm flex items-center gap-1 hover:text-primary transition-all" data-filter="activity" type="button">
+<span>活动提醒</span>
+</button>
+<button class="category-pill whitespace-nowrap px-space-md py-space-xs rounded-full font-label-caption text-label-caption bg-surface-container-lowest text-on-surface-variant shadow-sm flex items-center gap-1 hover:text-primary transition-all" data-filter="system" type="button">
+<span>系统通知</span>
+</button>
+</div>
+<!-- State Toggle Demonstration Bar (Delight Micro-Tool) -->
+<div class="flex items-center justify-between px-space-sm py-space-2xs bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>当前数据通道状态正常</span>
+</div>
+<button class="font-label-meta text-label-meta text-primary underline underline-offset-2 hover:opacity-80" id="toggle-empty-state-btn" type="button">
+      预览空状态
+    </button>
+</div>
+<!-- Empty State Container (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center p-space-2xl bg-surface-container-lowest rounded-2xl shadow-sm text-center" id="empty-state-card">
+<div class="w-16 h-16 rounded-full bg-surface-container-high/70 flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">mark_email_read</span>
+</div>
+<p class="font-title-card text-title-card text-on-surface">暂无待处理新消息</p>
+<p class="font-body-default text-body-default text-outline mt-space-2xs max-w-[240px]">
+      您已经掌握所有最新审核进展与研学安排，随时可在各业务专区查看归档记录。
+    </p>
+<button class="mt-space-lg px-space-xl py-space-xs bg-primary text-on-primary font-label-caption text-label-caption rounded-full shadow-sm active:scale-95 transition-transform" id="reset-list-btn" type="button">
+      返回演示列表
+    </button>
+</div>
+<!-- Notification Cards Stack -->
+<div class="flex flex-col space-y-space-md" id="cards-stack">
+<!-- Card 1: 重要审核结果 (退回通知) -->
+<div class="notification-item group flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-200" data-id="msg-1" data-type="audit">
+<div class="flex items-start justify-between cursor-pointer card-header-action">
+<div class="flex items-start gap-space-sm min-w-0 pr-space-xs">
+<div class="relative w-9 h-9 rounded-full bg-error-container/60 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+<span class="unread-dot absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-error"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs flex-wrap">
+<span class="font-label-meta text-label-meta px-1.5 py-0.5 bg-error-container text-on-error-container rounded font-medium">审核退回</span>
+<h2 class="font-title-card text-title-card text-on-surface truncate">《黔山古韵硬笔行草条幅》投稿审核退回通知</h2>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-space-2xs">今日 10:30 · 贵州省青年书法家协会评审组</span>
+</div>
+</div>
+<button aria-label="展开或收起详情" class="expand-icon-btn text-outline p-space-2xs shrink-0 rounded-full hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300">expand_more</span>
+</button>
+</div>
+<!-- Card Summary (Visible by default) -->
+<p class="summary-text font-body-default text-body-default text-on-surface-variant mt-space-sm pl-[44px] line-clamp-2">
+        您的“少年派硬笔书法展评”投稿作品已由省书协学术委员会专家完成初审。作品章法完整，但装裱落款处规格与扫描件分辨率不符合复审打印要求，需进行格式微调后重新提审。
+      </p>
+<!-- Expandable Detail Section -->
+<div class="detail-panel hidden flex-col mt-space-md pt-space-md space-y-space-md">
+<!-- Reviewer Feedback Box -->
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-xl space-y-space-xs">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">rate_review</span>
+<span class="font-label-caption text-label-caption font-semibold">评审专员具体意见：</span>
+</div>
+<ul class="font-body-default text-body-default text-on-surface-variant space-y-space-xs list-disc list-inside">
+<li>正文字形结构遒劲，符合行草评审规范；</li>
+<li>条幅落款印章边缘被裁切，需预留至少 <strong class="text-on-surface">1.5cm</strong> 的天地留白；</li>
+<li>当前上传之图像DPI为 150，请重新扫描输出为 <strong class="text-on-surface">300 DPI及以上超清TIFF或JPG</strong>。</li>
+</ul>
+</div>
+<!-- Submission Deadline & Meta Card -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-highest/40 rounded-lg">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-outline">
+<span class="material-symbols-outlined text-[15px] text-error">event_busy</span>
+<span>修改复审截止：<strong class="text-error">2025年5月12日 18:00</strong></span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">剩余 4 天</span>
+</div>
+<!-- Direct Action CTA (Leading to S04) -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="flex-1 h-11 bg-primary text-on-primary rounded-full flex items-center justify-center gap-space-xs font-body-medium text-body-medium shadow-md active:scale-98 transition-transform" data-path="S04" href="#">
+<span>去修改重投（前往S04）</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="quick-read-toggle h-11 px-space-md bg-surface-container-high text-on-surface-variant rounded-full font-label-caption text-label-caption hover:bg-surface-container-highest transition-colors" type="button">
+            收起
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 2: 活动出发提醒 (智慧农业采风) -->
+<div class="notification-item group flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-200" data-id="msg-2" data-type="activity">
+<div class="flex items-start justify-between cursor-pointer card-header-action">
+<div class="flex items-start gap-space-sm min-w-0 pr-space-xs">
+<div class="relative w-9 h-9 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">directions_bus</span>
+<span class="unread-dot absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-error"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs flex-wrap">
+<span class="font-label-meta text-label-meta px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant rounded font-medium">发车提醒</span>
+<h2 class="font-title-card text-title-card text-on-surface truncate">小记者农科院智慧农业采风发车提醒</h2>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-space-2xs">昨天 16:00 · 省小记者团实践组委会</span>
+</div>
+</div>
+<button aria-label="展开或收起详情" class="expand-icon-btn text-outline p-space-2xs shrink-0 rounded-full hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300">expand_more</span>
+</button>
+</div>
+<!-- Card Summary -->
+<p class="summary-text font-body-default text-body-default text-on-surface-variant mt-space-sm pl-[44px] line-clamp-2">
+        请各位小记者于明早07:45准时到达贵州日报社大楼前坪集合，统一穿戴发放的专属绿马甲与记者证帽，现场出示电子报名核销码完成登车打卡。
+      </p>
+<!-- Expandable Detail Section -->
+<div class="detail-panel hidden flex-col mt-space-md pt-space-md space-y-space-md">
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-xl space-y-space-xs">
+<div class="flex items-center justify-between font-label-caption text-label-caption">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pin_drop</span>
+              集合与随行准备须知
+            </span>
+<span class="text-outline">大巴车牌：贵A·89312</span>
+</div>
+<div class="font-body-default text-body-default text-on-surface-variant space-y-space-2xs">
+<p><strong>集合地点：</strong>贵州日报传媒集团南大门广场景区集结点</p>
+<p><strong>带队老师：</strong>张老师（电话：138****0921）、李督导</p>
+<p><strong>随行装备：</strong>官方绿马甲、采访录音笔、素描本及雨具（农科院温室无强光，建议携带轻便长裤）。</p>
+</div>
+</div>
+<!-- Voucher Redirect Action (J03) -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="flex-1 h-11 bg-secondary text-on-secondary rounded-full flex items-center justify-center gap-space-xs font-body-medium text-body-medium shadow-md active:scale-98 transition-transform" data-path="J03" href="#">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>出示报名核销凭证（前往J03）</span>
+</a>
+<button class="quick-read-toggle h-11 px-space-md bg-surface-container-high text-on-surface-variant rounded-full font-label-caption text-label-caption hover:bg-surface-container-highest transition-colors" type="button">
+            收起
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 3: 公益课上新 (思政直播课) -->
+<div class="notification-item group flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-200" data-id="msg-3" data-type="system">
+<div class="flex items-start justify-between cursor-pointer card-header-action">
+<div class="flex items-start gap-space-sm min-w-0 pr-space-xs">
+<div class="relative w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">live_tv</span>
+<span class="unread-dot absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-error"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs flex-wrap">
+<span class="font-label-meta text-label-meta px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-medium">公益直播</span>
+<h2 class="font-title-card text-title-card text-on-surface truncate">新一期名师思政直播课已开启预约</h2>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-space-2xs">3天前 · 贵州省少年大讲堂云端工作站</span>
+</div>
+</div>
+<button aria-label="展开或收起详情" class="expand-icon-btn text-outline p-space-2xs shrink-0 rounded-full hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300">expand_more</span>
+</button>
+</div>
+<!-- Card Summary -->
+<p class="summary-text font-body-default text-body-default text-on-surface-variant mt-space-sm pl-[44px] line-clamp-2">
+        特聘国家级骨干历史讲师开展《长征路上的精神丰碑》专题讲座，面向全省中小学开放同步公益转播。课后提供互动问答与配套导学思考题。
+      </p>
+<!-- Expandable Detail Section -->
+<div class="detail-panel hidden flex-col mt-space-md pt-space-md space-y-space-md">
+<div class="flex flex-col p-space-md bg-surface-container-low rounded-xl space-y-space-xs">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span class="font-label-caption text-label-caption font-semibold">课程安排明细</span>
+</div>
+<div class="font-body-default text-body-default text-on-surface-variant space-y-space-2xs">
+<p><strong>主讲嘉宾：</strong>韩明扬 教授（社科思政德育特约顾问）</p>
+<p><strong>开课时间：</strong>本周五 19:30 - 20:45</p>
+<p><strong>学习凭证：</strong>完整收看 45 分钟以上将自动发放《红色研学素养学时证书（1.5学时）》。</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 h-11 bg-primary text-on-primary rounded-full flex items-center justify-center gap-space-xs font-body-medium text-body-medium shadow-md active:scale-98 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>一键免费预约席位</span>
+</button>
+<button class="quick-read-toggle h-11 px-space-md bg-surface-container-high text-on-surface-variant rounded-full font-label-caption text-label-caption hover:bg-surface-container-highest transition-colors" type="button">
+            收起
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Interaction Toast Feedback Container -->
+<div class="fixed bottom-20 inset-x-6 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-2 flex justify-center" id="toast-banner">
+<div class="bg-inverse-surface/90 backdrop-blur text-inverse-on-surface px-space-md py-space-xs rounded-full shadow-lg font-label-caption text-label-caption flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">check_circle</span>
+<span id="toast-message">已将全部消息标记为已读</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const root = document.getElementById('notification-root');
+    if (!root) return;
+
+    const cards = root.querySelectorAll('.notification-item');
+    const markAllReadBtn = document.getElementById('mark-all-read-btn');
+    const toggleEmptyBtn = document.getElementById('toggle-empty-state-btn');
+    const resetListBtn = document.getElementById('reset-list-btn');
+    const cardsStack = document.getElementById('cards-stack');
+    const emptyStateCard = document.getElementById('empty-state-card');
+    const unreadCountBadge = document.getElementById('unread-count-badge');
+    const auditDot = document.getElementById('audit-dot');
+    const filterPills = root.querySelectorAll('.category-pill');
+    const toastBanner = document.getElementById('toast-banner');
+    const toastMessage = document.getElementById('toast-message');
+
+    let toastTimer = null;
+    function showToast(text) {
+      if (!toastBanner) return;
+      toastMessage.textContent = text;
+      toastBanner.classList.remove('opacity-0', 'translate-y-2');
+      toastBanner.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastBanner.classList.add('opacity-0', 'translate-y-2');
+        toastBanner.classList.remove('opacity-100', 'translate-y-0');
+      }, 2000);
+    }
+
+    // Toggle card expansion
+    cards.forEach(card => {
+      const headerAction = card.querySelector('.card-header-action');
+      const detailPanel = card.querySelector('.detail-panel');
+      const expandIcon = card.querySelector('.expand-icon-btn span');
+      const closeBtn = card.querySelector('.quick-read-toggle');
+      const unreadDot = card.querySelector('.unread-dot');
+
+      function toggleDetails(e) {
+        if (e && e.stopPropagation) e.stopPropagation();
+        const isHidden = detailPanel.classList.contains('hidden');
+        if (isHidden) {
+          detailPanel.classList.remove('hidden');
+          detailPanel.classList.add('flex');
+          expandIcon.style.transform = 'rotate(180deg)';
+          card.classList.add('shadow-md');
+          // Auto clear dot upon reading details
+          if (unreadDot && !unreadDot.classList.contains('hidden')) {
+            unreadDot.classList.add('hidden');
+            updateUnreadCount();
+          }
+        } else {
+          detailPanel.classList.add('hidden');
+          detailPanel.classList.remove('flex');
+          expandIcon.style.transform = 'rotate(0deg)';
+          card.classList.remove('shadow-md');
+        }
+      }
+
+      if (headerAction) headerAction.addEventListener('click', toggleDetails);
+      if (closeBtn) closeBtn.addEventListener('click', toggleDetails);
+    });
+
+    // Update global unread indicator
+    function updateUnreadCount() {
+      const remainingDots = root.querySelectorAll('.unread-dot:not(.hidden)');
+      const count = remainingDots.length;
+      if (unreadCountBadge) {
+        unreadCountBadge.textContent = count;
+        if (count === 0) {
+          unreadCountBadge.classList.add('hidden');
+          if (auditDot) auditDot.classList.add('hidden');
+        } else {
+          unreadCountBadge.classList.remove('hidden');
+        }
+      }
+    }
+
+    // Mark all as read
+    if (markAllReadBtn) {
+      markAllReadBtn.addEventListener('click', () => {
+        const dots = root.querySelectorAll('.unread-dot');
+        dots.forEach(d => d.classList.add('hidden'));
+        if (auditDot) auditDot.classList.add('hidden');
+        if (unreadCountBadge) unreadCountBadge.classList.add('hidden');
+        showToast('全部 3 条通告均已标为已读');
+      });
+    }
+
+    // Empty state switchers
+    function setEmptyView(isEmpty) {
+      if (isEmpty) {
+        cardsStack.classList.add('hidden');
+        emptyStateCard.classList.remove('hidden');
+        emptyStateCard.classList.add('flex');
+        toggleEmptyBtn.textContent = '还原消息列表';
+      } else {
+        emptyStateCard.classList.add('hidden');
+        emptyStateCard.classList.remove('flex');
+        cardsStack.classList.remove('hidden');
+        toggleEmptyBtn.textContent = '预览空状态';
+      }
+    }
+
+    if (toggleEmptyBtn) {
+      toggleEmptyBtn.addEventListener('click', () => {
+        const isCurrentlyEmpty = !cardsStack.classList.contains('hidden');
+        setEmptyView(isCurrentlyEmpty);
+      });
+    }
+
+    if (resetListBtn) {
+      resetListBtn.addEventListener('click', () => {
+        setEmptyView(false);
+      });
+    }
+
+    // Tab Filters
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary');
+
+        const filter = pill.getAttribute('data-filter');
+        setEmptyView(false);
+
+        cards.forEach(card => {
+          const type = card.getAttribute('data-type');
+          if (filter === 'all' || filter === type) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="G02";</script><script src="../routes.js"></script></body></html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}.top-bar-pt{padding-top:env(safe-area-inset-top,44px);}.header-offset{padding-top:calc(env(safe-area-inset-top,44px) + 44px);}.footer-offset{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 56px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-tertiary-fixed': '#2a1700', 'on-tertiary': '#ffffff', 'surface-container-lowest': '#ffffff', 'on-background': '#121c2a', 'error': '#ba1a1a', 'outline': '#6e7977', 'inverse-primary': '#78d7c8', 'primary-container': '#087f73', 'surface-container': '#e6eeff', 'outline-variant': '#bdc9c6', 'on-primary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'tertiary-fixed': '#ffddb8', 'secondary-container': '#5bb8fe', 'on-secondary-container': '#00476e', 'surface-variant': '#d9e3f7', 'error-container': '#ffdad6', 'on-surface-variant': '#3e4947', 'primary-fixed': '#95f3e4', 'inverse-on-surface': '#ebf1ff', 'on-primary-fixed': '#00201c', 'primary': '#00645a', 'on-error-container': '#93000a', 'tertiary-fixed-dim': '#ffb95f', 'background': '#f9f9ff', 'primary-fixed-dim': '#78d7c8', 'secondary-fixed': '#cce5ff', 'surface-container-high': '#dee9fd', 'on-tertiary-container': '#fff5ed', 'on-secondary-fixed': '#001d31', 'tertiary-container': '#9f6400', 'tertiary': '#7d4e00', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a60', 'on-primary-container': '#d6fff7', 'on-error': '#ffffff', 'surface-bright': '#f9f9ff', 'surface': '#f9f9ff', 'secondary': '#006398', 'on-surface': '#121c2a', 'on-secondary-fixed-variant': '#004b73', 'surface-dim': '#d0daef', 'surface-container-low': '#eff3ff', 'on-primary-fixed-variant': '#005048', 'inverse-surface': '#273140', 'surface-container-highest': '#d9e3f7', 'on-secondary': '#ffffff' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-md': '12px', 'space-xl': '20px', 'space-xs': '4px', 'capsule-safe-right': '96px', 'margin-page': '16px', 'space-3xl': '32px', 'gutter-grid': '12px', 'height-navbar': '44px', 'space-sm': '8px', 'height-tabbar': '56px', 'space-2xl': '24px', 'space-lg': '16px', 'space-2xs': '2px' }, 'fontFamily': { 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>html,body{background:#f3f8f5!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}body{padding-top:72px!important;padding-bottom:78px!important}main{padding-top:16px!important;padding-bottom:30px!important}#ep-header{height:72px;padding:10px 18px;box-sizing:border-box;position:fixed;inset:0 0 auto;z-index:999;background:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcece7;color:#087f73}#ep-header button{font-size:32px;width:30px}#ep-header div{text-align:center}#ep-header small{display:block;font-size:10px;font-weight:400;margin-top:3px}#ep-nav{height:72px;padding-bottom:8px;position:fixed;inset:auto 0 0;z-index:999;background:#fff;display:flex;justify-content:space-around;border-top:1px solid #dcece7}#ep-nav button{display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;font-size:11px;width:23%;color:#81948e}#ep-nav button.active{color:#087f73;font-weight:700}#ep-nav span{font-size:22px}</style><title>教育Plus｜服务｜一期交互演示</title><style id="v2-style">html,body{background:#f4f9f6!important;color:#21473f!important}body{padding-top:106px!important}#ep-header{height:106px!important; background:linear-gradient(120deg,#ffffff 12%,#e5f3ec 100%)!important;border:0!important;overflow:hidden}#ep-header:after{content:"";position:absolute;right:0;top:0;width:140px;height:106px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%20140%22%3E%3Cg%20fill%3D%22%238ebd5f%22%20opacity%3D%22.45%22%3E%3Cpath%20d%3D%22M160%200Q80%2025%2085%20115Q137%20105%20160%200%22%2F%3E%3Cpath%20d%3D%22M125%200Q44%208%2060%2063Q104%2067%20125%200%22%2F%3E%3Cpath%20d%3D%22M158%2044Q91%2062%20114%20111Q159%2091%20158%2044%22%2F%3E%3Cpath%20d%3D%22M70%200Q8%206%2025%2041Q62%2039%2070%200%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") right top/contain no-repeat}#ep-header div{position:relative;z-index:1;text-align:left!important;flex:1;padding-left:12px}#ep-header b{font-size:22px;letter-spacing:.2px}#ep-header small{font-size:11px!important;color:#5f8b80!important;margin-top:8px!important}#ep-header>span{z-index:1}h1,h2,h3,h4{color:#075c54!important}main>section,main>.rounded-xl,main>.rounded-2xl,main>.rounded-lg{border-radius:22px!important;box-shadow:0 5px 22px #1f625509!important;border-color:#eff5f1!important}.bg-primary{background-color:#168d78!important}.text-primary{color:#087f73!important}.bg-surface-container-low,.bg-surface-container,.bg-surface-container-high{background-color:#eaf5ee!important}button{transition:background .18s,transform .18s}button:active{transform:scale(.98)}#ep-nav{box-shadow:0 -5px 22px #18574406;border-top:1px solid #edf4ef!important}#ep-nav button.active{color:#159e69!important}#submit-checkin-btn,#checkin-btn{background:#efbd23!important;color:#fff!important;border-radius:30px!important}.v2-hero{position:relative;border-radius:23px;overflow:hidden;min-height:240px;background:#295d45;color:#fff;margin-bottom:16px;padding:26px 22px}.v2-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.v2-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c4025d9,#0c402525)}.v2-hero>div{position:relative;z-index:1}.v2-hero h1{color:#fff!important;font-size:26px;font-weight:700;line-height:1.45;margin-bottom:10px}.v2-hero p{font-size:13px;color:#fff;max-width:230px;line-height:1.8}.v2-hero button{margin-top:22px;background:#efbd23;color:white;padding:10px 24px;border-radius:28px;font-weight:700}.v2-card{background:#fff;border-radius:22px;padding:18px;margin:16px 0;box-shadow:0 5px 22px #1f625509}.v2-card h2{font-size:18px;font-weight:700;margin-bottom:14px}.v2-live{display:flex;gap:14px;align-items:center;cursor:pointer}.v2-live img{width:42%;height:110px;object-fit:cover;border-radius:12px}.v2-live h3{font-size:16px;font-weight:700}.v2-live p{font-size:12px;color:#6a817a;margin-top:8px}.v2-live span{font-size:13px;color:#168d78;display:block;margin-top:10px}</style><style id="audit-fixes">body{padding-top:78px!important}#ep-header{height:78px!important;padding:10px 12px}#ep-header b{font-size:19px}#ep-header small{margin-top:4px!important;font-size:10px!important}#ep-header:after{height:78px}h1.text-white,h2.text-white,h3.text-white,h4.text-white{color:white!important}.fixed.inset-0{z-index:2000!important;padding:12px!important;align-items:center!important}.fixed.inset-0>div{max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;border-radius:20px!important}button:focus-visible,[role=button]:focus-visible{outline:3px solid #e6b51c;outline-offset:2px}[id^=section-]{scroll-margin-top:90px}#youth-tabs{position:sticky;top:78px;z-index:40;background:#f4f9f6;padding:8px 0}#submission-form>div:last-child{position:sticky;bottom:-20px;background:white;padding:12px 0;margin-top:12px}#submission-modal h4{font-size:16px}#submission-modal button{flex-shrink:0}@media(max-width:360px){main{padding-left:12px!important;padding-right:12px!important}.v2-hero{min-height:205px;padding:20px 16px}.v2-hero h1{font-size:23px}#ep-header b{font-size:18px}#ep-header div{padding-left:5px}.tab-btn{font-size:14px!important}#checkin-btn,#submit-checkin-btn{white-space:nowrap;font-size:13px!important;padding:10px!important}}</style><style id="visual-polish">html,body{background:#f3f8f5!important}main.bg-surface{background:#f3f8f5!important}#ep-header small{color:#517269!important}button{min-height:36px}#ep-nav{height:64px!important}body{padding-bottom:72px!important}#ep-header{height:68px!important}body{padding-top:68px!important}#ep-header:after{height:68px}#ep-header b{font-size:18px}#youth-tabs{top:68px!important}main>div{min-width:0}.visual-wrap{display:flex!important;flex-wrap:wrap!important;gap:8px!important;align-items:center!important}.visual-wrap>*{margin-left:0!important}.visual-nowrap{white-space:nowrap;flex-shrink:0}.visual-line{flex-basis:100%;margin:0!important}.visual-meta{font-size:12px!important;line-height:1.6!important;color:#52675f!important}.visual-feed-head{display:flex!important;flex-wrap:wrap;gap:6px!important}.visual-feed-head>*{min-width:0}.visual-clear{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}.v2-hero{min-height:170px!important;padding:18px!important;margin-bottom:12px!important}.v2-hero h1{font-size:23px!important;margin-bottom:6px!important}.v2-hero button{margin-top:12px!important;padding:8px 22px!important;color:#244638!important}.visual-module-grid{gap:8px!important}.visual-module-grid>div{padding:10px 4px!important}.visual-location{display:flex!important;flex-wrap:wrap!important;gap:6px;align-items:center!important}.visual-location>div{min-width:0}.visual-location .visual-school{width:100%;font-size:12px!important}.visual-location>div:last-child{font-size:10px}.visual-points{display:flex!important;flex-wrap:wrap!important;gap:8px!important}.visual-points>span{margin:0!important}.visual-points>span:last-child{flex-basis:100%;font-size:12px!important;background:none!important;padding:0!important}.visual-course-meta{display:flex!important;flex-wrap:wrap;gap:8px!important}.visual-course-meta>span{margin:0!important;white-space:nowrap}.visual-course-meta>span:first-child{flex-basis:100%;white-space:normal}.visual-course-meta>span:nth-child(2){display:none}.visual-fullname{font-size:13px!important;line-height:1.5!important}.visual-entry{min-width:56px;flex-shrink:0;white-space:nowrap}.visual-intro{border:1px solid #dce9e2;border-radius:16px;padding:12px;font-size:13px;color:#52675f;background:#fff}.visual-intro summary{font-weight:600;color:#087f73;cursor:pointer}.visual-intro p{margin-top:8px}.visual-paper h1{font-size:22px!important}.visual-paper{padding:16px!important}.visual-tags{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:6px!important}.visual-tags>*{margin:0!important}</style><style>.visual-module-grid .text-outline,.visual-module-grid [class*=text-on-surface-variant]{color:#62786e!important}.visual-author{display:block!important}.visual-author>div:first-child{flex-wrap:nowrap!important;align-items:center!important;gap:8px!important}.visual-author>div:first-child>div:first-child{flex-shrink:0}.visual-author>div:first-child>div:last-child{min-width:0;flex:1}.visual-author>div:last-child{justify-content:flex-end;margin-top:4px;white-space:nowrap}.visual-paper{padding:8px 0!important}</style></head><body class="bg-surface font-body-default text-body-default text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed"><header id="ep-header"><button aria-label="返回首页" class="visual-entry" onclick="epGo(1)">‹</button><div><b>教育Plus · 服务</b><small>贵州教育资讯 · 权威教育服务入口</small></div><span>•••</span></header><main class="flex flex-col relative w-full header-offset footer-offset bg-surface px-margin-page flex-1"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Search & Demo Badge Bar -->
+<div class="w-full pt-space-xs pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-section text-headline-section text-on-surface tracking-tight">贵州专区服务</span>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-space-xs py-[2px] rounded border border-primary/20">[演示数据]</span>
+</div>
+<div class="flex items-center gap-space-2xs text-primary font-label-caption text-label-caption cursor-pointer" onclick="showToast('已开启贵州全省 88 个区县服务路由')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>业务导览</span>
+</div>
+</div>
+<!-- Quick Search Field -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-20 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-default text-body-default rounded-xl shadow-[0_2px_8px_-2px_rgba(8,127,115,0.06)] focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="serviceSearchInput" onkeydown="if(event.key==='Enter') executeSearch()" placeholder="输入业务关键词，如：读书会、报刊、小记者" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-space-sm flex items-center">
+<button class="bg-primary-container text-on-primary font-label-caption text-label-caption px-space-md py-1.5 rounded-lg flex items-center gap-1 active:scale-95 transition-transform shadow-sm" onclick="executeSearch()">
+<span>查找</span>
+</button>
+</div>
+</div>
+<div class="hidden w-full bg-primary-fixed/30 border border-primary/20 text-primary font-label-caption text-label-caption py-1.5 px-3 rounded-lg flex items-center justify-between" id="searchTipBanner">
+<span id="searchTipText">已检索到相关服务条目</span>
+<button class="text-primary hover:text-on-surface font-bold text-sm" onclick="document.getElementById('searchTipBanner').classList.add('hidden')">×</button>
+</div>
+</div>
+<!-- Top Quick Banner / Capsules -->
+<div class="w-full grid grid-cols-4 gap-space-xs py-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-xs flex flex-col items-center justify-center gap-1 shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] active:scale-95 transition-transform cursor-pointer" onclick="epGo(2)">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">event_available</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface tracking-tight">共读打卡</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xs flex flex-col items-center justify-center gap-1 shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] active:scale-95 transition-transform cursor-pointer" onclick="epGo(6)">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">file_download</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface tracking-tight">课件下载</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xs flex flex-col items-center justify-center gap-1 shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] active:scale-95 transition-transform cursor-pointer" onclick="epGo(7)">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface tracking-tight">科普答题</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xs flex flex-col items-center justify-center gap-1 shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] active:scale-95 transition-transform cursor-pointer" onclick="epGo(9)">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface tracking-tight">报刊发票</span>
+</div>
+</div>
+<!-- Announcement Banner Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex items-center justify-between gap-space-sm border-l-4 border-primary">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">campaign</span>
+<p class="font-body-default text-body-default text-on-surface truncate">
+  《贵州教育报》“教育Plus”数字化一期 8 大核心业务上线运行 [演示数据]
+</p>
+</div>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-2 py-0.5 rounded-full shrink-0 font-medium">全省通办</span>
+</div>
+<!-- Section 1: 阅读与文学艺术服务 -->
+<div class="flex flex-col gap-space-xs mb-space-lg service-group" data-group="reading">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-1.5 h-4 bg-primary-container rounded-full"></div>
+<span class="font-title-card text-title-card text-on-surface tracking-tight font-bold">阅读与文学艺术</span>
+<span class="text-[11px] text-outline font-normal">[省直及市州中小学]</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline">2项业务</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 读书会 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">读书会</span>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">每日共读</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">每日共读精选 · 班级 / 学校 / 区域阅读排行</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-primary hover:bg-primary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(2)">
+<span>进入</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-4 gap-space-xs pt-space-xs bg-surface-container-low/60 rounded-lg p-space-xs">
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-meta text-label-meta text-outline">连续打卡</span>
+<span class="font-title-card text-title-card text-primary-container" data-reading-days="">21天</span>
+</div>
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-meta text-label-meta text-outline">黔读书分</span>
+<span class="font-title-card text-title-card text-on-surface" data-reading-points="">650</span>
+</div>
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-meta text-label-meta text-outline">全省排行</span>
+<span class="font-title-card text-title-card text-tertiary">第 12 名</span>
+</div>
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-meta text-label-meta text-outline">所属层级</span>
+<span class="font-title-card text-title-card text-primary text-[13px]">贵阳市级</span>
+</div>
+</div>
+</div>
+<!-- 少年派 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">draw</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">少年派</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">书画文学</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">才艺书画展 · 全省中小学文学赛事 · 名师专家评审</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-secondary hover:bg-secondary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(3)">
+<span>参与</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low/60 rounded-lg">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">workspace_premium</span>
+<span class="font-label-caption text-label-caption text-on-surface truncate">当前热赛：2025“筑梦黔山”全省青少年书法美术大赛征稿中</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary shrink-0 font-medium cursor-pointer" onclick="epGo(3)">去投递</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: 实践与综合素养服务 -->
+<div class="flex flex-col gap-space-xs mb-space-lg service-group" data-group="practice">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-1.5 h-4 bg-secondary rounded-full"></div>
+<span class="font-title-card text-title-card text-on-surface tracking-tight font-bold">实践与综合素养</span>
+<span class="text-[11px] text-outline font-normal">[实践基地直通]</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline">2项业务</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 小记者 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">小记者</span>
+<span class="bg-tertiary-fixed-dim/40 text-tertiary-container font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">官方实践</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">省农科院/科技馆基地采风 · 《贵州教育报》实名官方证书</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-tertiary hover:bg-tertiary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(4)">
+<span>参与</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 bg-surface-container-low p-space-xs rounded-lg flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-outline">采风专线</span>
+<span class="font-label-caption text-label-caption text-primary font-medium">省农科院茶研所站</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-xs rounded-lg flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-outline">实名持证</span>
+<span class="font-label-caption text-label-caption text-on-surface font-medium">接入覆盖待确认</span>
+</div>
+</div>
+</div>
+<!-- 科学港 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed-dim/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">biotech</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">科学港</span>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">高校实验室</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">前沿科普微课 · 基础科普答题计分 · 贵州大学等高校开放日</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-primary hover:bg-primary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(7)">
+<span>查看</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low/60 rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">science</span>
+<span class="font-label-caption text-label-caption text-on-surface truncate">贵州大学大数据与空间重点实验室开放预约</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary font-medium cursor-pointer" onclick="epGo(7)">预约参观</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: 校园文化与课后课堂 -->
+<div class="flex flex-col gap-space-xs mb-space-lg service-group" data-group="culture">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-1.5 h-4 bg-tertiary rounded-full"></div>
+<span class="font-title-card text-title-card text-on-surface tracking-tight font-bold">校园文化与课后课堂</span>
+<span class="text-[11px] text-outline font-normal">[高校与名师联袂]</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline">2项业务</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 致青春 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">movie_edit</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">致青春</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">高校风采</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">贵州高校大学生短视频/图文展播 · 稿件审核与退回修改</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(5)">
+<span>查看</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low/60 rounded-lg">
+<div class="flex items-center gap-1 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-tertiary shrink-0">info</span>
+<span class="font-label-caption text-label-caption text-on-surface truncate">贵州师范大学文学院《黔山支教纪实》待审核补充材料</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary shrink-0 font-medium cursor-pointer" onclick="epGo(5)">查看审核</span>
+</div>
+</div>
+<!-- 公益课 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">co_present</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">公益课</span>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">名师微课</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">贵州特聘思政名师微课 · 优质课件资源免费下载与播放</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-primary hover:bg-primary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(6)">
+<span>进入</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-center gap-space-xs cursor-pointer" onclick="epGo(6)">
+<span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caption text-label-caption text-on-surface truncate">贵阳名师大讲堂</span>
+<span class="font-label-meta text-label-meta text-outline">思政示范 · 32分钟</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-center gap-space-xs cursor-pointer" onclick="epGo(6)">
+<span class="material-symbols-outlined text-secondary text-[18px]">download_for_offline</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caption text-label-caption text-on-surface truncate">思政配套讲义包</span>
+<span class="font-label-meta text-label-meta text-outline">点击在线下载演示</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: 升学与校园订阅服务 -->
+<div class="flex flex-col gap-space-xs service-group" data-group="subscribe">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-1.5 h-4 bg-primary rounded-full"></div>
+<span class="font-title-card text-title-card text-on-surface tracking-tight font-bold">升学与校园订阅</span>
+<span class="text-[11px] text-outline font-normal">[第三方服务说明]</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline">2项业务</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 填志愿 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">填志愿</span>
+<span class="bg-secondary-fixed-dim/40 text-on-secondary-container font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">第三方测评</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">第三方高考测评接入说明 · 历年贵州本省投档分数线匹配</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-secondary hover:bg-secondary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(8)">
+<span>进入</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-low/60 rounded-lg p-space-xs text-center">
+<div class="py-1">
+<span class="font-label-meta text-label-meta text-outline block">接入测评模型</span>
+<span class="font-body-medium text-body-medium text-on-surface">接入待确认</span>
+</div>
+<div class="py-1">
+<span class="font-label-meta text-label-meta text-outline block">数据权威度</span>
+<span class="font-body-medium text-body-medium text-primary">覆盖待确认</span>
+</div>
+<div class="py-1">
+<span class="font-label-meta text-label-meta text-outline block">贵州历年投档</span>
+<span class="font-body-medium text-body-medium text-tertiary">2020-2024</span>
+</div>
+</div>
+</div>
+<!-- 订报刊 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(8,127,115,0.05)] flex flex-col gap-space-sm border border-outline-variant/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">newspaper</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">订报刊</span>
+<span class="bg-tertiary-fixed-dim/40 text-tertiary-container font-label-meta text-label-meta px-1.5 py-0.5 rounded-full font-medium">报刊管理</span>
+</div>
+<span class="font-label-caption text-label-caption text-outline block">《贵州教育报》征订服务 · 增值税电子发票申领与寄送管理</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-tertiary hover:bg-tertiary-fixed px-space-sm py-1.5 rounded-lg font-label-caption text-label-caption flex items-center transition-colors active:scale-95 visual-entry" onclick="epGo(9)">
+<span>进入</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low/60 rounded-lg">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[18px]">receipt</span>
+<span class="font-label-caption text-label-caption text-on-surface truncate">2025年度《贵州教育报》订阅在线开发票通道已开启</span>
+</div>
+<span class="font-label-meta text-label-meta text-tertiary shrink-0 font-medium cursor-pointer" onclick="epGo(9)">开发票</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Workspace Footer Tip -->
+<div class="py-space-md flex flex-col items-center justify-center gap-1 mt-2">
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-meta text-label-meta">贵州教育报社 · 一期核心业务全量接入</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline-variant">教育Plus 数字化服务大厅 [演示环境] · 一期原型演示</span>
+</div>
+</div>
+<!-- Modal Dialog Component -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 backdrop-blur-sm hidden transition-opacity duration-200" id="serviceModal" onclick="if(event.target===this) closeModal()" role="dialog">
+<div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-lg shadow-2xl flex flex-col max-h-[85vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]" id="modalIcon">info</span>
+<h3 class="font-headline-section text-[17px] font-bold text-on-surface" id="modalTitle">业务详情预览</h3>
+</div>
+<button aria-label="关闭弹窗" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-on-surface" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="py-4 flex flex-col gap-3 text-body-default text-on-surface" id="modalBody">
+<!-- Modal dynamic content -->
+</div>
+<div class="pt-2 flex gap-2">
+<button class="flex-1 py-2.5 rounded-xl border border-outline-variant text-on-surface font-body-medium" onclick="closeModal()">返回大厅</button>
+<button class="flex-1 py-2.5 rounded-xl bg-primary-container text-on-primary font-body-medium" id="modalActionBtn" onclick="confirmModalAction()">立即办理</button>
+</div>
+</div>
+</div>
+<!-- Global Toast -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-caption text-label-caption shadow-lg pointer-events-none transition-all duration-300 opacity-0 transform -translate-y-2" id="toast">
+  提示消息
+</div>
+<script>
+  // Search Functionality
+  function executeSearch() {
+    const input = document.getElementById('serviceSearchInput');
+    const tipBanner = document.getElementById('searchTipBanner');
+    const tipText = document.getElementById('searchTipText');
+    const val = (input.value || '').trim().toLowerCase();
+    
+    tipBanner.classList.remove('hidden');
+    if (!val) {
+      tipText.innerText = "已检索到相关服务条目：展示全部 8 项业务";
+      showToast("已检索到相关服务条目");
+    } else {
+      tipText.innerText = `已检索到相关服务条目（含关键词“${val}”）`;
+      showToast(`已检索到相关服务条目`);
+    }
+  }
+
+  // Toast Functionality
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.innerText = msg;
+    toast.classList.remove('opacity-0', '-translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-2');
+    }, 2000);
+  }
+
+  // Service Modal Preview
+  const serviceDetails = {
+    reading: {
+      title: "读书会 · 贵州共读专区",
+      icon: "menu_book",
+      iconColor: "text-primary",
+      content: `
+        <div class="bg-primary/5 p-3 rounded-xl border border-primary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-primary text-sm">业务归类：阅读与文学艺术</p>
+          <p>• 每日共读打卡：按《贵州教育报》推荐书单每天打卡记录心得。</p>
+          <p>• 贵州省三级排行系统：校级榜、区县级榜、省级书香达人三级联动。</p>
+          <p>• 当前进度：已连续打卡 21 天，获得全省通报表彰积分。</p>
+        </div>
+        <p class="text-xs text-outline">提示：该功能已接入“贵州教育数字阅读库”，可同步积分至学籍综合素质评价。</p>
+      `,
+      action: "进入今日共读"
+    },
+    shaonian: {
+      title: "少年派 · 才艺书画与文学赛事",
+      icon: "draw",
+      iconColor: "text-secondary",
+      content: `
+        <div class="bg-secondary-container/10 p-3 rounded-xl border border-secondary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-secondary text-sm">业务归类：阅读与文学艺术</p>
+          <p>• 赛事专注才艺书画与文学，规范剥离纯音频民谣项目。</p>
+          <p>• 2025“筑梦黔山”全省中小学生书画与文学征文正在初评。</p>
+          <p>• 由贵州省书法家协会与省特级语文名师联合在线评审。</p>
+        </div>
+        <p class="text-xs text-outline">可直接上传 PDF/高清画作扫描件参与初赛海选。</p>
+      `,
+      action: "作品申报投递"
+    },
+    journalist: {
+      title: "小记者 · 官方采风实践中心",
+      icon: "photo_camera",
+      iconColor: "text-tertiary",
+      content: `
+        <div class="bg-tertiary-fixed/30 p-3 rounded-xl border border-tertiary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-tertiary text-sm">业务归类：实践与综合素养</p>
+          <p>• 官方合作基地：贵州省农科院科技示范园、贵州省科技馆。</p>
+          <p>• 纯公益公益实践：坚决取消商业付费年卡，统一官方电子实名发证。</p>
+          <p>• 本周六采风：“走进高原特色农业与茶文化探秘”正在召集中。</p>
+        </div>
+        <p class="text-xs text-outline">出示《贵州教育报》小记者电子证享受基地免费进出通道。</p>
+      `,
+      action: "报名采风活动"
+    },
+    science: {
+      title: "科学港 · 科普与高校开放",
+      icon: "biotech",
+      iconColor: "text-primary",
+      content: `
+        <div class="bg-primary/5 p-3 rounded-xl border border-primary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-primary text-sm">业务归类：实践与综合素养</p>
+          <p>• 科普微课：贵州FAST射电天文、山地生态保护专项专题微课。</p>
+          <p>• 每日科学基础答题：每天完成3道科普题可计入实践分。</p>
+          <p>• 高校开放日：贵州大学重点实验室现场观摩体验已开启预约。</p>
+        </div>
+        <p class="text-xs text-outline">考核分数可与综合实践素养活动互通积分。</p>
+      `,
+      action: "开始科普答题"
+    },
+    youth: {
+      title: "致青春 · 贵州高校青年动态",
+      icon: "movie_edit",
+      iconColor: "text-on-surface",
+      content: `
+        <div class="bg-surface-container-high p-3 rounded-xl text-xs text-on-surface space-y-1">
+          <p class="font-bold text-sm">业务归类：校园文化与课后课堂</p>
+          <p>• 展播主体：全省各高校大学生社团短视频与乡村支教图文。</p>
+          <p>• 双向审核机制：支持稿件驳回并提示退回修改意见。</p>
+          <p>• 动态反馈：您投递的《黔山支教纪实》需补充高清片尾授权书。</p>
+        </div>
+        <p class="text-xs text-outline">审核通过后将在《贵州教育报》教育Plus青年频道联合轮播。</p>
+      `,
+      action: "修改并重新提交"
+    },
+    welfare: {
+      title: "公益课 · 特聘思政微课资源",
+      icon: "co_present",
+      iconColor: "text-primary-container",
+      content: `
+        <div class="bg-primary/5 p-3 rounded-xl border border-primary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-primary-container text-sm">业务归类：校园文化与课后课堂</p>
+          <p>• 师资力量：贵州省特聘中小学思政学科领军教师。</p>
+          <p>• 教学资源：开放高质量讲义 PPT 与课后教研案例免费打包。</p>
+          <p>• 课件下载演示：支持一键导出标准格式教育资源包。</p>
+        </div>
+        <p class="text-xs text-outline">课件支持离线存储与校园多媒体大屏无缝兼容播发。</p>
+      `,
+      action: "下载讲义课件包"
+    },
+    volunteer: {
+      title: "填志愿 · 升学智囊接入规范",
+      icon: "school",
+      iconColor: "text-secondary",
+      content: `
+        <div class="bg-secondary-container/10 p-3 rounded-xl border border-secondary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-secondary text-sm">业务归类：升学与校园订阅</p>
+          <p>• 数据接入说明：直连第三方专业潜能测评，经教育部门核验合规。</p>
+          <p>• 本省数据覆盖：贵州省 2020-2024 新老高考历年录取最低位次与各批次线。</p>
+          <p>• 智能推荐：基于文理选科与兴趣模型的志愿梯次组合方案。</p>
+        </div>
+        <p class="text-xs text-outline">数据仅作志愿辅助参考，正式填报以省招生考试院发布为准。</p>
+      `,
+      action: "进入测评模拟"
+    },
+    press: {
+      title: "订报刊 · 《贵州教育报》征订与发票",
+      icon: "newspaper",
+      iconColor: "text-tertiary",
+      content: `
+        <div class="bg-tertiary-fixed/30 p-3 rounded-xl border border-tertiary/20 text-xs text-on-surface space-y-1">
+          <p class="font-bold text-tertiary text-sm">业务归类：升学与校园订阅</p>
+          <p>• 2025年度《贵州教育报》全省中小学及教育机构订阅渠道。</p>
+          <p>• 发票管理：在线开具增值税电子普通发票/专用发票，自动推邮箱。</p>
+          <p>• 物流跟踪：中国邮政特快送达，随时查看批次投递路线。</p>
+        </div>
+        <p class="text-xs text-outline">发票一般在提交申请后 1 个工作日内发送至注册邮箱。</p>
+      `,
+      action: "申请开具发票"
+    }
+  };
+
+  function openServiceModal(type) {
+    const data = serviceDetails[type];
+    if (!data) return;
+    document.getElementById('modalTitle').innerText = data.title;
+    document.getElementById('modalIcon').innerText = data.icon;
+    document.getElementById('modalBody').innerHTML = data.content;
+    document.getElementById('modalActionBtn').innerText = data.action;
+    document.getElementById('serviceModal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('serviceModal').classList.add('hidden');
+  }
+
+  function confirmModalAction() {
+    const actionName = document.getElementById('modalActionBtn').innerText;
+    closeModal();
+    showToast(`已触发操作：【${actionName}】，正在跳转业务终端`);
+  }
+
+  // TabBar Switching
+  function switchTab(path) {
+    const tabs = document.querySelectorAll('nav a[data-path]');
+    tabs.forEach(tab => {
+      const p = tab.getAttribute('data-path');
+      const icon = tab.querySelector('.material-symbols-outlined');
+      const label = tab.querySelector('span:not(.material-symbols-outlined)');
+      if (p === path) {
+        tab.className = "flex flex-col items-center justify-center w-16 h-12 text-primary-container font-medium transition-colors";
+        if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        if (label) {
+          label.classList.remove('text-outline');
+          label.classList.add('text-primary-container', 'font-medium');
+        }
+      } else {
+        tab.className = "flex flex-col items-center justify-center w-16 h-12 text-outline hover:text-on-surface transition-colors";
+        if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        if (label) {
+          label.classList.remove('text-primary-container', 'font-medium');
+          label.classList.add('text-outline');
+        }
+      }
+    });
+    if (path !== 'services') {
+      showToast(`已切换至【${path === 'home' ? '首页' : path === 'activities' ? '活动' : '我的'}】模块 (演示预览)`);
+    } else {
+      showToast(`当前位于【服务大厅】`);
+    }
+  }
+</script></main><nav id="ep-nav"><button class="visual-entry" onclick="epGo(1)"><span class="material-symbols-outlined">home</span>首页</button><button class="active visual-entry" onclick="epGo(11)"><span class="material-symbols-outlined">grid_view</span>服务</button><button class="visual-entry" onclick="epGo(12)"><span class="material-symbols-outlined">event</span>活动</button><button class="visual-entry" onclick="epGo(10)"><span class="material-symbols-outlined">person</span>我的</button></nav><script>
+function epGo(n){if(parent!==window)parent.postMessage({educationPlusRoute:n},location.origin);else location.href='index.html#'+n;}
+window.goHome=window.goToHome=()=>epGo(1);
+window.alert=(message)=>{const old=document.getElementById('ep-alert');if(old)old.remove();const d=document.createElement('dialog');d.id='ep-alert';d.style.cssText='padding:24px;border:0;border-radius:20px;max-width:330px;color:#204239;box-shadow:0 20px 90px #1235';const t=document.createElement('p');t.textContent=message;d.append(t);const b=document.createElement('button');b.textContent='我知道了';b.style.cssText='margin-top:20px;background:#087f73;color:white;padding:10px 30px;border-radius:20px';b.onclick=()=>d.remove();d.append(b);document.body.append(d);d.showModal();};
+// Replace root-navigation callbacks only. Scientific/campus tab callbacks stay local.
+if(11===1||11===11)window.switchTab=(k)=>epGo({home:1,services:11,activities:12,profile:10}[k]||1);
+document.querySelectorAll('input').forEach(e=>{if(e.id.includes('taxcode'))e.value='';});
+</script><script>function epRead(){try{return JSON.parse(localStorage.getItem('ep-reading-v3'))||{points:1280,days:12,checked:false}}catch(e){return {points:1280,days:12,checked:false}}}function epSync(){const r=epRead();document.querySelectorAll('[data-reading-points]').forEach(e=>e.textContent=r.points.toLocaleString());document.querySelectorAll('[data-reading-days]').forEach(e=>e.textContent=r.days+' 天');let q=localStorage.getItem('ep-quiz-v3');document.querySelectorAll('[data-quiz-score]').forEach(e=>e.textContent=q===null?'未作答':q+' 分');}window.addEventListener('storage',epSync);window.addEventListener('pageshow',epSync);epSync();document.querySelectorAll('.material-symbols-outlined').forEach(e=>e.setAttribute('aria-hidden','true'));document.querySelectorAll('[onclick]:not(button):not(a):not(input):not(label)').forEach(e=>{if(!e.querySelector('button,input,a')){e.setAttribute('role','button');e.tabIndex=0;e.addEventListener('keydown',k=>{if(k.key==='Enter'||k.key===' '){k.preventDefault();e.click();}})}});</script><script>let epDialog=null,epPriorFocus=null;function epModalSync(){const d=[...document.querySelectorAll('.fixed.inset-0')].find(e=>getComputedStyle(e).display!=='none'&&getComputedStyle(e).opacity!=='0'&&getComputedStyle(e).pointerEvents!=='none');if(d===epDialog)return;if(epDialog){document.querySelectorAll('[data-ep-inert]').forEach(e=>{e.inert=false;e.removeAttribute('data-ep-inert')});}if(d){epPriorFocus=document.activeElement;let child=d;while(child.parentElement&&child.parentElement!==document.documentElement){[...child.parentElement.children].filter(e=>e!==child&&!['SCRIPT','STYLE'].includes(e.tagName)).forEach(e=>{e.inert=true;e.setAttribute('data-ep-inert','')});child=child.parentElement;}}else if(epPriorFocus&&epPriorFocus.isConnected){epPriorFocus.focus();}epDialog=d;}new MutationObserver(epModalSync).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','style']});</script><script>window.EP_PAGE="11";</script><script src="routes.js"></script></body></html>

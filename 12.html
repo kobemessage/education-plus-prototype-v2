@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}.top-bar-pt{padding-top:env(safe-area-inset-top,44px);}.header-offset{padding-top:calc(env(safe-area-inset-top,44px) + 44px);}.footer-offset{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 60px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-tertiary-fixed': '#2a1700', 'on-tertiary': '#ffffff', 'surface-container-lowest': '#ffffff', 'on-background': '#121c2a', 'error': '#ba1a1a', 'outline': '#6e7977', 'inverse-primary': '#78d7c8', 'primary-container': '#087f73', 'surface-container': '#e6eeff', 'outline-variant': '#bdc9c6', 'on-primary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'tertiary-fixed': '#ffddb8', 'secondary-container': '#5bb8fe', 'on-secondary-container': '#00476e', 'surface-variant': '#d9e3f7', 'error-container': '#ffdad6', 'on-surface-variant': '#3e4947', 'primary-fixed': '#95f3e4', 'inverse-on-surface': '#ebf1ff', 'on-primary-fixed': '#00201c', 'primary': '#00645a', 'on-error-container': '#93000a', 'tertiary-fixed-dim': '#ffb95f', 'background': '#f9f9ff', 'primary-fixed-dim': '#78d7c8', 'secondary-fixed': '#cce5ff', 'surface-container-high': '#dee9fd', 'on-tertiary-container': '#fff5ed', 'on-secondary-fixed': '#001d31', 'tertiary-container': '#9f6400', 'tertiary': '#7d4e00', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a60', 'on-primary-container': '#d6fff7', 'on-error': '#ffffff', 'surface-bright': '#f9f9ff', 'surface': '#f9f9ff', 'secondary': '#006398', 'on-surface': '#121c2a', 'on-secondary-fixed-variant': '#004b73', 'surface-dim': '#d0daef', 'surface-container-low': '#eff3ff', 'on-primary-fixed-variant': '#005048', 'inverse-surface': '#273140', 'surface-container-highest': '#d9e3f7', 'on-secondary': '#ffffff' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-md': '12px', 'space-xl': '20px', 'space-xs': '4px', 'capsule-safe-right': '96px', 'margin-page': '16px', 'space-3xl': '32px', 'gutter-grid': '12px', 'height-navbar': '44px', 'space-sm': '8px', 'height-tabbar': '56px', 'space-2xl': '24px', 'space-lg': '16px', 'space-2xs': '2px' }, 'fontFamily': { 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>html,body{background:#f3f8f5!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}body{padding-top:72px!important;padding-bottom:78px!important}main{padding-top:16px!important;padding-bottom:30px!important}#ep-header{height:72px;padding:10px 18px;box-sizing:border-box;position:fixed;inset:0 0 auto;z-index:999;background:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcece7;color:#087f73}#ep-header button{font-size:32px;width:30px}#ep-header div{text-align:center}#ep-header small{display:block;font-size:10px;font-weight:400;margin-top:3px}#ep-nav{height:72px;padding-bottom:8px;position:fixed;inset:auto 0 0;z-index:999;background:#fff;display:flex;justify-content:space-around;border-top:1px solid #dcece7}#ep-nav button{display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;font-size:11px;width:23%;color:#81948e}#ep-nav button.active{color:#087f73;font-weight:700}#ep-nav span{font-size:22px}</style><title>教育Plus｜活动｜一期交互演示</title><style id="v2-style">html,body{background:#f4f9f6!important;color:#21473f!important}body{padding-top:106px!important}#ep-header{height:106px!important; background:linear-gradient(120deg,#ffffff 12%,#e5f3ec 100%)!important;border:0!important;overflow:hidden}#ep-header:after{content:"";position:absolute;right:0;top:0;width:140px;height:106px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%20140%22%3E%3Cg%20fill%3D%22%238ebd5f%22%20opacity%3D%22.45%22%3E%3Cpath%20d%3D%22M160%200Q80%2025%2085%20115Q137%20105%20160%200%22%2F%3E%3Cpath%20d%3D%22M125%200Q44%208%2060%2063Q104%2067%20125%200%22%2F%3E%3Cpath%20d%3D%22M158%2044Q91%2062%20114%20111Q159%2091%20158%2044%22%2F%3E%3Cpath%20d%3D%22M70%200Q8%206%2025%2041Q62%2039%2070%200%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") right top/contain no-repeat}#ep-header div{position:relative;z-index:1;text-align:left!important;flex:1;padding-left:12px}#ep-header b{font-size:22px;letter-spacing:.2px}#ep-header small{font-size:11px!important;color:#5f8b80!important;margin-top:8px!important}#ep-header>span{z-index:1}h1,h2,h3,h4{color:#075c54!important}main>section,main>.rounded-xl,main>.rounded-2xl,main>.rounded-lg{border-radius:22px!important;box-shadow:0 5px 22px #1f625509!important;border-color:#eff5f1!important}.bg-primary{background-color:#168d78!important}.text-primary{color:#087f73!important}.bg-surface-container-low,.bg-surface-container,.bg-surface-container-high{background-color:#eaf5ee!important}button{transition:background .18s,transform .18s}button:active{transform:scale(.98)}#ep-nav{box-shadow:0 -5px 22px #18574406;border-top:1px solid #edf4ef!important}#ep-nav button.active{color:#159e69!important}#submit-checkin-btn,#checkin-btn{background:#efbd23!important;color:#fff!important;border-radius:30px!important}.v2-hero{position:relative;border-radius:23px;overflow:hidden;min-height:240px;background:#295d45;color:#fff;margin-bottom:16px;padding:26px 22px}.v2-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.v2-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c4025d9,#0c402525)}.v2-hero>div{position:relative;z-index:1}.v2-hero h1{color:#fff!important;font-size:26px;font-weight:700;line-height:1.45;margin-bottom:10px}.v2-hero p{font-size:13px;color:#fff;max-width:230px;line-height:1.8}.v2-hero button{margin-top:22px;background:#efbd23;color:white;padding:10px 24px;border-radius:28px;font-weight:700}.v2-card{background:#fff;border-radius:22px;padding:18px;margin:16px 0;box-shadow:0 5px 22px #1f625509}.v2-card h2{font-size:18px;font-weight:700;margin-bottom:14px}.v2-live{display:flex;gap:14px;align-items:center;cursor:pointer}.v2-live img{width:42%;height:110px;object-fit:cover;border-radius:12px}.v2-live h3{font-size:16px;font-weight:700}.v2-live p{font-size:12px;color:#6a817a;margin-top:8px}.v2-live span{font-size:13px;color:#168d78;display:block;margin-top:10px}</style><style id="audit-fixes">body{padding-top:78px!important}#ep-header{height:78px!important;padding:10px 12px}#ep-header b{font-size:19px}#ep-header small{margin-top:4px!important;font-size:10px!important}#ep-header:after{height:78px}h1.text-white,h2.text-white,h3.text-white,h4.text-white{color:white!important}.fixed.inset-0{z-index:2000!important;padding:12px!important;align-items:center!important}.fixed.inset-0>div{max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;border-radius:20px!important}button:focus-visible,[role=button]:focus-visible{outline:3px solid #e6b51c;outline-offset:2px}[id^=section-]{scroll-margin-top:90px}#youth-tabs{position:sticky;top:78px;z-index:40;background:#f4f9f6;padding:8px 0}#submission-form>div:last-child{position:sticky;bottom:-20px;background:white;padding:12px 0;margin-top:12px}#submission-modal h4{font-size:16px}#submission-modal button{flex-shrink:0}@media(max-width:360px){main{padding-left:12px!important;padding-right:12px!important}.v2-hero{min-height:205px;padding:20px 16px}.v2-hero h1{font-size:23px}#ep-header b{font-size:18px}#ep-header div{padding-left:5px}.tab-btn{font-size:14px!important}#checkin-btn,#submit-checkin-btn{white-space:nowrap;font-size:13px!important;padding:10px!important}}</style><style id="visual-polish">html,body{background:#f3f8f5!important}main.bg-surface{background:#f3f8f5!important}#ep-header small{color:#517269!important}button{min-height:36px}#ep-nav{height:64px!important}body{padding-bottom:72px!important}#ep-header{height:68px!important}body{padding-top:68px!important}#ep-header:after{height:68px}#ep-header b{font-size:18px}#youth-tabs{top:68px!important}main>div{min-width:0}.visual-wrap{display:flex!important;flex-wrap:wrap!important;gap:8px!important;align-items:center!important}.visual-wrap>*{margin-left:0!important}.visual-nowrap{white-space:nowrap;flex-shrink:0}.visual-line{flex-basis:100%;margin:0!important}.visual-meta{font-size:12px!important;line-height:1.6!important;color:#52675f!important}.visual-feed-head{display:flex!important;flex-wrap:wrap;gap:6px!important}.visual-feed-head>*{min-width:0}.visual-clear{white-space:normal!important;overflow:visible!important;text-overflow:clip!important}.v2-hero{min-height:170px!important;padding:18px!important;margin-bottom:12px!important}.v2-hero h1{font-size:23px!important;margin-bottom:6px!important}.v2-hero button{margin-top:12px!important;padding:8px 22px!important;color:#244638!important}.visual-module-grid{gap:8px!important}.visual-module-grid>div{padding:10px 4px!important}.visual-location{display:flex!important;flex-wrap:wrap!important;gap:6px;align-items:center!important}.visual-location>div{min-width:0}.visual-location .visual-school{width:100%;font-size:12px!important}.visual-location>div:last-child{font-size:10px}.visual-points{display:flex!important;flex-wrap:wrap!important;gap:8px!important}.visual-points>span{margin:0!important}.visual-points>span:last-child{flex-basis:100%;font-size:12px!important;background:none!important;padding:0!important}.visual-course-meta{display:flex!important;flex-wrap:wrap;gap:8px!important}.visual-course-meta>span{margin:0!important;white-space:nowrap}.visual-course-meta>span:first-child{flex-basis:100%;white-space:normal}.visual-course-meta>span:nth-child(2){display:none}.visual-fullname{font-size:13px!important;line-height:1.5!important}.visual-entry{min-width:56px;flex-shrink:0;white-space:nowrap}.visual-intro{border:1px solid #dce9e2;border-radius:16px;padding:12px;font-size:13px;color:#52675f;background:#fff}.visual-intro summary{font-weight:600;color:#087f73;cursor:pointer}.visual-intro p{margin-top:8px}.visual-paper h1{font-size:22px!important}.visual-paper{padding:16px!important}.visual-tags{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:6px!important}.visual-tags>*{margin:0!important}</style><style>.visual-module-grid .text-outline,.visual-module-grid [class*=text-on-surface-variant]{color:#62786e!important}.visual-author{display:block!important}.visual-author>div:first-child{flex-wrap:nowrap!important;align-items:center!important;gap:8px!important}.visual-author>div:first-child>div:first-child{flex-shrink:0}.visual-author>div:first-child>div:last-child{min-width:0;flex:1}.visual-author>div:last-child{justify-content:flex-end;margin-top:4px;white-space:nowrap}.visual-paper{padding:8px 0!important}</style></head><body class="bg-surface font-body-default text-body-default text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed"><header id="ep-header"><button aria-label="返回首页" onclick="epGo(1)">‹</button><div><b>教育Plus · 活动</b><small>贵州教育资讯 · 权威教育服务入口</small></div><span>•••</span></header><main class="flex flex-col relative w-full header-offset footer-offset bg-surface px-margin-page flex-1"><div class="flex flex-col w-full pb-space-2xl space-y-space-md">
+<!-- 标题栏与精准筛选 -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-section text-headline-section text-on-surface">贵州本土精选活动</span>
+<span class="font-label-meta text-label-meta px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant leading-none">[演示数据]</span>
+</div>
+<button class="flex items-center gap-space-2xs text-primary font-label-caption text-label-caption active:opacity-75 transition-opacity px-2 py-1 rounded-md hover:bg-primary-container/10" id="btn-open-filter">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span id="filter-btn-text">精准筛选</span>
+</button>
+</div>
+<!-- 状态筛选项 -->
+<div class="relative w-full -mx-margin-page px-margin-page overflow-x-auto scrollbar-none flex items-center gap-space-xs py-space-2xs visual-tags">
+<button class="status-tab flex-shrink-0 px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-caption text-label-caption font-semibold transition-all shadow-sm flex items-center gap-1" data-status="all">
+<span>全部活动</span>
+</button>
+<button class="status-tab flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-caption text-label-caption transition-all shadow-sm flex items-center gap-1 hover:text-on-surface" data-status="enrolling">
+<span>报名中</span>
+<span class="bg-primary-fixed text-on-primary-fixed rounded-full px-1.5 py-0.2 text-[10px] font-bold">3</span>
+</button>
+<button class="status-tab flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-caption text-label-caption transition-all shadow-sm flex items-center gap-1 hover:text-on-surface" data-status="ongoing">
+<span>进行中</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed rounded-full px-1.5 py-0.2 text-[10px] font-bold">2</span>
+</button>
+<button class="status-tab flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-caption text-label-caption transition-all shadow-sm flex items-center gap-1 hover:text-on-surface" data-status="ended">
+<span>已结束</span>
+</button>
+</div>
+<!-- 模块筛选项 -->
+<div class="relative w-full -mx-margin-page px-margin-page overflow-x-auto scrollbar-none flex items-center gap-space-xs pb-space-2xs visual-tags">
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container text-primary font-label-caption text-label-caption font-semibold transition-all shadow-sm" data-category="all">
+      全部
+    </button>
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption transition-all flex items-center gap-1" data-category="reading">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>读书会</span>
+</button>
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption transition-all flex items-center gap-1" data-category="shaonian">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>少年派</span>
+</button>
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption transition-all flex items-center gap-1" data-category="reporter">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>小记者</span>
+</button>
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption transition-all flex items-center gap-1" data-category="youth">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>致青春</span>
+</button>
+<button class="category-chip flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption transition-all flex items-center gap-1" data-category="science">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+<span>科学港</span>
+</button>
+</div>
+<!-- 精准筛选折叠展开抽屉 -->
+<div class="hidden flex-col bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/40 shadow-sm space-y-space-sm animate-fadeIn" id="filter-drawer">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-title-card text-title-card text-on-surface">综合高级筛选</span>
+<button class="text-label-caption font-label-caption text-outline hover:text-primary" id="btn-reset-filters">重置全部</button>
+</div>
+<div class="space-y-1">
+<div class="text-label-meta text-on-surface-variant font-medium">活动范围</div>
+<div class="flex flex-wrap gap-1.5">
+<button class="filter-tag px-2.5 py-1 rounded-md text-label-caption bg-primary/10 text-primary font-medium" data-filter="scope" data-val="all">全省通报</button>
+<button class="filter-tag px-2.5 py-1 rounded-md text-label-caption bg-surface-container-low text-on-surface-variant" data-filter="scope" data-val="guiyang">贵阳地区</button>
+<button class="filter-tag px-2.5 py-1 rounded-md text-label-caption bg-surface-container-low text-on-surface-variant" data-filter="scope" data-val="campus">高校专场</button>
+</div>
+</div>
+<div class="space-y-1">
+<div class="text-label-meta text-on-surface-variant font-medium">报名费用</div>
+<div class="flex flex-wrap gap-1.5">
+<button class="filter-tag px-2.5 py-1 rounded-md text-label-caption bg-primary/10 text-primary font-medium" data-filter="fee" data-val="free">公益免费</button>
+<button class="filter-tag px-2.5 py-1 rounded-md text-label-caption bg-surface-container-low text-on-surface-variant" data-filter="fee" data-val="all">全部</button>
+</div>
+</div>
+<div class="pt-2 flex justify-end">
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-label-caption font-medium shadow-sm" id="btn-confirm-filter">确定应用</button>
+</div>
+</div>
+<div class="flex flex-col space-y-space-md pt-space-2xs" id="activity-cards-container">
+<!-- Card 1: 读书会 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all active:scale-[0.99]" data-category="reading" data-id="act-1" data-status="enrolling" data-title="“书香黔岭·全省共读共创大赛”" data-type="reading">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">读书会</span>
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-surface-container text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+<span>报名中·进行期</span>
+</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="favorite-btn text-outline hover:text-tertiary transition-colors" title="收藏">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<button class="share-btn text-outline hover:text-on-surface transition-colors" title="分享">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-md items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm, bright university library reading corner with high wooden bookshelves filled with books, sunlight casting soft geometric shadows on modern comfortable armchairs and open study tables, academic, refreshing teal undertones, high resolution photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4RH_2wEq-Cdlu2kprwBymWgtkbKEwNf7WeZyLymLs7Rxz5EB6JMygYaj3NaJUFv4_52fjtwCpBp4_ydplWg_UQFvv2OkeuPWgh5oQBwrBQUJUC8p4DrMv4e6iNHC6gunorW9Kd51vJeuNW-iwJaIYbRG7psTgEExRW0GfYtXVjaYVbik4_UPDi7JMkF8ogSytJytUCjHHRx0-ns7Eur-fSNzoK7LaexUzl4vRAN2_0UpNbeA3siqh"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="font-title-card text-title-card text-on-surface tracking-tight line-clamp-2">
+            “书香黔岭·全省共读共创大赛”
+          </h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-1">
+<span class="material-symbols-outlined text-[15px] text-primary">auto_stories</span>
+<span class="truncate">形式：全省中小学线上伴读 + 线下共创</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-fixed font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container">card_giftcard</span>
+<span class="truncate text-tertiary font-medium">贵州教育报专版刊登优秀读者感悟</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+<span class="font-medium text-on-surface user-count">2,340</span>
+<span>人已报</span>
+<div class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden ml-1">
+<div class="h-full bg-primary-container rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<button class="action-btn px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-caption text-label-caption font-semibold shadow-sm flex items-center gap-1 active:opacity-90 transition-transform active:scale-95" data-action="enroll" data-title="“书香黔岭·全省共读共创大赛”">
+<span class="btn-text">立即报名参赛</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: 小记者 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all active:scale-[0.99]" data-category="reporter" data-id="act-2" data-status="enrolling" data-title="探访贵州省农科院山地智慧农业实践采风" data-type="reporter">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">小记者</span>
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>名额紧张·剩5席</span>
+</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="favorite-btn text-outline hover:text-tertiary transition-colors" title="收藏">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<button class="share-btn text-outline hover:text-on-surface transition-colors" title="分享">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-md items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-tech modern agricultural greenhouse dome with lush vertical hydroponic greens, student researchers wearing clipboards taking notes, vibrant natural daylight filtering through glass roof, crisp scientific atmosphere, photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvJORfZod53HHZHPVu8_1FDuK3mR8HfZY_BYqKR5w6geH1SxPB7-wO7SdYFvwjAMFrbsQf9CJpCyRmQbB1ZXjT5wfq79bX2U1l063dPkLvNFuQ1-i8kCk1l3OTtZaYpvtggMCH-UXRezn6MXzkQZf2pBoMSqAipzyVZ1LzE1KbII_MQ095-21vGd0--lESvkWuuAkEpI2yNtVG49Qtj2zrRvfuCKFY22_9xYhmh-2fEgIizv3EZ3Qh"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="font-title-card text-title-card text-on-surface tracking-tight line-clamp-2">
+            探访贵州省农科院山地智慧农业实践采风
+          </h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+<span class="truncate">地点：贵州省农科院山地农业示范基地</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">calendar_today</span>
+<span class="truncate">时间：本周六 09:00 - 16:00</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-error">sensors</span>
+<span>限定30席小记者 | 资深编辑随队带教</span>
+</div>
+<button class="action-btn px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-caption text-label-caption font-semibold shadow-sm flex items-center gap-1 active:opacity-90 transition-transform active:scale-95" data-action="enroll" data-title="探访贵州省农科院山地智慧农业实践采风">
+<span class="btn-text">立即报名采风</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3: 少年派 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all active:scale-[0.99]" data-category="shaonian" data-id="act-3" data-status="ongoing" data-title="第四届贵州省青少年新时代征文大赛" data-type="submission">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">少年派</span>
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">mode_edit</span>
+<span>征稿进行中</span>
+</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="favorite-btn text-outline hover:text-tertiary transition-colors" title="收藏">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<button class="share-btn text-outline hover:text-on-surface transition-colors" title="分享">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-md items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up of fountain pen resting on pristine cream textured stationery with handwritten Chinese characters, artistic soft bokeh, bright educational setting, warm amber lighting accentuating scholastic excellence, professional still life photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDygm5moOd923kPstmBmWQffKeD52EFufM1K0DGU1COgQw37uBaTmd_JjA8yX3dudr1wr-EuNoHn__uej5YZAc-eNQvFbCRYlfGCHyfj7O8eYIa1xmiLmO-ptiyHj10ipVpYOr8t2TlzUWMcm7CmkPun32nipM22BcM2r7z_nUzgsg3pb4S2xT8Zm6boZzJgrn9c-JGE8gWXxivWbc_BYVPUXp-NnCfna7nYEF_J-vN6EB3xSTFm_p5"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="font-title-card text-title-card text-on-surface tracking-tight line-clamp-2">
+            第四届贵州省青少年新时代征文大赛
+          </h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span class="truncate">省作协名家评阅 · 颁发官方省级荣誉证书</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">schedule</span>
+<span class="truncate">截稿时间：5月30日 24:00</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">assignment_turned_in</span>
+<span class="user-count">已有 812 篇佳作入库</span>
+</div>
+<button class="action-btn px-space-md py-1.5 rounded-full bg-secondary text-on-secondary font-label-caption text-label-caption font-semibold shadow-sm flex items-center gap-1 active:opacity-90 transition-transform active:scale-95" data-action="submit" data-title="第四届贵州省青少年新时代征文大赛">
+<span class="btn-text">在线投递稿件</span>
+<span class="material-symbols-outlined text-[15px]">send</span>
+</button>
+</div>
+</article>
+<!-- Card 4: 科学港 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all active:scale-[0.99]" data-category="science" data-id="act-4" data-status="enrolling" data-title="走进贵州大学国家重点实验室开放日" data-type="science">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed font-semibold">科学港</span>
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">biotech</span>
+<span>高校参访开放</span>
+</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="favorite-btn text-outline hover:text-tertiary transition-colors" title="收藏">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<button class="share-btn text-outline hover:text-on-surface transition-colors" title="分享">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-md items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Student laboratory workspace with miniature robotic model, astronomy globe, and futuristic circuit board schematics on a tablet screen, bright clear teal and turquoise ambient laboratory lighting, clean scientific composition, macro photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7qtXCdsc01-Lp5sbjXHtblEh02pkLL1PQg7UtAnUzKVueCjtZE-b9uk0RzrQHmlkweKGI6nUsRgJ4_1UG-4cnt3G0N-_G--QMzy1QgvEbcDsbDLVXkrtNDbxVnYOGILAtcuIyn0b4S7bWOzWgMef1aOaCAyTB8FfBiaU3ZIV2aEZ4bGOme7izkxwHrMZLPB52EJVCWJQlMxxMFqvNg5YagUu3tKuydKbOfqeeVqscgfz3_eFlppj_"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="font-title-card text-title-card text-on-surface tracking-tight line-clamp-2">
+            走进贵州大学国家重点实验室开放日
+          </h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-1">
+<span class="material-symbols-outlined text-[15px] text-primary">domain</span>
+<span class="truncate">贵州大学花溪校区 · 绿色农药与农业工程</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">workspace_premium</span>
+<span class="truncate font-medium">博导面对面科普 + 沉浸式实验体验</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">groups</span>
+<span>限中小学生家庭 · 余量60人</span>
+</div>
+<button class="action-btn px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-caption text-label-caption font-semibold shadow-sm flex items-center gap-1 active:opacity-90 transition-transform active:scale-95" data-action="enroll" data-title="走进贵州大学国家重点实验室开放日">
+<span class="btn-text">立即预约入校</span>
+<span class="material-symbols-outlined text-[15px]">event_available</span>
+</button>
+</div>
+</article>
+<!-- Card 5: 致青春 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col space-y-space-md transition-all active:scale-[0.99]" data-category="youth" data-id="act-5" data-status="ongoing" data-title="“我和我的大学”全省高校大学生微电影短视频征集" data-type="youth">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-semibold">致青春</span>
+<span class="font-label-caption text-label-caption px-2 py-0.5 rounded-full bg-surface-container text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">videocam</span>
+<span>仅限高校 · 征集中</span>
+</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="favorite-btn text-outline hover:text-tertiary transition-colors" title="收藏">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<button class="share-btn text-outline hover:text-on-surface transition-colors" title="分享">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-md items-start">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="College students holding cinema clapperboard and professional video camera filming on sunny green campus lawn with collegiate brick buildings behind, youthful energetic vibe, warm sun flare, cinematic realism photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEXgDlz0rYaXEXzPsjtayw98c6Q_1s4m-Gp7oheFO3opeaqGnbtURdox4zz1m23tcWAne9gLWIJ6Yy07xlHEvtPeG76F1hrUAlcie24D8yDXgmsP3lZhHgbY5xkfkYGLJHojPbt5RkBi6T7GKEO8g4_FLfkMdByQWgv_mIgoenSID0jQQweeyBi51GznqqSLfRzQPJL-3cORjN7bM7QJ9vrYRJkSlUx7L65QL0qwushLeMuH4ixqNs"/>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="font-title-card text-title-card text-on-surface tracking-tight line-clamp-2">
+            “我和我的大学”全省高校大学生微电影短视频征集
+          </h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">school</span>
+<span class="truncate">贵州师范大学/贵大/贵财等全省普通高校在读生</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caption text-label-caption mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-primary">featured_video</span>
+<span class="truncate">审核通过作品按活动安排展示</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>截稿至 6月15日</span>
+</div>
+<button class="action-btn px-space-md py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caption text-label-caption font-semibold flex items-center gap-1 hover:bg-secondary-container/80 transition-transform active:scale-95" data-action="submit" data-title="“我和我的大学”微电影短视频征集">
+<span class="btn-text">上传作品参赛</span>
+<span class="material-symbols-outlined text-[15px]">upload</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Empty state fallback helper (hidden by default) -->
+<div class="hidden flex-col items-center justify-center py-space-3xl px-space-lg text-center space-y-space-sm" id="filter-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[32px]">event_busy</span>
+</div>
+<div class="font-title-card text-title-card text-on-surface">暂无匹配活动</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant max-w-xs">贵州教育报本期暂无对应活动，快去切换模块或筛选其他类型看看吧！</p>
+<button class="mt-2 px-4 py-1.5 rounded-full bg-primary-container text-on-primary text-label-caption font-medium shadow-sm" id="btn-empty-reset">查看全部活动</button>
+</div>
+</div>
+<!-- 统一交互弹窗：活动报名/投稿表单 -->
+<div aria-modal="true" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity" id="modal-container" role="dialog">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-lg shadow-2xl flex flex-col space-y-4 max-h-[85vh] overflow-y-auto transform transition-transform">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<div>
+<div class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed mb-1" id="modal-tag">报名登记</div>
+<h3 class="text-[16px] font-bold text-on-surface tracking-tight leading-snug" id="modal-title">活动标题</h3>
+</div>
+<button aria-label="关闭弹窗" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" id="btn-close-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<form class="space-y-3.5" id="activity-form">
+<div>
+<label class="block text-label-caption font-medium text-on-surface mb-1">参与者姓名 / 学生姓名 *</label>
+<input class="w-full text-body-medium rounded-lg border border-outline-variant/60 px-3 py-2 bg-surface text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-name" placeholder="请输入真实姓名" required="" type="text"/>
+</div>
+<div>
+<label class="block text-label-caption font-medium text-on-surface mb-1">联系电话 *</label>
+<input class="w-full text-body-medium rounded-lg border border-outline-variant/60 px-3 py-2 bg-surface text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-phone" pattern="[0-9]{11}" placeholder="请输入11位手机号码" required="" type="tel"/>
+</div>
+<div id="school-field">
+<label class="block text-label-caption font-medium text-on-surface mb-1">就读学校/单位 (贵州省内)</label>
+<input class="w-full text-body-medium rounded-lg border border-outline-variant/60 px-3 py-2 bg-surface text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-school" placeholder="例如：贵阳市第一实验中学 / 贵州大学" type="text"/>
+</div>
+<div class="space-y-1" id="upload-field">
+<label class="block text-label-caption font-medium text-on-surface">作品标题与简述</label>
+<textarea class="w-full text-body-medium rounded-lg border border-outline-variant/60 px-3 py-2 bg-surface text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="form-memo" placeholder="可填写作品主题、组别或附带说明..." rows="2"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-2.5 rounded-full bg-primary-container text-on-primary font-semibold text-body-medium shadow-md active:opacity-90 flex items-center justify-center gap-1.5 transition-all" id="btn-submit-form" type="submit">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span id="submit-btn-label">确认提交报名</span>
+</button>
+</div>
+<p class="text-[11px] text-outline text-center">本期为《贵州教育报》素质拓展数字化示范服务</p>
+</form>
+</div>
+</div>
+<!-- 吐司通知提示 -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 hidden bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full shadow-lg text-label-caption items-center gap-2 transition-all" id="toast-tip">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]" id="toast-icon">check_circle</span>
+<span id="toast-text">操作成功</span>
+</div>
+</main>
+<!-- 底部Tab导航 -->
+<script>
+  (function initActivityTabInteractive() {
+    // 1. TabBar 导航高亮与点击模拟
+    const tabLinks = document.querySelectorAll('.nav-tab-item');
+    tabLinks.forEach((tab) => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetPath = tab.getAttribute('data-path');
+        tabLinks.forEach(t => {
+          t.classList.remove('text-primary', 'font-bold');
+          t.classList.add('text-outline');
+          t.removeAttribute('aria-current');
+          const icon = t.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        });
+        tab.classList.remove('text-outline');
+        tab.classList.add('text-primary', 'font-bold');
+        tab.setAttribute('aria-current', 'page');
+        const activeIcon = tab.querySelector('.material-symbols-outlined');
+        if (activeIcon) activeIcon.style.fontVariationSettings = "'FILL' 1";
+        
+        if (targetPath !== 'activities') {
+          showToast(`已切换至「${tab.querySelector('span:last-child').textContent}」栏目`, 'navigation');
+        }
+      });
+    });
+
+    // 2. 状态筛选与模块筛选
+    let activeStatus = 'all';
+    let activeCategory = 'all';
+
+    const statusButtons = document.querySelectorAll('.status-tab');
+    const categoryButtons = document.querySelectorAll('.category-chip');
+    const cards = document.querySelectorAll('article[data-category]');
+    const emptyState = document.getElementById('filter-empty-state');
+    const emptyResetBtn = document.getElementById('btn-empty-reset');
+
+    function applyFilter() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const cardStatus = card.getAttribute('data-status');
+        const cardCategory = card.getAttribute('data-category');
+
+        const matchStatus = (activeStatus === 'all' || cardStatus === activeStatus);
+        const matchCategory = (activeCategory === 'all' || cardCategory === activeCategory);
+
+        if (matchStatus && matchCategory) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+          emptyState.classList.add('flex');
+        } else {
+          emptyState.classList.add('hidden');
+          emptyState.classList.remove('flex');
+        }
+      }
+    }
+
+    statusButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        statusButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        activeStatus = btn.getAttribute('data-status');
+        applyFilter();
+      });
+    });
+
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-surface-container', 'text-primary', 'font-semibold', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container', 'text-primary', 'font-semibold', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        activeCategory = btn.getAttribute('data-category');
+        applyFilter();
+      });
+    });
+
+    if (emptyResetBtn) {
+      emptyResetBtn.addEventListener('click', () => {
+        if (statusButtons[0]) statusButtons[0].click();
+        if (categoryButtons[0]) categoryButtons[0].click();
+      });
+    }
+
+    // 3. 精准筛选抽屉切换
+    const filterBtn = document.getElementById('btn-open-filter');
+    const filterDrawer = document.getElementById('filter-drawer');
+    const filterBtnText = document.getElementById('filter-btn-text');
+    const btnConfirmFilter = document.getElementById('btn-confirm-filter');
+    const btnResetFilter = document.getElementById('btn-reset-filters');
+    const filterTags = document.querySelectorAll('.filter-tag');
+
+    if (filterBtn && filterDrawer) {
+      filterBtn.addEventListener('click', () => {
+        const isHidden = filterDrawer.classList.contains('hidden');
+        if (isHidden) {
+          filterDrawer.classList.remove('hidden');
+          filterDrawer.classList.add('flex');
+          filterBtnText.textContent = '收起筛选';
+        } else {
+          filterDrawer.classList.add('hidden');
+          filterDrawer.classList.remove('flex');
+          filterBtnText.textContent = '精准筛选';
+        }
+      });
+    }
+
+    filterTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        const group = tag.getAttribute('data-filter');
+        document.querySelectorAll(`.filter-tag[data-filter="${group}"]`).forEach(t => {
+          t.classList.remove('bg-primary/10', 'text-primary', 'font-medium');
+          t.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        tag.classList.add('bg-primary/10', 'text-primary', 'font-medium');
+        tag.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      });
+    });
+
+    if (btnConfirmFilter) {
+      btnConfirmFilter.addEventListener('click', () => {
+        filterDrawer.classList.add('hidden');
+        filterDrawer.classList.remove('flex');
+        filterBtnText.textContent = '精准筛选';
+        showToast('已更新综合筛选条件', 'tune');
+      });
+    }
+
+    if (btnResetFilter) {
+      btnResetFilter.addEventListener('click', () => {
+        filterTags.forEach(tag => {
+          if (tag.getAttribute('data-val') === 'all' || tag.getAttribute('data-val') === 'free') {
+            tag.classList.add('bg-primary/10', 'text-primary', 'font-medium');
+            tag.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          } else {
+            tag.classList.remove('bg-primary/10', 'text-primary', 'font-medium');
+            tag.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          }
+        });
+        showToast('筛选条件已重置', 'refresh');
+      });
+    }
+
+    // 4. 收藏与分享微交互
+    const favoriteBtns = document.querySelectorAll('.favorite-btn');
+    favoriteBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFav = icon.textContent === 'bookmark';
+        if (isFav) {
+          icon.textContent = 'bookmark_border';
+          btn.classList.remove('text-tertiary');
+          btn.classList.add('text-outline');
+          showToast('已取消收藏');
+        } else {
+          icon.textContent = 'bookmark';
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('text-outline');
+          btn.classList.add('text-tertiary');
+          showToast('收藏成功！可在“我的-收藏”查看', 'bookmark');
+        }
+      });
+    });
+
+    const shareBtns = document.querySelectorAll('.share-btn');
+    shareBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showToast('活动海报链接已复制，可分享至班级微信群', 'share');
+      });
+    });
+
+    // 5. 弹窗报名/投稿与提交交互
+    const modalContainer = document.getElementById('modal-container');
+    const modalTitle = document.getElementById('modal-title');
+    const modalTag = document.getElementById('modal-tag');
+    const submitBtnLabel = document.getElementById('submit-btn-label');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const activityForm = document.getElementById('activity-form');
+    let currentActiveButton = null;
+
+    const actionButtons = document.querySelectorAll('.action-btn');
+    actionButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentActiveButton = btn;
+        const title = btn.getAttribute('data-title') || '贵州教育报活动';
+        const action = btn.getAttribute('data-action');
+        
+        modalTitle.textContent = title;
+        if (action === 'submit') {
+          modalTag.textContent = '作品投递登记';
+          modalTag.className = 'inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-secondary-fixed text-on-secondary-fixed mb-1';
+          submitBtnLabel.textContent = '提交参赛作品';
+        } else {
+          modalTag.textContent = '官方名额报名';
+          modalTag.className = 'inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-primary-fixed text-on-primary-fixed mb-1';
+          submitBtnLabel.textContent = '确认提交报名';
+        }
+
+        modalContainer.classList.remove('hidden');
+        modalContainer.classList.add('flex');
+      });
+    });
+
+    function closeModal() {
+      modalContainer.classList.add('hidden');
+      modalContainer.classList.remove('flex');
+    }
+
+    if (btnCloseModal) {
+      btnCloseModal.addEventListener('click', closeModal);
+    }
+
+    modalContainer.addEventListener('click', (e) => {
+      if (e.target === modalContainer) closeModal();
+    });
+
+    if (activityForm) {
+      activityForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameVal = document.getElementById('form-name').value;
+        closeModal();
+
+        // 反馈按钮状态变化
+        if (currentActiveButton) {
+          const btnText = currentActiveButton.querySelector('.btn-text');
+          const btnIcon = currentActiveButton.querySelector('.material-symbols-outlined');
+          if (btnText) btnText.textContent = '已成功报名';
+          if (btnIcon) btnIcon.textContent = 'check_circle';
+          currentActiveButton.classList.remove('bg-primary-container', 'bg-secondary', 'bg-secondary-container', 'text-on-primary', 'text-on-secondary', 'text-on-secondary-container');
+          currentActiveButton.classList.add('bg-surface-container-high', 'text-primary', 'pointer-events-none');
+
+          const article = currentActiveButton.closest('article');
+          if (article) {
+            const userCountEl = article.querySelector('.user-count');
+            if (userCountEl) {
+              const currentNum = parseInt(userCountEl.textContent.replace(/[^0-9]/g, '')) || 0;
+              if (currentNum > 0) {
+                userCountEl.textContent = (currentNum + 1).toLocaleString();
+              }
+            }
+          }
+        }
+
+        showToast(`恭喜 ${nameVal || ''}，报名信息已送交《贵州教育报》审核！`, 'task_alt');
+        activityForm.reset();
+      });
+    }
+
+    // 吐司提示组件
+    const toastTip = document.getElementById('toast-tip');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    let toastTimer = null;
+
+    function showToast(msg, icon = 'check_circle') {
+      if (!toastTip) return;
+      if (toastTimer) clearTimeout(toastTimer);
+      toastText.textContent = msg;
+      toastIcon.textContent = icon;
+      toastTip.classList.remove('hidden');
+      toastTip.classList.add('flex');
+
+      toastTimer = setTimeout(() => {
+        toastTip.classList.add('hidden');
+        toastTip.classList.remove('flex');
+      }, 2600);
+    }
+  })();
+</script><nav id="ep-nav"><button class="" onclick="epGo(1)"><span class="material-symbols-outlined">home</span>首页</button><button class="" onclick="epGo(11)"><span class="material-symbols-outlined">grid_view</span>服务</button><button class="active" onclick="epGo(12)"><span class="material-symbols-outlined">event</span>活动</button><button class="" onclick="epGo(10)"><span class="material-symbols-outlined">person</span>我的</button></nav><script>
+function epGo(n){if(parent!==window)parent.postMessage({educationPlusRoute:n},location.origin);else location.href='index.html#'+n;}
+window.goHome=window.goToHome=()=>epGo(1);
+window.alert=(message)=>{const old=document.getElementById('ep-alert');if(old)old.remove();const d=document.createElement('dialog');d.id='ep-alert';d.style.cssText='padding:24px;border:0;border-radius:20px;max-width:330px;color:#204239;box-shadow:0 20px 90px #1235';const t=document.createElement('p');t.textContent=message;d.append(t);const b=document.createElement('button');b.textContent='我知道了';b.style.cssText='margin-top:20px;background:#087f73;color:white;padding:10px 30px;border-radius:20px';b.onclick=()=>d.remove();d.append(b);document.body.append(d);d.showModal();};
+// Replace root-navigation callbacks only. Scientific/campus tab callbacks stay local.
+if(12===1||12===11)window.switchTab=(k)=>epGo({home:1,services:11,activities:12,profile:10}[k]||1);
+document.querySelectorAll('input').forEach(e=>{if(e.id.includes('taxcode'))e.value='';});
+</script><script>function epRead(){try{return JSON.parse(localStorage.getItem('ep-reading-v3'))||{points:1280,days:12,checked:false}}catch(e){return {points:1280,days:12,checked:false}}}function epSync(){const r=epRead();document.querySelectorAll('[data-reading-points]').forEach(e=>e.textContent=r.points.toLocaleString());document.querySelectorAll('[data-reading-days]').forEach(e=>e.textContent=r.days+' 天');let q=localStorage.getItem('ep-quiz-v3');document.querySelectorAll('[data-quiz-score]').forEach(e=>e.textContent=q===null?'未作答':q+' 分');}window.addEventListener('storage',epSync);window.addEventListener('pageshow',epSync);epSync();document.querySelectorAll('.material-symbols-outlined').forEach(e=>e.setAttribute('aria-hidden','true'));document.querySelectorAll('[onclick]:not(button):not(a):not(input):not(label)').forEach(e=>{if(!e.querySelector('button,input,a')){e.setAttribute('role','button');e.tabIndex=0;e.addEventListener('keydown',k=>{if(k.key==='Enter'||k.key===' '){k.preventDefault();e.click();}})}});</script><script>let epDialog=null,epPriorFocus=null;function epModalSync(){const d=[...document.querySelectorAll('.fixed.inset-0')].find(e=>getComputedStyle(e).display!=='none'&&getComputedStyle(e).opacity!=='0'&&getComputedStyle(e).pointerEvents!=='none');if(d===epDialog)return;if(epDialog){document.querySelectorAll('[data-ep-inert]').forEach(e=>{e.inert=false;e.removeAttribute('data-ep-inert')});}if(d){epPriorFocus=document.activeElement;let child=d;while(child.parentElement&&child.parentElement!==document.documentElement){[...child.parentElement.children].filter(e=>e!==child&&!['SCRIPT','STYLE'].includes(e.tagName)).forEach(e=>{e.inert=true;e.setAttribute('data-ep-inert','')});child=child.parentElement;}}else if(epPriorFocus&&epPriorFocus.isConnected){epPriorFocus.focus();}epDialog=d;}new MutationObserver(epModalSync).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class','style']});</script><script>window.EP_PAGE="12";</script><script src="routes.js"></script></body></html>

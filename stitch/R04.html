@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 名家讲座详情</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">名家讲座详情</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Top Navigation & Return Row -->
+<div class="flex items-center justify-between py-space-sm mb-space-xs">
+<button class="flex items-center gap-space-2xs text-on-surface-variant hover:text-primary active:scale-95 transition-all" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+<span class="font-body-medium text-body-medium">返回名家讲座</span>
+</button>
+<span class="bg-surface-container-highest/80 text-on-surface-variant font-label-meta text-label-meta px-space-sm py-space-2xs rounded-full">
+      [演示数据]
+    </span>
+</div>
+<!-- Video Player Section (16:9) -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-md bg-inverse-surface aspect-video mb-space-lg select-none group" id="videoContainer">
+<!-- Video Poster Cover -->
+<div class="absolute inset-0 bg-cover bg-center transition-opacity duration-300" data-alt="An intellectual Chinese literature professor in a tailored modern suit giving a lecture behind a polished wooden podium on a well-lit warm academic stage with green and amber atmospheric rim lighting, bookshelf background with subtle depth of field." id="videoCover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEY5W94GiPDgl0Aar8jOGl742o5cgzd7ktMtMKQfX2gWnSTeoJwo7JsYyVvJ-wDikMW85QMPmpgrFlBTv7wQJjzxSsIDJzOQtZwACoDexNY3ifuGjVylXmS5RXd66wgTeiRgjg8c4MdtZ3XgbVTjzlwgxhgVo61nJoCp4mjy4f41PKCtR5kJM9Z4dpwx6mcdqavtJL2AgKADQd3VivmzbIJzRdnUN9F15fEr5bON34vgFjlZ4PhxB8')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent"></div>
+<!-- Top Demo Banner Indicator -->
+<div class="absolute top-space-sm inset-x-space-sm flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs bg-inverse-surface/80 backdrop-blur-md px-space-sm py-space-2xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="text-on-primary font-label-meta text-label-meta">视频演示占位 · 未接真实视频源</span>
+</div>
+<span class="bg-error/90 text-on-error font-label-meta text-label-meta px-space-xs py-space-2xs rounded">演示样本</span>
+</div>
+<!-- Center Big Play Button -->
+<button aria-label="播放讲座视频" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transform group-hover:scale-105 active:scale-95 transition-all backdrop-blur-sm" id="mainPlayBtn" type="button">
+<span class="material-symbols-outlined text-[32px] ml-1">play_arrow</span>
+</button>
+<!-- Video Duration Badge -->
+<div class="absolute bottom-space-md right-space-md bg-inverse-surface/85 px-space-sm py-space-2xs rounded-lg text-on-primary font-label-caption text-label-caption flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>48:20</span>
+</div>
+</div>
+<!-- Active Simulated Player Overlay (Initially hidden) -->
+<div class="absolute inset-0 bg-inverse-surface hidden flex flex-col justify-between p-space-md" id="playingOverlay">
+<!-- Simulated Video Canvas Animation -->
+<div class="flex-1 flex flex-col items-center justify-center text-center">
+<div class="flex items-center gap-1.5 mb-space-sm">
+<span class="w-1.5 h-6 bg-primary-fixed animate-bounce"></span>
+<span class="w-1.5 h-10 bg-primary animate-bounce [animation-delay:0.15s]"></span>
+<span class="w-1.5 h-8 bg-tertiary-fixed animate-bounce [animation-delay:0.3s]"></span>
+<span class="w-1.5 h-12 bg-primary-container animate-bounce [animation-delay:0.45s]"></span>
+<span class="w-1.5 h-5 bg-secondary-fixed animate-bounce [animation-delay:0.2s]"></span>
+</div>
+<p class="text-on-primary/80 font-label-caption text-label-caption">讲座原声正在模拟播放中...</p>
+</div>
+<!-- Player Controls Bar -->
+<div class="bg-inverse-surface/90 backdrop-blur-md rounded-xl p-space-xs flex items-center justify-between gap-space-sm">
+<button class="text-on-primary w-8 h-8 flex items-center justify-center hover:text-primary-fixed" id="togglePlayBtn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="playIcon">pause</span>
+</button>
+<!-- Progress Track -->
+<div class="flex-1 flex items-center gap-space-xs">
+<span class="text-on-primary/70 font-label-meta text-label-meta">12:35</span>
+<div class="flex-1 h-1.5 bg-surface-container-highest/40 rounded-full overflow-hidden relative cursor-pointer">
+<div class="h-full bg-primary rounded-full w-1/4"></div>
+</div>
+<span class="text-on-primary/70 font-label-meta text-label-meta">48:20</span>
+</div>
+<!-- Clarity Selector -->
+<div class="relative">
+<button class="text-on-primary bg-surface-container-highest/20 hover:bg-surface-container-highest/40 px-space-xs py-space-2xs rounded font-label-caption text-label-caption flex items-center gap-0.5" id="qualityBtn" type="button">
+<span id="qualityText">超清 1080P</span>
+<span class="material-symbols-outlined text-[14px]">expand_less</span>
+</button>
+<div class="hidden absolute bottom-full right-0 mb-space-xs bg-inverse-surface rounded-lg shadow-xl py-space-2xs w-24 flex flex-col" id="qualityMenu">
+<button class="quality-opt px-space-sm py-1 text-left font-label-meta text-label-meta text-primary hover:bg-surface-container-highest/20" data-val="蓝光 4K" type="button">蓝光 4K</button>
+<button class="quality-opt px-space-sm py-1 text-left font-label-meta text-label-meta text-on-primary hover:bg-surface-container-highest/20" data-val="超清 1080P" type="button">超清 1080P</button>
+<button class="quality-opt px-space-sm py-1 text-left font-label-meta text-label-meta text-on-primary hover:bg-surface-container-highest/20" data-val="高清 720P" type="button">高清 720P</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Action Bar (Likes, Favorites, Share) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm mb-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-lg">
+<!-- Like Action -->
+<button class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary active:scale-95 transition-all" id="likeActionBtn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="likeIcon">favorite</span>
+<span class="font-body-medium text-body-medium" id="likeCount">1,284</span>
+</button>
+<!-- Favorite Action -->
+<button class="flex items-center gap-space-xs text-on-surface-variant hover:text-tertiary active:scale-95 transition-all" id="favActionBtn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="favIcon">bookmark</span>
+<span class="font-body-medium text-body-medium" id="favText">收藏讲座</span>
+</button>
+</div>
+<!-- Share Poster Action -->
+<button class="flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container text-primary px-space-md py-space-xs rounded-full font-label-caption text-label-caption active:scale-95 transition-all" id="shareActionBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>生成讲座海报</span>
+</button>
+</div>
+<!-- Lecture Core Info Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm mb-space-lg">
+<!-- Title -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<h2 class="font-headline-page text-headline-page text-on-surface leading-snug">
+        《让经典照亮心灵：青少年如何阅读世界文学经典》
+      </h2>
+</div>
+<!-- Lecture Meta Badges -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+<span class="inline-flex items-center gap-1 bg-surface-container text-secondary px-space-sm py-space-2xs rounded-full font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+        48分钟精讲
+      </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface-variant px-space-sm py-space-2xs rounded-full font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+        1.6万次播放
+      </span>
+<span class="inline-flex items-center gap-1 bg-primary-fixed/30 text-primary-container px-space-sm py-space-2xs rounded-full font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        贵州教育报官方录制
+      </span>
+</div>
+<!-- Professor Bio Panel -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-cover bg-center shrink-0 shadow-sm" data-alt="Close-up portrait of Professor Lin Qinghua, a warm and distinguished Asian female academic scholar wearing glasses and a dark teal mandarin-collar blazer, serene smile, softly lit university library background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGIrygIoeO_pmn83Wuag9CpkcVu7bUAV6cBpzzGP4C1kHiG04WKq4sevcatQi7CRPuCwqNyTrL8XoObYZYsTm-VMrASRn2Hwat4Gj5XoQY-bIzFBWVGh1h_9sRiw8NXQKErQ7l9clmXXX-GN_zrxmTrzzlBCsHQPRq3F_Iqwo9_itJP_OaaY5zZHGYia-2UywOqzC_qktDPl4F41wagfGPPeizVEnBzUKyuUDjGZ6CWqHLCsQN3I4O')"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface">林清华 教授</span>
+<span class="bg-primary/10 text-primary font-label-meta text-label-meta px-space-2xs py-0.5 rounded">特聘专家</span>
+</div>
+<p class="text-on-surface-variant font-label-caption text-label-caption mt-space-2xs">
+            贵州大学中文系特聘教授 · 全省青少年阅读指导顾问
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-sm relative mt-space-2xs">
+<span class="material-symbols-outlined text-primary/30 text-[20px] absolute -top-2 left-2">format_quote</span>
+<p class="font-body-default text-body-default text-on-surface-variant italic pl-space-md">
+          “经典作品不是供奉在神坛上的标本，它是前人面对生命叩问时留下的温热答案。读进去，就是照亮一生的一束光。”
+        </p>
+</div>
+</div>
+</div>
+<!-- Key Insights Section (3 Points) -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h3 class="font-headline-section text-headline-section text-on-surface">讲座纲要与核心观点</h3>
+</div>
+<span class="text-on-surface-variant font-label-caption text-label-caption">共3大核心模块</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Point 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 font-title-card text-title-card">
+          1
+        </div>
+<div class="flex flex-col flex-1">
+<h4 class="font-title-card text-title-card text-on-surface mb-space-2xs">超越死记硬背的对话式阅读</h4>
+<p class="font-body-default text-body-default text-on-surface-variant">
+            阅读经典不是摘抄好词好句的机械应试，而是在文字深处与一个跨越千百年的伟大灵魂促膝长谈，借大师的眼睛看见更宽广的人间。
+          </p>
+<div class="mt-space-xs flex items-center gap-space-xs text-primary font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>节点标记：04:20 - 15:45</span>
+</div>
+</div>
+</div>
+<!-- Point 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 font-title-card text-title-card">
+          2
+        </div>
+<div class="flex flex-col flex-1">
+<h4 class="font-title-card text-title-card text-on-surface mb-space-2xs">抗击“碎片化快餐”，重建长篇专注力</h4>
+<p class="font-body-default text-body-default text-on-surface-variant">
+            短视频和速读梗概正在蚕食年轻一代的深度思考回路。讲座支招“20分钟深浸浸润法”，分步建立对多层叙事长篇巨著的持久审美耐力。
+          </p>
+<div class="mt-space-xs flex items-center gap-space-xs text-secondary font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[14px]">timelapse</span>
+<span>节点标记：15:46 - 32:10</span>
+</div>
+</div>
+</div>
+<!-- Point 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0 font-title-card text-title-card">
+          3
+        </div>
+<div class="flex flex-col flex-1">
+<h4 class="font-title-card text-title-card text-on-surface mb-space-2xs">在读后感中抒写真我，摒弃假大空套话</h4>
+<p class="font-body-default text-body-default text-on-surface-variant">
+            拒绝千篇一律的模式化感悟。鼓励青少年将书中的矛盾困境与自己当下的学习、亲情和成长迷茫勇敢并联，写出带有体温的真实文字。
+          </p>
+<div class="mt-space-xs flex items-center gap-space-xs text-tertiary font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>节点标记：32:11 - 48:20</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Recommendations Section -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h3 class="font-headline-section text-headline-section text-on-surface">相关名家系列推荐</h3>
+</div>
+<a class="text-on-surface-variant hover:text-primary font-label-caption text-label-caption flex items-center" href="#">
+<span>查看更多</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Recommend Item 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex gap-space-md hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-24 h-20 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" data-alt="Lush green mountain ranges of Guizhou under morning mist with an open paper book in the foreground, literary naturalism vibe, photorealistic, emerald and gold hues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArerl50x745p6GV43JnO6c1qZZwPOhmWJF8mWasatUpI8llz4Qj8ql6GVjXjvqoKmw1HaoLCJPLavrscgNX5y10bzyULOFDNMIoS8-uG6-owYCqv6PamOUzU6jPEN_I9L8xBH2ntzLG039P5gc43WK8ueLlDL85pJ4puXoXnd1DhfEVa5aeMQdhK4IlvgkJtB4v8M_qD4DcpZFy7yZB0pPsbMVvwbJulDjXXKdDIKOShr90Gw6snkm')">
+<div class="absolute bottom-1 right-1 bg-inverse-surface/80 text-on-primary px-1 rounded text-[10px]">36:15</div>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<h4 class="font-title-card text-title-card text-on-surface group-hover:text-primary truncate transition-colors">
+              《在山水与书页之间：贵州本土文学的少年阅读视角》
+            </h4>
+<p class="text-on-surface-variant font-label-caption text-label-caption mt-0.5">主讲：何老师 · 贵州作家协会</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-meta text-label-meta">9,420次学习</span>
+<span class="text-primary font-label-caption text-label-caption flex items-center gap-0.5">
+              立即观看
+              <span class="material-symbols-outlined text-[14px]">play_circle</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Recommend Item 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex gap-space-md hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-24 h-20 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" data-alt="Conceptual modern library architecture with geometric sunbeams highlighting open notebooks and chess pieces, representing logical structured reading thought, clean and academic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANA8CWa2eorWF1w1H1kkd0Eyva90lRr-nsCMixq_v015V8pDDzc8UipeCbHM3aPTiBi6N-d101Dej-fsuXgU1s03wYYUepYkkdjShG_OlnZXPsYUTV3kqrTw5GPmyYUWDk_OJsQRVBmGIe5xb2zfxfi2SZA8epuDJr8a0B6DkdQMnIIR41e3iN3cbLIdCeNojGeIzj2TBjHBm3D-R5i1ObEOJOj0IGKZlXxkhTEmuELu7OdwC9xnfF')">
+<div class="absolute bottom-1 right-1 bg-inverse-surface/80 text-on-primary px-1 rounded text-[10px]">52:00</div>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<h4 class="font-title-card text-title-card text-on-surface group-hover:text-primary truncate transition-colors">
+              《从文字到思维：如何提升中学生的深度阅读理解力》
+            </h4>
+<p class="text-on-surface-variant font-label-caption text-label-caption mt-0.5">主讲：陈明礼 老师 · 资深语文教研员</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-meta text-label-meta">1.2万次学习</span>
+<span class="text-primary font-label-caption text-label-caption flex items-center gap-0.5">
+              立即观看
+              <span class="material-symbols-outlined text-[14px]">play_circle</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA Fixed-like Floating Bar within slot boundary -->
+<div class="sticky bottom-2 z-30 w-full">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-space-sm shadow-xl flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm pl-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface">青少年文学素养培育工程</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">课后拓展 · 免费公益</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-space-lg py-space-sm rounded-xl font-title-card text-title-card shadow-md active:scale-95 transition-all" id="quickEnrollBtn" type="button">
+        加入读书研讨组
+      </button>
+</div>
+</div>
+<!-- Simulated Poster Modal Dialog -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-margin-page hidden" id="posterModal">
+<div class="bg-surface-container-lowest w-full max-w-[340px] rounded-2xl p-space-lg shadow-2xl flex flex-col items-center animate-in fade-in zoom-in-95 duration-200">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<h4 class="font-title-card text-title-card text-on-surface mb-space-xs">讲座海报已生成 [演示数据]</h4>
+<p class="font-body-default text-body-default text-on-surface-variant text-center mb-space-md">
+        已为您自动生成《让经典照亮心灵》精美分享卡片，可一键发送至微信好友或班级读书群。
+      </p>
+<!-- Mini Poster Preview Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-sm flex items-center gap-space-sm mb-space-lg">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[18px]">
+          名家
+        </div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-caption text-label-caption text-on-surface font-semibold truncate">让经典照亮心灵：青少年如何阅读世界文学经典</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">主讲：林清华 教授</span>
+</div>
+</div>
+<div class="flex w-full gap-space-sm">
+<button class="flex-1 py-space-sm rounded-xl bg-surface-container-high text-on-surface font-body-medium text-body-medium active:scale-95 transition-all" id="closePosterBtn" type="button">
+          关闭
+        </button>
+<button class="flex-1 py-space-sm rounded-xl bg-primary text-on-primary font-body-medium text-body-medium shadow-md active:scale-95 transition-all" id="confirmShareBtn" type="button">
+          模拟发送
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface/90 text-on-primary px-space-lg py-space-xs rounded-full font-label-caption text-label-caption shadow-lg flex items-center gap-space-xs transition-opacity duration-300 opacity-0 pointer-events-none" id="toast">
+<span class="material-symbols-outlined text-[16px]" id="toastIcon">info</span>
+<span id="toastMsg">通知提示</span>
+</div>
+</div>
+<script>
+  (function() {
+    // DOM Elements
+    const mainPlayBtn = document.getElementById('mainPlayBtn');
+    const videoCover = document.getElementById('videoCover');
+    const playingOverlay = document.getElementById('playingOverlay');
+    const togglePlayBtn = document.getElementById('togglePlayBtn');
+    const playIcon = document.getElementById('playIcon');
+    const qualityBtn = document.getElementById('qualityBtn');
+    const qualityText = document.getElementById('qualityText');
+    const qualityMenu = document.getElementById('qualityMenu');
+    const qualityOptions = document.querySelectorAll('.quality-opt');
+
+    const likeActionBtn = document.getElementById('likeActionBtn');
+    const likeIcon = document.getElementById('likeIcon');
+    const likeCount = document.getElementById('likeCount');
+
+    const favActionBtn = document.getElementById('favActionBtn');
+    const favIcon = document.getElementById('favIcon');
+    const favText = document.getElementById('favText');
+
+    const shareActionBtn = document.getElementById('shareActionBtn');
+    const posterModal = document.getElementById('posterModal');
+    const closePosterBtn = document.getElementById('closePosterBtn');
+    const confirmShareBtn = document.getElementById('confirmShareBtn');
+    const quickEnrollBtn = document.getElementById('quickEnrollBtn');
+
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+
+    let isPlaying = false;
+    let isLiked = false;
+    let isFaved = false;
+    let likeNum = 1284;
+
+    function showToast(msg, icon = 'check_circle') {
+      toastMsg.innerText = msg;
+      toastIcon.innerText = icon;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2000);
+    }
+
+    // Video Simulation
+    function startPlaying() {
+      isPlaying = true;
+      videoCover.classList.add('opacity-0', 'pointer-events-none');
+      playingOverlay.classList.remove('hidden');
+      playIcon.innerText = 'pause';
+      showToast('视频模拟播放开始 [演示数据]', 'play_circle');
+    }
+
+    function togglePause() {
+      if (isPlaying) {
+        isPlaying = false;
+        playIcon.innerText = 'play_arrow';
+        showToast('视频已暂停', 'pause');
+      } else {
+        isPlaying = true;
+        playIcon.innerText = 'pause';
+        showToast('视频继续播放', 'play_arrow');
+      }
+    }
+
+    if (mainPlayBtn) mainPlayBtn.addEventListener('click', startPlaying);
+    if (togglePlayBtn) togglePlayBtn.addEventListener('click', togglePause);
+
+    // Clarity Switch
+    if (qualityBtn && qualityMenu) {
+      qualityBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        qualityMenu.classList.toggle('hidden');
+      });
+
+      qualityOptions.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const chosen = opt.getAttribute('data-val');
+          qualityText.innerText = chosen;
+          qualityMenu.classList.add('hidden');
+          showToast(`已切换清晰度为: ${chosen} [演示数据]`, 'tune');
+        });
+      });
+
+      document.addEventListener('click', () => {
+        if (!qualityMenu.classList.contains('hidden')) {
+          qualityMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // Like Action
+    if (likeActionBtn) {
+      likeActionBtn.addEventListener('click', () => {
+        isLiked = !isLiked;
+        if (isLiked) {
+          likeNum += 1;
+          likeIcon.innerText = 'favorite';
+          likeIcon.style.fontVariationSettings = "'FILL' 1";
+          likeActionBtn.classList.add('text-error');
+          likeActionBtn.classList.remove('text-on-surface-variant');
+          showToast('已点赞！感谢您的支持', 'favorite');
+        } else {
+          likeNum -= 1;
+          likeIcon.innerText = 'favorite';
+          likeIcon.style.fontVariationSettings = "'FILL' 0";
+          likeActionBtn.classList.remove('text-error');
+          likeActionBtn.classList.add('text-on-surface-variant');
+          showToast('已取消点赞');
+        }
+        likeCount.innerText = likeNum.toLocaleString();
+      });
+    }
+
+    // Favorite Action
+    if (favActionBtn) {
+      favActionBtn.addEventListener('click', () => {
+        isFaved = !isFaved;
+        if (isFaved) {
+          favIcon.innerText = 'bookmark';
+          favIcon.style.fontVariationSettings = "'FILL' 1";
+          favActionBtn.classList.add('text-tertiary');
+          favActionBtn.classList.remove('text-on-surface-variant');
+          favText.innerText = '已收藏';
+          showToast('讲座已加入个人书斋收藏夹', 'bookmark_added');
+        } else {
+          favIcon.innerText = 'bookmark';
+          favIcon.style.fontVariationSettings = "'FILL' 0";
+          favActionBtn.classList.remove('text-tertiary');
+          favActionBtn.classList.add('text-on-surface-variant');
+          favText.innerText = '收藏讲座';
+          showToast('已取消收藏');
+        }
+      });
+    }
+
+    // Share Poster Modal
+    if (shareActionBtn && posterModal) {
+      shareActionBtn.addEventListener('click', () => {
+        posterModal.classList.remove('hidden');
+      });
+    }
+
+    if (closePosterBtn && posterModal) {
+      closePosterBtn.addEventListener('click', () => {
+        posterModal.classList.add('hidden');
+      });
+    }
+
+    if (confirmShareBtn && posterModal) {
+      confirmShareBtn.addEventListener('click', () => {
+        posterModal.classList.add('hidden');
+        showToast('讲座海报已模拟发送至微信好友！', 'ios_share');
+      });
+    }
+
+    if (quickEnrollBtn) {
+      quickEnrollBtn.addEventListener('click', () => {
+        showToast('已报名该名家读书研讨小组 [演示数据]', 'groups');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="R04";</script><script src="../routes.js"></script></body></html>

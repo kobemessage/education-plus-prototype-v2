@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><title>教育Plus · 读后感详情</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#d6fff7', 'on-primary-fixed': '#00201c', 'error-container': '#ffdad6', 'outline': '#6e7977', 'tertiary-fixed-dim': '#ffb95f', 'outline-variant': '#bdc9c6', 'surface-container': '#e6eeff', 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#005048', 'on-surface': '#121c2a', 'secondary-container': '#5bb8fe', 'inverse-on-surface': '#ebf1ff', 'on-secondary-container': '#00476e', 'surface-container-lowest': '#ffffff', 'secondary': '#006398', 'tertiary-fixed': '#ffddb8', 'error': '#ba1a1a', 'surface-bright': '#f9f9ff', 'on-error': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'on-primary': '#ffffff', 'on-surface-variant': '#3e4947', 'primary-fixed-dim': '#78d7c8', 'surface-container-highest': '#d9e3f7', 'secondary-fixed': '#cce5ff', 'tertiary-container': '#9f6400', 'surface-dim': '#d0daef', 'on-background': '#121c2a', 'primary-fixed': '#95f3e4', 'surface-variant': '#d9e3f7', 'on-error-container': '#93000a', 'background': '#f9f9ff', 'inverse-primary': '#78d7c8', 'on-secondary-fixed': '#001d31', 'on-secondary-fixed-variant': '#004b73', 'inverse-surface': '#273140', 'tertiary': '#7d4e00', 'surface-container-low': '#eff3ff', 'primary-container': '#087f73', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#93ccff', 'primary': '#00645a', 'surface': '#f9f9ff', 'surface-container-high': '#dee9fd', 'surface-tint': '#006a60', 'on-tertiary-container': '#fff5ed', 'on-tertiary-fixed-variant': '#653e00' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', '2xl': '1rem', 'full': '9999px' }, 'spacing': { 'space-xl': '20px', 'space-3xl': '32px', 'space-sm': '8px', 'space-2xs': '2px', 'capsule-safe-right': '96px', 'gutter-grid': '12px', 'space-lg': '16px', 'margin-page': '16px', 'space-2xl': '24px', 'height-navbar': '44px', 'space-md': '12px', 'height-tabbar': '56px', 'space-xs': '4px' }, 'fontFamily': { 'body-medium': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'display-stat': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-page': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'title-card': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'body-default': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-caption': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'label-meta': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'], 'headline-section': ['"Plus Jakarta Sans, PingFang SC, -apple-system, sans-serif"'] }, 'fontSize': { 'body-medium': ['14px', { 'lineHeight': '22px', 'fontWeight': '500' }], 'display-stat': ['26px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'headline-page': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'title-card': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'body-default': ['14px', { 'lineHeight': '22px', 'fontWeight': '400' }], 'label-caption': ['12px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'label-meta': ['11px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-section': ['18px', { 'lineHeight': '26px', 'fontWeight': '600' }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); } .pt-safe { padding-top: env(safe-area-inset-top, 44px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-default text-body-default min-h-screen flex flex-col items-center"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,100,90,0.04)]"><div class="h-11 flex items-center justify-between px-margin-page"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">local_library</span><h1 class="font-headline-section text-headline-section text-on-surface tracking-tight">读后感详情</h1></div><div class="flex items-center justify-end gap-space-sm w-capsule-safe-right"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,100,90,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div aria-hidden="true" class="w-12 h-8 rounded-full bg-surface-container-high/60 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_horiz</span></div></div></div></header><main class="flex flex-col w-full max-w-[390px] pt-11 px-margin-page pb-20 bg-surface mt-11 min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Top Navigation & Return Row -->
+<div class="flex items-center justify-between py-space-sm mb-space-xs">
+<button aria-label="返回精选列表" class="flex items-center gap-space-xs text-primary font-body-medium text-body-medium active:scale-95 transition-transform" id="btn-back" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span>
+<span class="font-body-medium text-body-medium">精选列表</span>
+</button>
+<span class="bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta px-space-sm py-space-2xs rounded-full">
+      [演示数据]
+    </span>
+</div>
+<!-- Article Hero & Header Card -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm mb-space-md">
+<!-- Associated Book Tag Pill -->
+<div class="flex items-center gap-space-xs mb-space-sm">
+<div class="inline-flex items-center gap-space-2xs bg-on-primary-container/40 text-primary px-space-sm py-1 rounded-full font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-[15px]">auto_stories</span>
+<span class="font-label-caption text-label-caption font-semibold">关联书目：《人类群星闪耀时·精注特辑》</span>
+</div>
+</div>
+<!-- Article Main Title -->
+<h1 class="font-headline-page text-headline-page text-on-surface mb-space-md tracking-tight leading-snug">
+      命运翻覆时的勇敢之心——读茨威格《滑铁卢的一分钟》
+    </h1>
+<!-- Author Profile Banner -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-xl">
+<div class="relative w-11 h-11 rounded-full overflow-hidden shrink-0 bg-primary/10 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Close up realistic portrait avatar of a focused Asian high school student boy wearing a clean modern school uniform against soft library bookshelf background, warm cinematic natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3EdH7T4hZIUyUDUhGCahM_juQRIaqJHBfHQCAjiwEGytyh6LEE4ADQCDvqBNMIkbXGdNcNL5_3Xsxt6rodiLwo3P-BpI4Kzo81BRXFIwVSYmS8gsKhZmxvsGH5CMrqFpCWzAZq5Vr7vu8Yh_YBiJE4tE0toL-F3eb0zFxuvge9KylVS4AcO_DVYKCZsaXS0sOlz60X_gADUMivwzt94FxzX5PHuuuCBkGc2U2EQEjr-Lt4gMYTKy6"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-primary rounded-full flex items-center justify-center text-on-primary text-[9px]">
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-title-card text-title-card text-on-surface truncate">程子轩</span>
+<span class="shrink-0 inline-flex items-center gap-space-2xs bg-tertiary-fixed text-on-tertiary-fixed font-label-meta text-label-meta px-space-xs py-0.5 rounded-full font-medium">
+<span class="material-symbols-outlined text-[12px] text-tertiary">local_fire_department</span>
+            打卡28天
+          </span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant truncate mt-space-2xs">
+          贵阳市实验三中 · 高一(2)班
+        </p>
+<div class="flex items-center gap-space-xs text-outline font-label-meta text-label-meta mt-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>2025年4月 · 全省共读打卡推荐</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Article Body Card -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm mb-space-md">
+<!-- Visual Reading Accent Banner -->
+<div class="relative w-full h-36 rounded-xl overflow-hidden mb-space-lg shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Cinematic atmospheric still life representing historical turning point, vintage quill pen, antique open manuscript book of Waterloo strategy map, delicate warm afternoon sunbeam ray cutting through library dust, solemn academic tone with emerald and warm paper tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67I9CTfc1KdoiXO1aPbVMNYNv7g_anQX434odwfzJ6sMzAea-cjOdI5t9MakaWlbta6wUbhp2aAb1kKcrwAci4eB1a80Zz1HJPrsaXWGIPpItLS3IBmg2WKgwj1CBExC9QiY1EueP4D8NtviCwH3KKvdgWxkzJiTmAdoQ9ocE1r1NEOY0EIHN5tRenMLllcDHcjXYU1yJira8-yNMp4bx5OrUMO6i2UcLx7-cH59kuF92Kxf9Jash"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex items-end p-space-md">
+<p class="font-label-caption text-label-caption text-inverse-on-surface italic line-clamp-1">
+          “那决定一生命运的一分钟，常常只在静默与犹疑中悄然滑落。”
+        </p>
+</div>
+</div>
+<!-- Typography Content -->
+<div class="flex flex-col gap-space-md font-body-default text-body-default text-on-surface leading-relaxed">
+<!-- Intro Section -->
+<div class="relative pl-space-md">
+<div class="absolute left-0 top-1 bottom-1 w-1 bg-primary rounded-full"></div>
+<p class="font-body-medium text-body-medium text-on-surface-variant">
+          引言：在历史浩瀚的长河中，决定千万人命运乃至文明走向的，有时往往不是漫长筹谋的宏大史诗，而恰恰是某一个电光石火的转折瞬间。斯蒂芬·茨威格在《人类群星闪耀时》中所展现的，正是这样令人窒息的戏剧张力。
+        </p>
+</div>
+<!-- Main Body Analysis -->
+<p>
+        初读《滑铁卢的一分钟》，格鲁希元帅在南怀尔的犹豫不决令人扼腕长叹。前线枪炮声沉闷如雷震，部将热拉尔焦急恳求“向枪炮声前进”，然而这位谨小慎微的将领却战战兢兢地恪守拿破仑清晨发出的死板指令。他不敢跨出未知的一步，更不敢以非凡的胆魄去打破常规承担变局。
+      </p>
+<p>
+        拿破仑在雨后泥泞的丘陵上期盼着蓝色军团的旗帜，最终等来的却是布吕歇尔的普鲁士骑兵。茨威格用近乎史诗叹咏调的笔触，将格鲁希那致命的一秒钟凝固成了千古喟叹。命运并非冷血，它曾以最慷慨的姿态垂青过平凡之人，却因懦弱而让这份伟力随风消散。
+      </p>
+<!-- Reflection Section -->
+<div class="bg-surface-container-low p-space-md rounded-xl">
+<h3 class="font-title-card text-title-card text-primary mb-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+          青年反思：于细微抉择处见坚毅
+        </h3>
+<p class="text-on-surface-variant">
+          回望当下的高中学习与成长旅程，我们何尝不在经历属于自己的“关键时刻”？面对一次试卷难题的放弃与坚持，面对升学方向与兴趣爱好的权衡抉择，最易滋生的借口正是“萧规曹随”与安全区的盲从。然而真正的成长与卓越，恰在于关键当口勇于挺身而出、敢于为选择负全责的果断坚韧。
+        </p>
+</div>
+<p>
+        合上书卷，滑铁卢的硝烟早已散尽，但茨威格的警钟长鸣。青春不应是唯唯诺诺的观望，而是认清重任后，敢于在属于自己的那一分钟里，听从心中的召唤果敢前行。
+      </p>
+</div>
+<!-- Article Bottom Meta Badges -->
+<div class="flex items-center justify-between pt-space-md mt-space-md bg-surface-container-low/40 rounded-lg px-space-sm py-space-xs">
+<span class="font-label-meta text-label-meta text-outline">字数：1280字 · 全文完</span>
+<span class="font-label-meta text-label-meta text-primary font-medium">指导组审阅通过</span>
+</div>
+</section>
+<!-- Official Teacher Critique Section -->
+<section class="bg-surface-container rounded-2xl p-space-lg shadow-sm mb-space-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+<h2 class="font-title-card text-title-card text-on-surface">名师官方点评专区</h2>
+</div>
+<span class="bg-primary/15 text-primary font-label-meta text-label-meta px-space-sm py-0.5 rounded-full font-semibold">特优习作</span>
+</div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-sm shrink-0 shadow-sm">
+        王
+      </div>
+<div>
+<div class="font-body-medium text-body-medium text-on-surface font-semibold">王老师 · 高级语文教师</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant">贵阳市实验三中语文名师工作室</div>
+</div>
+</div>
+<!-- Teacher Quote Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl relative mb-space-sm shadow-sm">
+<span class="material-symbols-outlined absolute top-2 right-2 text-surface-container-highest text-[24px]">format_quote</span>
+<p class="font-body-default text-body-default text-on-surface-variant italic leading-relaxed">
+        “通篇逻辑严紧，语言富有张力。不仅深读懂了原著中极其戏剧性的历史转折，更能举重若轻地投射到当代青少年自身的心理锤炼之中，见解独到，堪称同龄人精读与哲思写作的典范。”
+      </p>
+</div>
+<!-- Honored Achievement Badge -->
+<div class="flex items-center gap-space-xs bg-tertiary-fixed/60 text-on-tertiary-fixed px-space-md py-space-xs rounded-xl">
+<span class="material-symbols-outlined text-tertiary text-[18px]">military_tech</span>
+<span class="font-label-caption text-label-caption font-semibold flex-1">荣誉入选：《贵州教育报》学生优秀习作精选库</span>
+<span class="font-label-meta text-label-meta text-outline bg-surface-container-lowest/80 px-1.5 py-0.5 rounded">演示数据</span>
+</div>
+</section>
+<!-- Reader Interaction & Comments Section -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-card text-title-card text-on-surface">读者互动与交流</h2>
+<span class="bg-surface-container-high text-on-surface-variant text-label-meta font-label-meta px-2 py-0.5 rounded-full" id="comment-count-badge">6条评论</span>
+</div>
+<!-- Stat Badges summary -->
+<div class="flex items-center gap-space-sm text-outline font-label-meta text-label-meta">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[15px] text-primary">thumb_up</span> <b class="text-on-surface" id="stat-like">42</b></span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[15px] text-tertiary">bookmark</span> <b class="text-on-surface" id="stat-fav">18</b></span>
+</div>
+</div>
+<!-- Comments List -->
+<div class="flex flex-col gap-space-md" id="comments-container">
+<!-- Comment 1 -->
+<div class="flex items-start gap-space-sm pb-space-sm bg-surface-container-low/40 p-space-sm rounded-xl">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs shrink-0">
+          林
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-0.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">林思源</span>
+<span class="font-label-meta text-label-meta text-outline">昨天 19:40</span>
+</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant mb-space-xs">贵阳一中 · 高一(5)班</div>
+<p class="font-body-default text-body-default text-on-surface leading-normal">
+            写得太深刻了！我也曾卡在畏惧失败的借口里，这一分钟的选择确实点醒了我，与其被动等待不如主动担责！
+          </p>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex items-start gap-space-sm bg-surface-container-low/40 p-space-sm rounded-xl">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xs shrink-0">
+          赵
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-0.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold truncate">赵若琳</span>
+<span class="font-label-meta text-label-meta text-outline">2天前</span>
+</div>
+<div class="font-label-meta text-label-meta text-on-surface-variant mb-space-xs">贵阳市实验三中 · 高二(1)班</div>
+<p class="font-body-default text-body-default text-on-surface leading-normal">
+            学弟的语言表达非常有节奏感，把茨威格那种悬崖边缘的心跳感还原出来了，值得精读研磨！
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Toast Notification element -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 bg-inverse-surface/90 text-inverse-on-surface px-space-md py-space-xs rounded-full font-label-caption text-label-caption shadow-lg transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-1" id="toast">
+<span class="material-symbols-outlined text-[16px]" id="toast-icon">check_circle</span>
+<span id="toast-text">操作成功</span>
+</div>
+<!-- Bottom Floating Interactive Action Bar -->
+<aside class="fixed bottom-14 inset-x-0 z-40 max-w-[390px] mx-auto px-margin-page pointer-events-none">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-full shadow-lg p-space-xs flex items-center justify-between gap-space-xs pointer-events-auto">
+<!-- Fake Comment Input / Quick Trigger -->
+<div class="flex-1 flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container h-10 px-space-md rounded-full text-outline cursor-pointer transition-colors active:scale-98" id="btn-open-comment">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span class="font-label-caption text-label-caption truncate">谈谈你的读后启发...</span>
+</div>
+<!-- Action Buttons Cluster -->
+<div class="flex items-center gap-1 shrink-0 pr-1">
+<!-- Like Button -->
+<button aria-label="点赞" class="flex items-center justify-center gap-1 h-10 px-3 rounded-full text-on-surface-variant bg-surface-container-low hover:bg-surface-container transition-all active:scale-95" id="btn-like" type="button">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="icon-like">thumb_up</span>
+<span class="font-label-caption text-label-caption font-semibold" id="label-like">42</span>
+</button>
+<!-- Favorite Button -->
+<button aria-label="收藏" class="flex items-center justify-center gap-1 h-10 px-3 rounded-full text-on-surface-variant bg-surface-container-low hover:bg-surface-container transition-all active:scale-95" id="btn-fav" type="button">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="icon-fav">bookmark</span>
+<span class="font-label-caption text-label-caption font-semibold" id="label-fav">18</span>
+</button>
+<!-- Quick Back Button -->
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary shadow-sm hover:opacity-95 transition-transform active:scale-95" id="btn-quick-list" title="返回读后感列表" type="button">
+<span class="material-symbols-outlined text-[20px]">list_alt</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  (function() {
+    // State
+    let isLiked = false;
+    let likeCount = 42;
+    let isFaved = false;
+    let favCount = 18;
+
+    const btnLike = document.getElementById('btn-like');
+    const iconLike = document.getElementById('icon-like');
+    const labelLike = document.getElementById('label-like');
+    const statLike = document.getElementById('stat-like');
+
+    const btnFav = document.getElementById('btn-fav');
+    const iconFav = document.getElementById('icon-fav');
+    const labelFav = document.getElementById('label-fav');
+    const statFav = document.getElementById('stat-fav');
+
+    const btnBack = document.getElementById('btn-back');
+    const btnQuickList = document.getElementById('btn-quick-list');
+    const btnOpenComment = document.getElementById('btn-open-comment');
+    const commentsContainer = document.getElementById('comments-container');
+    const commentCountBadge = document.getElementById('comment-count-badge');
+
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    let toastTimer = null;
+
+    function showToast(msg, icon = 'check_circle') {
+      if (toastTimer) clearTimeout(toastTimer);
+      toastText.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', '-translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-2');
+      }, 1800);
+    }
+
+    // Like Toggle
+    btnLike.addEventListener('click', () => {
+      isLiked = !isLiked;
+      if (isLiked) {
+        likeCount += 1;
+        btnLike.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        btnLike.classList.add('bg-primary-container', 'text-on-primary-container');
+        iconLike.style.fontVariationSettings = "'FILL' 1";
+        showToast('点赞成功 +1', 'thumb_up');
+      } else {
+        likeCount -= 1;
+        btnLike.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btnLike.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        iconLike.style.fontVariationSettings = "'FILL' 0";
+        showToast('已取消点赞', 'thumb_up_off_alt');
+      }
+      labelLike.textContent = likeCount;
+      statLike.textContent = likeCount;
+    });
+
+    // Favorite Toggle
+    btnFav.addEventListener('click', () => {
+      isFaved = !isFaved;
+      if (isFaved) {
+        favCount += 1;
+        btnFav.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        btnFav.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+        iconFav.style.fontVariationSettings = "'FILL' 1";
+        showToast('已收藏至个人书房', 'bookmark_added');
+      } else {
+        favCount -= 1;
+        btnFav.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+        btnFav.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        iconFav.style.fontVariationSettings = "'FILL' 0";
+        showToast('已取消收藏', 'bookmark_border');
+      }
+      labelFav.textContent = favCount;
+      statFav.textContent = favCount;
+    });
+
+    // Fake Interactive Add Comment
+    let addedComment = false;
+    btnOpenComment.addEventListener('click', () => {
+      if (addedComment) {
+        showToast('您已发表过交流感悟', 'info');
+        return;
+      }
+      const newComment = document.createElement('div');
+      newComment.className = 'flex items-start gap-space-sm bg-on-primary-container/20 p-space-sm rounded-xl animate-fade-in transition-all';
+      newComment.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">我</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between mb-0.5">
+            <span class="font-body-medium text-body-medium text-primary font-semibold truncate">我的交流感想</span>
+            <span class="font-label-meta text-label-meta text-outline">刚刚</span>
+          </div>
+          <div class="font-label-meta text-label-meta text-on-surface-variant mb-space-xs">实验三中读书会读者 [演示发布]</div>
+          <p class="font-body-default text-body-default text-on-surface leading-normal">
+            “面对未知的风浪，果断比迟疑更有生命力！”深有共鸣，好文共勉！
+          </p>
+        </div>
+      `;
+      commentsContainer.prepend(newComment);
+      commentCountBadge.textContent = '7条评论';
+      addedComment = true;
+      showToast('感悟发表成功 [演示]', 'check_circle');
+    });
+
+    // Navigation back handlers
+    function handleBackToList() {
+      showToast('正在返回精选列表...', 'arrow_back');
+      setTimeout(() => {
+        window.history.length > 1 ? window.history.back() : showToast('已处于顶层列表视图');
+      }, 500);
+    }
+
+    btnBack.addEventListener('click', handleBackToList);
+    btnQuickList.addEventListener('click', handleBackToList);
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,100,90,0.05)]" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-14 max-w-[390px] mx-auto px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-all text-primary font-body-medium" data-path="reading-club-hub" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption mt-space-2xs">书会</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="campus-activities" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-caption text-label-caption mt-space-2xs">活动</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="academic-services" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-caption text-label-caption mt-space-2xs">服务</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-all" data-path="member-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caption text-label-caption mt-space-2xs">我的</span></a></div></nav><script>window.EP_PAGE="R06";</script><script src="../routes.js"></script></body></html>
