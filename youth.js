@@ -1,0 +1,8 @@
+function youthGo(route){route=String(route);if(parent!==window)parent.postMessage({educationPlusRoute:route},location.origin);else location.href=(/^[A-Z]/.test(String(window.EP_PAGE||''))?'../':'')+'index.html#'+route}
+function youthToast(message){let t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.append(t)}t.textContent=message;t.classList.add('show');clearTimeout(window.__youthToast);window.__youthToast=setTimeout(()=>t.classList.remove('show'),1700)}
+function switchYouthTab(name,button){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===button));document.querySelectorAll('.pane').forEach(x=>x.hidden=x.dataset.pane!==name)}
+function toggleAction(button,message){button.classList.toggle('on');youthToast(button.classList.contains('on')?message:'已取消')}
+function filterYouthStatus(name,button){document.querySelectorAll('.status-tabs button').forEach(x=>x.classList.toggle('active',x===button));document.querySelectorAll('.status-card').forEach(x=>x.hidden=name!=='all'&&x.dataset.status!==name)}
+function chooseContentType(button,type){document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('active',x===button));const input=document.getElementById('contentType');if(input)input.value=type;document.getElementById('uploadText').textContent=type==='短视频'?'选择视频文件（MP4，演示）':'选择图片（最多9张，演示）'}
+function submitYouthForm(event){event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;localStorage.setItem('ep-youth-demo-submitted','1');youthToast('提交成功，状态已更新为“审核中”');setTimeout(()=>youthGo('Y05'),700)}
+function simulateUpload(){document.getElementById('uploadText').textContent='已选择演示素材，可继续提交';youthToast('演示素材已选择')}
