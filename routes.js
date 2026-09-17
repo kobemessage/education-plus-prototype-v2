@@ -5,10 +5,10 @@ function go(route){if(parent!==window)parent.postMessage({educationPlusRoute:rou
 window.epGo=go;
 const hooks={R01:{openCourseDetail:'R02'},R03:{handleLectureClick:'R04'},R05:{openReviewDetail:'R06'},R07:{handleAction:'R08'},J01:{navigateToApply:'J02'},J02:{goToPass:'J03'},Y03:{handleDirectToSubmission:'Y04'},N04:{closeAndRedirect:'N05'}};
 Object.entries(hooks[id]||{}).forEach(([fn,r])=>window[fn]=()=>go(r));
-if(id==='2'){window.handleQuickNav=x=>go(/领读/.test(x)?'R01':/名家/.test(x)?'R03':'R05');window.handleJoinBook=()=>go('R08')}
+if(id==='2'){window.handleQuickNav=x=>go(/领读/.test(x)?'R01':/大家|校园|读后感/.test(x)?'R12':'R03');window.handleJoinBook=()=>go('R08')}
 const textRoutes={
 '1':[['正在直播','C02'],['今日推荐','G07']],
-'2':[['更多书库','R07'],['领读员培训','R01'],['名家谈阅读','R03'],['读后感专栏','R05']],
+'2':[['查看全省读书会','R12'],['大家一起读','R12'],['来做领读员','R01'],['名家谈阅读','R03'],['更多书库','R07']],
 '3':[['成长档案','S06'],['名师指导','S05'],['去投稿','S02'],['赛事详情','S03']],
 '4':[['我要在线投稿','J02'],['在线投稿','J02'],['投稿进度','J03'],['作品档案','J04'],['荣誉证书','J06'],['小记者风采','J05'],['阅读全文','J01']],
 '5':[['发布创作','Y04'],['我的发布','Y05']],
@@ -24,7 +24,9 @@ const textRoutes={
 'J03':[['查看见报文章','J01'],['荣誉证书','J06'],['撰写新采写文稿','J02']],
 'J04':[['作品详情','J01'],['录用进度','J03'],['直达修改','J03'],['发起新稿件投稿','J02']],
 'J05':[['阅读全文','J01'],['荣誉证书','J06'],['投稿成为风采小记者','J02']],
-'J06':[['返回小记者','4']]
+'J06':[['返回小记者','4']],
+'R12':[['进入读书会主页','R13'],['返回读书会','2']],
+'R13':[['阅读打卡','R09'],['读后感投稿','R05'],['阅读积分','R10'],['校园排行','R11'],['更多书目','R07'],['书目详情','R08'],['全部精选','R05'],['阅读全文','R06'],['返回全省校园读书会','R12']]
 };
 document.addEventListener('click',e=>{const b=e.target.closest('button,a,[onclick],[role="button"]');if(!b)return;const t=b.textContent.trim(),h=b.getAttribute('onclick')||'',a=b.getAttribute('aria-label')||'';let r=b.dataset.epRoute;
 if(/history.back/.test(h)||a==='返回'){e.preventDefault();e.stopImmediatePropagation();go(groups[group]||1);return}

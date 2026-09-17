@@ -154,33 +154,43 @@
 <span>第 14 期黔青悦读</span>
 </div>
 </div>
-<!-- 核心新增模块：三个核心入口卡片（领读员培训、名家谈阅读、读后感） -->
+<!-- 读书会三个一级栏目：来做领读员、大家一起读、名家谈阅读 -->
 <div class="grid grid-cols-3 gap-2.5">
 <!-- 入口 1: 领读员培训 -->
-<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-primary/40" onclick="handleQuickNav('领读员培训')">
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-primary/40" onclick="handleQuickNav('来做领读员')">
 <div class="w-10 h-10 rounded-full bg-primary-fixed/60 flex items-center justify-center text-primary mb-1.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
 <span class="material-symbols-outlined text-[22px]">record_voice_over</span>
 </div>
-<span class="font-title-card text-[13px] text-on-surface font-semibold">领读员培训</span>
-<span class="text-on-surface-variant text-[10px] mt-0.5">名师领读课堂</span>
+<span class="font-title-card text-[13px] text-on-surface font-semibold">来做领读员</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">培训与成长</span>
 </button>
-<!-- 入口 2: 名家谈阅读 -->
-<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-tertiary/40" onclick="handleQuickNav('名家谈阅读')">
+<!-- 入口 2: 大家一起读 -->
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-secondary/40" onclick="handleQuickNav('大家一起读')">
 <div class="w-10 h-10 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-tertiary mb-1.5 group-hover:bg-tertiary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<span class="font-title-card text-[13px] text-on-surface font-semibold">大家一起读</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">校园共读汇</span>
+</button>
+<!-- 入口 3: 名家谈阅读 -->
+<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-tertiary/40" onclick="handleQuickNav('名家谈阅读')">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-1.5 group-hover:bg-secondary group-hover:text-on-primary transition-colors">
 <span class="material-symbols-outlined text-[22px]">school</span>
 </div>
 <span class="font-title-card text-[13px] text-on-surface font-semibold">名家谈阅读</span>
-<span class="text-on-surface-variant text-[10px] mt-0.5">贵州教育名家</span>
-</button>
-<!-- 入口 3: 读后感 -->
-<button class="rounded-xl bg-surface-container-lowest p-3 flex flex-col items-center justify-center text-center shadow-sm border border-surface-container active:scale-95 transition-all group hover:border-secondary/40" onclick="handleQuickNav('读后感专栏')">
-<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-1.5 group-hover:bg-secondary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-[22px]">history_edu</span>
-</div>
-<span class="font-title-card text-[13px] text-on-surface font-semibold">读后感精选</span>
-<span class="text-on-surface-variant text-[10px] mt-0.5">全省优秀习作</span>
+<span class="text-on-surface-variant text-[10px] mt-0.5">名家领读分享</span>
 </button>
 </div>
+<!-- 大家一起读：汇聚全省学校读书会，读后感精选作为栏目内内容 -->
+<section class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm border border-surface-container-high/50">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed/60 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined">diversity_3</span></div>
+<div class="min-w-0"><div class="flex items-center gap-2"><h2 class="font-headline-section text-[17px] font-bold">大家一起读 · 校园共读汇</h2><span class="text-[10px] px-2 py-0.5 rounded-full bg-primary-fixed/60 text-primary">全省学校</span></div><p class="text-on-surface-variant text-[12px] leading-5 mt-1">汇聚各地各学校读书会，共读书目、阅读打卡与读后感精选统一呈现。</p></div>
+</div>
+<button class="visual-entry h-9 px-3 rounded-full bg-primary text-on-primary text-[12px] font-semibold" data-ep-route="R12">查看全省读书会</button>
+</div>
+</section>
 <!-- 1. 当前共读书目与阅读态势卡片 -->
 <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-surface-container-high/40">
 <div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-primary-fixed/25 pointer-events-none blur-2xl"></div>
