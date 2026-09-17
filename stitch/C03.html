@@ -140,13 +140,13 @@
 </div>
 </div>
 </div>
-<!-- 4. 4讲连贯目录抽屉列表 -->
+<!-- 4. 课程章节列表 -->
 <div class="px-margin-page mt-space-md">
 <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
 <div class="flex items-center justify-between pb-space-xs mb-space-xs">
 <div class="flex items-center gap-1.5">
 <span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
-<h3 class="font-title-card text-title-card text-on-surface">连贯讲义目录</h3>
+<h3 class="font-title-card text-title-card text-on-surface">课程章节</h3>
 </div>
 <span class="font-label-caption text-label-caption text-on-surface-variant">共 4 讲 · 进阶必修</span>
 </div>
@@ -181,24 +181,24 @@
 <!-- 讲目 3 -->
 <div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
 <div class="flex items-center gap-space-sm min-w-0">
-<span class="material-symbols-outlined text-[20px] text-outline">lock_open</span>
+<span class="material-symbols-outlined text-[20px] text-primary">play_circle</span>
 <div class="flex flex-col min-w-0">
 <span class="font-body-medium text-body-medium text-on-surface truncate">第3讲《巧渡金沙江与飞夺泸定桥的精神魄力》</span>
-<span class="font-label-meta text-label-meta text-on-surface-variant">时长 31:40 · 未开始</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">时长 31:40 · 可回放</span>
 </div>
 </div>
-<button class="px-2 py-1 rounded-md bg-surface-container-low text-outline font-label-caption text-label-caption shrink-0" onclick="triggerToast('请先完成第2讲打卡')" type="button">待学</button>
+<button class="px-2 py-1 rounded-md bg-surface-container text-primary font-label-caption text-label-caption shrink-0" onclick="triggerToast('正在载入第3讲回放视频')" type="button">播放</button>
 </div>
 <!-- 讲目 4 -->
 <div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
 <div class="flex items-center gap-space-sm min-w-0">
-<span class="material-symbols-outlined text-[20px] text-outline">lock_open</span>
+<span class="material-symbols-outlined text-[20px] text-primary">play_circle</span>
 <div class="flex flex-col min-w-0">
 <span class="font-body-medium text-body-medium text-on-surface truncate">第4讲《雪山草地铸丰碑：新时代的接力奋斗》</span>
-<span class="font-label-meta text-label-meta text-on-surface-variant">时长 29:50 · 未开始</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">时长 29:50 · 可回放</span>
 </div>
 </div>
-<button class="px-2 py-1 rounded-md bg-surface-container-low text-outline font-label-caption text-label-caption shrink-0" onclick="triggerToast('请按课时顺序学习')" type="button">待学</button>
+<button class="px-2 py-1 rounded-md bg-surface-container text-primary font-label-caption text-label-caption shrink-0" onclick="triggerToast('正在载入第4讲回放视频')" type="button">播放</button>
 </div>
 </div>
 </div>
@@ -206,15 +206,9 @@
 <!-- 5. 底部辅助栏 (纯演示数据) -->
 <div class="mt-space-lg px-margin-page">
 <div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
-<!-- 下载讲义 (C04 模块导向) -->
-<button class="flex-1 h-12 rounded-xl bg-surface-container flex items-center justify-center gap-1.5 text-primary font-body-medium text-body-medium font-semibold active:scale-[0.985] transition-transform" onclick="triggerToast('已开始下载：C04《四渡赤水随堂研学手册.pdf》[演示数据]')" type="button">
-<span class="material-symbols-outlined text-[20px]">download</span>
-<span>下载讲义 (C04)</span>
-</button>
-<!-- 完成本讲打卡 -->
-<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-1.5 font-body-medium text-body-medium font-semibold shadow-md active:scale-[0.985] transition-transform" onclick="completeCheckin(this)" type="button">
-<span class="material-symbols-outlined text-[20px]">check_circle</span>
-<span>完成本讲打卡</span>
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-1.5 font-body-medium text-body-medium font-semibold shadow-md active:scale-[0.985] transition-transform" onclick="epGo(6)" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>返回名师公益课</span>
 </button>
 </div>
 </div>
@@ -254,10 +248,4 @@
     triggerToast('播放倍速已切换至 ' + rates[idx]);
   }
 
-  function completeCheckin(btn) {
-    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">verified</span><span>打卡成功！</span>';
-    btn.classList.remove('bg-primary');
-    btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
-    triggerToast('打卡成功！已记录学时 +28分钟 [演示数据]');
-  }
 </script></main><script>window.EP_PAGE="C03";</script><script src="../routes.js"></script></body></html>

@@ -179,11 +179,6 @@
 <!-- 5. 底部固定互动栏与免责声明提示 -->
 <div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest/95 backdrop-blur-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)] z-40">
 <div class="px-margin-page py-2 flex items-center gap-2">
-<!-- 课件讲义预览入口按钮 -->
-<button class="flex flex-col items-center justify-center h-10 w-11 rounded-lg bg-surface-container-low text-primary active:scale-95 transition-transform shrink-0" id="btn-slide" title="课件讲义" type="button">
-<span class="material-symbols-outlined text-[20px]">description</span>
-<span class="text-[9px] font-label-meta mt-0.5 leading-none">讲义</span>
-</button>
 <!-- 留言输入框 -->
 <div class="flex-1 relative flex items-center">
 <input class="w-full h-10 pl-3.5 pr-9 bg-surface-container-low rounded-full font-body-default text-body-default text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container text-sm" id="chat-input" placeholder="发一条文明互动发言…" type="text"/>
@@ -202,37 +197,6 @@
 <p class="text-[10px] font-label-meta text-outline leading-tight">
         * 提示：本页数据与流媒体均为模拟演示，不消耗校园网专属免流包，亦不代表已完成课程实名认证学时记录。
       </p>
-</div>
-</div>
-<!-- 轻量讲义预览浮层 (默认隐藏) -->
-<div class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 hidden flex items-end justify-center" id="slide-modal">
-<div class="w-full max-w-[390px] bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-3 shadow-xl max-h-[70vh] overflow-y-auto">
-<div class="flex items-center justify-between border-b pb-2">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">menu_book</span>
-<h4 class="font-title-card text-title-card text-on-surface">特邀讲义预览 · [演示数据]</h4>
-</div>
-<button class="w-8 h-8 flex items-center justify-center rounded-full text-outline hover:text-on-surface" id="btn-close-slide" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="flex flex-col gap-2.5 text-on-surface-variant font-body-default text-body-default text-sm">
-<div class="p-3 bg-surface-container-low rounded-lg">
-<p class="font-semibold text-on-surface">第一章：时代坐标中的使命感</p>
-<p class="text-xs text-outline mt-1">从国家现代化战略看当代青年担当与专业成才路径。</p>
-</div>
-<div class="p-3 bg-surface-container-low rounded-lg">
-<p class="font-semibold text-on-surface">第二章：遵义精神的当代价值</p>
-<p class="text-xs text-outline mt-1">坚持真理、科学应变与大学生创新开拓精神。</p>
-</div>
-<div class="p-3 bg-surface-container-low rounded-lg">
-<p class="font-semibold text-on-surface">第三章：知行合一的实践方法</p>
-<p class="text-xs text-outline mt-1">如何从校园研学、志愿服务起步走向基层广阔天地。</p>
-</div>
-</div>
-<button class="w-full h-11 bg-primary text-on-primary rounded-xl font-title-card text-[14px] mt-1 shadow-sm" id="btn-confirm-slide" type="button">
-        关闭预览
-      </button>
 </div>
 </div>
 </div>
@@ -296,21 +260,5 @@
       });
     }
 
-    // 讲义弹窗开关
-    const btnSlide = document.getElementById('btn-slide');
-    const slideModal = document.getElementById('slide-modal');
-    const btnCloseSlide = document.getElementById('btn-close-slide');
-    const btnConfirmSlide = document.getElementById('btn-confirm-slide');
-
-    function openModal() {
-      if (slideModal) slideModal.classList.remove('hidden');
-    }
-    function closeModal() {
-      if (slideModal) slideModal.classList.add('hidden');
-    }
-
-    if (btnSlide) btnSlide.addEventListener('click', openModal);
-    if (btnCloseSlide) btnCloseSlide.addEventListener('click', closeModal);
-    if (btnConfirmSlide) btnConfirmSlide.addEventListener('click', closeModal);
   })();
 </script></main><script>window.EP_PAGE="C02";</script><script src="../routes.js"></script></body></html>
