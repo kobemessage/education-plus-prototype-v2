@@ -9,6 +9,25 @@
   ];
 
   const labels = ['首页', '书会', '读书会', '少年派', '小记者', '致青春', '公益课', '科学港', '填志愿', '订报刊', '服务', '活动', '我的'];
+  const iconLabels = {
+    arrow_back: '返回', arrow_back_ios: '返回', arrow_back_ios_new: '返回', close: '关闭',
+    more_horiz: '更多', person: '个人中心', account_circle: '个人中心', notifications: '消息通知',
+    share: '分享', favorite: '点赞', favorite_border: '点赞', bookmark: '收藏', bookmark_border: '收藏',
+    search: '搜索', tune: '筛选', fullscreen: '全屏', volume_up: '音量', play_arrow: '播放',
+    chevron_right: '查看详情', expand_more: '展开详情', download: '保存', delete: '删除'
+  };
+
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.hasAttribute('alt')) img.alt = img.dataset.alt || '';
+  });
+  document.querySelectorAll('button,a,[role="button"]').forEach(control => {
+    if (control.getAttribute('aria-label') || control.getAttribute('title')) return;
+    const text = (control.textContent || '').replace(/\s+/g, ' ').trim();
+    const icon = control.querySelector('.material-symbols-outlined');
+    const iconName = (icon?.textContent || '').trim();
+    if (text && text !== iconName) return;
+    control.setAttribute('aria-label', iconLabels[iconName] || '操作');
+  });
   const isLegacyNav = nav => {
     const text = (nav.textContent || '').replace(/\s+/g, '');
     const count = labels.filter(label => text.includes(label)).length;
