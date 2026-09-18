@@ -2,10 +2,10 @@
   const page = String(window.EP_PAGE || document.documentElement.dataset.page || '');
   const activeRoute = page === '1' ? '1' : page === '12' ? '12' : page === '10' ? '10' : '11';
   const items = [
-    ['1', '首页', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.7 12 3l8.5 7.7v9.8h-6v-6h-5v6h-6z"/></svg>'],
-    ['11', '服务', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"/></svg>'],
-    ['12', '活动', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v3m12-3v3M4 8h16v12H4zm4 4h3v3H8z"/></svg>'],
-    ['10', '我的', '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 21v-2.3c0-3.2 3.1-5.7 7-5.7s7 2.5 7 5.7V21z"/></svg>']
+    ['1', '首页', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.4 12 3l8.5 7.4v9.1h-5.4v-5.8H8.9v5.8H3.5z"/></svg>'],
+    ['11', '服务', '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="6.5" height="6.5" rx=".8"/><rect x="14" y="3.5" width="6.5" height="6.5" rx=".8"/><rect x="3.5" y="14" width="6.5" height="6.5" rx=".8"/><rect x="14" y="14" width="6.5" height="6.5" rx=".8"/></svg>'],
+    ['12', '活动', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3m10-3v3M4.5 7.5h15v12h-15z"/><path d="M9 11.5h6v4H9z"/></svg>'],
+    ['10', '我的', '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.2" r="3.6"/><path d="M5.2 20.5v-1.7c0-3.4 3-5.9 6.8-5.9s6.8 2.5 6.8 5.9v1.7z"/></svg>']
   ];
 
   const labels = ['首页', '书会', '读书会', '少年派', '小记者', '致青春', '公益课', '科学港', '填志愿', '订报刊', '服务', '活动', '我的'];
@@ -60,17 +60,17 @@
   style.id = 'ep-global-nav-style';
   style.textContent = `
     .ep-nav-legacy{display:none!important}
-    html body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))!important}
-    html body.ep-has-bottom-action{padding-bottom:calc(136px + env(safe-area-inset-bottom,0px))!important}
-    .ep-bottom-action{bottom:64px!important}
-    #ep-global-nav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:9998!important;height:calc(64px + env(safe-area-inset-bottom,0px))!important;padding:0 8px env(safe-area-inset-bottom,0px)!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:stretch!important;background:rgba(255,255,255,.97)!important;border-top:1px solid #e4eee9!important;box-shadow:0 -5px 22px rgba(24,87,68,.06)!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important;font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif!important}
-    #ep-global-nav button{appearance:none!important;border:0!important;background:transparent!important;margin:0!important;padding:7px 2px 5px!important;min-width:0!important;min-height:56px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;color:#7c9089!important;font:500 11px/1.1 "PingFang SC","Microsoft YaHei",-apple-system,sans-serif!important;letter-spacing:0!important;box-shadow:none!important;border-radius:0!important;transform:none!important}
-    #ep-global-nav button:active{background:#f1f8f5!important}
+    html body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))!important}
+    html body.ep-has-bottom-action{padding-bottom:calc(152px + env(safe-area-inset-bottom,0px))!important}
+    .ep-bottom-action{bottom:76px!important}
+    #ep-global-nav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:9998!important;height:calc(76px + env(safe-area-inset-bottom,0px))!important;padding:0 10px env(safe-area-inset-bottom,0px)!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:stretch!important;background:#fff!important;border-top:1px solid #edf2f0!important;box-shadow:0 -4px 18px rgba(24,62,52,.045)!important;font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif!important}
+    #ep-global-nav button{appearance:none!important;border:0!important;background:transparent!important;margin:0!important;padding:8px 2px 7px!important;min-width:0!important;min-height:68px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;color:#879a94!important;font:600 14px/1.1 "PingFang SC","Microsoft YaHei",-apple-system,sans-serif!important;letter-spacing:0!important;box-shadow:none!important;border-radius:0!important;transform:none!important}
+    #ep-global-nav button:active{background:#f4f8f6!important}
     #ep-global-nav button:focus-visible{outline:3px solid #efbd23!important;outline-offset:-3px!important}
-    #ep-global-nav svg{display:block!important;width:23px!important;height:23px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important;flex:none!important}
+    #ep-global-nav svg{display:block!important;width:29px!important;height:29px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.9!important;stroke-linecap:round!important;stroke-linejoin:round!important;flex:none!important}
     #ep-global-nav button[data-active="true"]{color:#087f73!important;font-weight:700!important}
-    #ep-global-nav button[data-active="true"] svg{stroke-width:2.25!important}
-    @media(max-width:360px){#ep-global-nav button{font-size:10px!important}}
+    #ep-global-nav button[data-active="true"] svg{stroke-width:2.35!important}
+    @media(max-width:360px){#ep-global-nav button{font-size:13px!important}#ep-global-nav svg{width:27px!important;height:27px!important}}
   `;
   document.head.append(style);
 
