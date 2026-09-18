@@ -17,6 +17,21 @@
     chevron_right: '查看详情', expand_more: '展开详情', download: '保存', delete: '删除'
   };
 
+  const demoText = (() => {
+    if (page === '1') return '贵阳市 · 8个服务入口 · 2项内容更新';
+    if (page === '2' || page.startsWith('R')) return '贵阳市实验三中 · 连续打卡12天 · 1,280积分';
+    if (page === '3' || page.startsWith('S')) return '林奕辰 · 6篇成长作品 · 2篇获评优秀';
+    if (page === '4' || page.startsWith('J')) return '林奕辰 · 审核中1篇 · 已刊发2篇';
+    if (page === '5' || page.startsWith('Y')) return '贵州大学 · 已发布3条 · 审核中1条';
+    if (page === '6' || page.startsWith('C')) return '王老师 · 4节公益课 · 1.2万人次观看';
+    if (page === '7' || page.startsWith('K')) return '黔灵山科学观察 · 2条记录 · 1条专家回复';
+    if (page === '8' || page.startsWith('V')) return '高三学生 · 3项测评 · 6所收藏院校';
+    if (page === '9' || page.startsWith('N')) return '订单 GZJY20260918001 · 已支付 · 待派送';
+    if (page === '10') return '个人中心 · 2项进行中 · 5条成长记录';
+    if (page === '12') return '全省活动 · 5项演示 · 2项进行中';
+    return '服务中心 · 8类服务 · 3条新消息';
+  })();
+
   document.querySelectorAll('img').forEach(img => {
     if (!img.hasAttribute('alt')) img.alt = img.dataset.alt || '';
   });
@@ -70,9 +85,21 @@
     #ep-global-nav svg{display:block!important;width:29px!important;height:29px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.9!important;stroke-linecap:round!important;stroke-linejoin:round!important;flex:none!important}
     #ep-global-nav button[data-active="true"]{color:#087f73!important;font-weight:700!important}
     #ep-global-nav button[data-active="true"] svg{stroke-width:2.35!important}
+    .ep-demo-strip{box-sizing:border-box!important;margin:8px 16px 12px!important;padding:9px 12px!important;display:flex!important;align-items:center!important;gap:8px!important;min-height:38px!important;border:1px solid #dcebe5!important;border-radius:12px!important;background:#f2faf7!important;color:#526a63!important;font:500 12px/1.45 "PingFang SC","Microsoft YaHei",-apple-system,sans-serif!important;box-shadow:none!important}
+    .ep-demo-strip strong{flex:none!important;padding:2px 6px!important;border-radius:5px!important;background:#dff3ec!important;color:#087f73!important;font-weight:700!important}
+    .ep-demo-strip span{min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
     @media(max-width:360px){#ep-global-nav button{font-size:13px!important}#ep-global-nav svg{width:27px!important;height:27px!important}}
   `;
   document.head.append(style);
+
+  const main = document.querySelector('main');
+  if (main && !main.querySelector('.ep-demo-strip')) {
+    const strip = document.createElement('aside');
+    strip.className = 'ep-demo-strip';
+    strip.setAttribute('aria-label', '原型演示数据');
+    strip.innerHTML = `<strong>[演示数据]</strong><span>${demoText}</span>`;
+    main.prepend(strip);
+  }
 
   const nav = document.createElement('nav');
   nav.id = 'ep-global-nav';
